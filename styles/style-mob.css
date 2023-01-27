@@ -1,0 +1,179 @@
+@media screen and (max-width: 650px) {
+  /* -------- */
+  /* NAVIGATION */
+  /* -------- */
+
+  nav {
+    --nav-primary-li-padding-right: 0.75rem;
+    --nav-primary-li-padding-left: 0.75rem;
+  }
+
+  /* -------- */
+  /* SUPPORT */
+  /* -------- */
+
+  .support {
+    --support-i-ff-size: 18px;
+  }
+
+  .support-btn {
+    top: 100px;
+  }
+  .support-btn:hover + .support-window {
+    right: 4rem;
+  }
+
+  .support-window {
+    top: -140px;
+  }
+
+  /* -------- */
+  /* FEATURED PRODUCTS */
+  /* -------- */
+
+  .product-highlights-acoustic {
+    max-width: 650px;
+  }
+
+  /* -------- */
+  /* FOOTER */
+  /* -------- */
+
+  .footer-container {
+    --footer-item-content-ff-size: 13px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  /* -------- */
+  /* HEADER */
+  /* -------- */
+
+  header {
+    --header-logo-ff-size: 25px;
+    --header-right-acoustic-ff-size: 22px;
+    --header-right-electric-ff-size: 27px;
+    --header-right-synth-ff-size: 17px;
+    --header-right-antique-ff-size: 21px;
+
+    --header-right-title-ff-size: 35px;
+    --header-right-p-ff-size: 15px;
+    --header-right-reviews-ff-size: 15px;
+    --header-right-cite-ff-size: 13.5px;
+  }
+
+  .img-container {
+    display: none;
+  }
+
+  .header-p {
+    line-height: 1.5rem;
+  }
+
+  /* -------- */
+  /* NAVIGATION */
+  /* -------- */
+
+  nav {
+    --nav-public-list-a-ff-size: 15px;
+  }
+  .public-list > li {
+    padding: 0.65rem;
+    border: 1px solid black;
+  }
+
+  /* -------- */
+  /* SUPPORT */
+  /* -------- */
+
+  .support {
+    --support-i-ff-size: 12.5px;
+  }
+  .support-btn {
+    padding: 0.65rem;
+    border: 1px solid black;
+  }
+  .support-btn:hover + .support-window {
+    right: 3rem;
+  }
+
+  /* -------- */
+  /* FEATURED PRODUCTS */
+  /* -------- */
+
+  .product-description > p {
+    padding-left: 8rem;
+    font-size: 10px;
+  }
+
+  /* -------- */
+  /* FEATURED EVENTS */
+  /* -------- */
+
+  .event-highlights-container {
+    --event-height: 150px;
+    --event-info-padding-top: 55px;
+    --event-info-title-ff-size: 20px;
+
+    --event-dates-head-ff-size: 20px;
+    --event-dates-items-padding-top: 12.5px;
+  }
+  .event-container:hover {
+    --event-info-title-ff-size: 20px;
+  }
+  .composition {
+    --event-info-padding-top: 40px;
+  }
+  .composition .event-info:hover {
+    --event-info-padding-top: 40px;
+  }
+  .event-info:hover {
+    --event-info-padding-top: 55px;
+  }
+  .event-dates > ul > li:hover {
+    --event-dates-items-ff-size: 15px;
+  }
+
+  /* -------- */
+  /* AFFILIATED UNIVERSITIES */
+  /* -------- */
+
+  /* -------- */
+  /* FOOTER */
+  /* -------- */
+
+  .footer-container {
+    --footer-head-paddig-top: 0.75rem;
+    --footer-head-ff-size: 10px;
+    --footer-copyright-ff-size: 5px;
+
+    --footer-head-underline-pos-bottom: 0%;
+
+    grid-template-rows: 60px 160px 50px;
+  }
+
+  .footer-content {
+    grid-template-columns: 0.33fr 0.33fr 0.33fr;
+    grid-template-areas:
+      "faq contact service"
+      "terms privacy stuff"
+      "links links links";
+    row-gap: 1rem;
+
+    overflow: hidden;
+  }
+  .footer-links {
+    grid-template-rows: repeat(4, 0.25fr);
+  }
+
+  .footer-item-content {
+    display: none;
+  }
+  .footer-item-head:hover + .footer-item-content {
+    display: none;
+  }
+
+  .footer-links {
+    grid-template-columns: repeat(4, 0.25fr);
+  }
+}

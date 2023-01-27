@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- TITLE -->
+    <title>Music Shop</title>
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="./res/favicon.ico" />
+    <!-- STYLES -->
+    <link rel="stylesheet" href="./style-general.css" />
+    <link rel="stylesheet" href="./styles/style-sml.css" />
+    <link rel="stylesheet" href="./styles/style-tab.css" />
+    <link rel="stylesheet" href="./styles/style-mob.css" />
+    <!-- JS -->
+    <script src="./js/preloader.js" defer></script>
+    <script src="./js/show-nav-support.js" defer></script>
+    <script src="./js/affil-uni.js" defer></script>
+    <script src="./js/show-footer-item-lists.js" defer></script>
+    <script src="./js/update-year.js" defer></script>
+    <script src="./js/play-header-music.js" defer></script>
+  </head>
+  <body>
+    <div class="preloader">
+      <img src="./res/misc/preloader.gif" alt="" />
+    </div>
+    <header>
+      <div class="header-container">
+        <div class="header-bg-container">
+          <div class="header-bg">
+            <div class="img-container">
+              <div class="acoustic-bg"></div>
+              <img src="./res/header-bg/header-bg-acoustic.jpg" alt="" />
+            </div>
+            <div class="img-container">
+              <div class="electric-bg"></div>
+              <img src="./res/header-bg/header-bg-electric.jpg" alt="" />
+            </div>
+            <div class="img-container">
+              <div class="synth-bg"></div>
+              <img src="./res/header-bg/header-bg-synth.jpg" alt="" />
+            </div>
+            <div class="img-container">
+              <div class="antique-bg"></div>
+              <img src="./res/header-bg/header-bg-antique.jpg" alt="" />
+            </div>
+            <audio class="header-bg-music" loop>
+              <source src="./res/misc/gymnopedie-no-1.mp3" type="audio/mpeg" />
+            </audio>
+          </div>
+        </div>
+        <div class="header-info-container">
+          <div class="header-info">
+            <div class="header-info-bg"></div>
+            <div class="header-text-container">
+              <div class="website-logo-container">
+                <h1 class="website-logo">
+                  <span>Engel /Haft<span class="logo-break">.</span></span
+                  ><sup
+                    ><sup><sup>&copy;</sup></sup></sup
+                  >
+                </h1>
+                <div class="website-logo-brands-container">
+                  <div class="website-logo-brands">
+                    <a href="#" class="website-logo-acoustic">acoustic</a>
+                    <a href="#" class="website-logo-electric">electric</a>
+                    <a href="#" class="website-logo-synth">synth</a>
+                    <a href="#" class="website-logo-antique">antique</a>
+                  </div>
+                </div>
+              </div>
+              <h2 class="header-title">Own the Stage</h2>
+              <p class="header-p">
+                <span>Confidently</span> lorem ipsum dolor sit, amet consectetur
+                adipisicing elit. Eaque, delectus optio quae sint voluptate ab?
+              </p>
+              <div class="header-reviews">
+                <div class="header-reviews-container">
+                  <p>
+                    <q>
+                      ipsum dolor sit amet <span>consectetur</span> adipisicing
+                      elit.
+                    </q>
+                    <cite>- Andre Kururu</cite>
+                  </p>
+                  <p>
+                    <q>
+                      Dolores <span>cumque, expedita, molestiae</span> ...
+                      possimus dolorum laborum fugiat,
+                      <span>recusandae</span> quidem neque ducimus est.
+                    </q>
+                    <cite>- Lea Longanisa</cite>
+                  </p>
+                  <p>
+                    <q>
+                      Fuga consequatur hic magni ullam
+                      <span>perferendis</span> eligendi? <span>Merci!</span>
+                    </q>
+                    <cite>- Ed et Eddy</cite>
+                  </p>
+                  <p>
+                    <q>
+                      in animi corporis reiciendis odit mollitia quisquam
+                      nostrum
+                      <span>praesentium</span> dolor omnis sunt, est vitae ut
+                      culpa ad!
+                    </q>
+                    <cite>- Curry Mari</cite>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav id="navigation">
+      <div class="nav-container">
+        <ul class="public-list">
+          <li>
+            <a href="#navigation"><i class="fa-solid fa-cart-shopping"></i></a>
+          </li>
+          <li class="primary-list-hover">
+            <a href="#navigation"
+              ><i class="primary-list-hover fa-solid fa-ellipsis-vertical"></i
+            ></a>
+            <ul class="primary-list">
+              <li class="tutoring-li">
+                <a href="#navigation">
+                  <i class="fa-solid fa-chevron-left"></i>
+                  Tutoring
+                </a>
+                <ul class="tutoring-ul secondary-ul">
+                  <li><a href="#">Courses</a></li>
+                  <li><a href="#">Faculty</a></li>
+                  <li><a href="#">Certificates</a></li>
+                  <li><a href="#">Affiliates</a></li>
+                </ul>
+              </li>
+              <li class="events-li">
+                <a href="#navigation">
+                  <i class="fa-solid fa-chevron-left"></i>
+                  Events
+                </a>
+              </li>
+              <li class="careers-li">
+                <a href="#navigation">
+                  <i class="fa-solid fa-chevron-left"></i>
+                  Careers
+                </a>
+                <ul class="careers-ul secondary-ul">
+                  <li><a href="#">Internship</a></li>
+                  <li><a href="#">Teaching</a></li>
+                  <li><a href="#">Developer</a></li>
+                </ul>
+              </li>
+              <li class="community-li">
+                <a href="#navigation">
+                  <i class="fa-solid fa-chevron-left"></i>
+                  Community
+                </a>
+                <ul class="community-ul secondary-ul">
+                  <li><a href="#">Forums</a></li>
+                  <li><a href="#">Classes</a></li>
+                  <li><a href="#">Bands</a></li>
+                </ul>
+              </li>
+              <li class="resources-li">
+                <a href="#navigation">
+                  <i class="fa-solid fa-chevron-left"></i>
+                  Resources
+                </a>
+                <ul class="resources-ul secondary-ul">
+                  <li><a href="#">Books</a></li>
+                  <li><a href="#">Lessons</a></li>
+                  <li><a href="#">Prinouts</a></li>
+                  <li><a href="#">Audio</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#navigation"
+              ><i class="fa-solid fa-magnifying-glass"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="support" id="support">
+      <div class="support-btn">
+        <a href="#support"><i class="fa-regular fa-comments"></i></a>
+      </div>
+      <div class="support-window">
+        <div class="support-window-tab">
+          <i class="fa-solid fa-ellipsis"></i
+          ><i class="fa-solid fa-compress"></i>
+        </div>
+        <div class="support-head">Welcome to <span>Engel /Haft</span></div>
+        <div class="support-start">
+          <a class="support-start-text" href="#">
+            <i class="fa-solid fa-headphones"></i>
+            <span>Chat Support</span></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <section class="product-highlights" id="product-highlights">
+        <div class="product-highlights-container">
+          <div class="product-highlights-head">
+            <h2>Featured Products</h2>
+          </div>
+          <div class="product-highlights-brands">
+            <div class="product-highlights-acoustic">
+              <div class="product-brand">
+                <h3 class="product-brand-head">acoustic</h3>
+                <div class="product-brand-info">
+                  <div>
+                    <span>Learn More</span>
+                    <i class="fa-solid fa-circle-info"></i>
+                  </div>
+                  <div>
+                    <p>
+                      Lorem ipsum dolor, sit amet elit. Ad officia aut amet
+                      quos! Nihil eaque quis officia culpa id! Lorem ipsum dolor
+                      sit amet, elit. Fugiat, fuga est quam! Natus, aut
+                      provident? Lorem ipsum dolor, sit amet elit. Vero, itaque.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="products-container">
+                <div class="product">
+                  <div class="product-container">
+                    <div class="product-specification">
+                      <div class="product-specification-container">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <p>Speaker Jack</p>
+                        <i class="fa-solid fa-headphones-simple"></i>
+                        <p>Headphone Jack</p>
+                        <i class="fa-solid fa-sliders"></i>
+                        <p>Synthesizer Jack</p>
+                        <div class="product-links">
+                          <a class="product-link" href="#product-highlights">
+                            Specifications
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-description">
+                      <h4>Model GB1K</h4>
+                      <p>
+                        Lorem ipsum dolor sit amet elit. Non dolorum dolor ,
+                        nostrum ? Lorem ipsum dolor sit amet elit , nobis?
+                      </p>
+                    </div>
+                    <img
+                      src="./res/products/acoustic/acoustic-grand-gb1k.png"
+                      alt=""
+                    />
+                    <div class="product-links">
+                      <a class="product-link" href="#product-highlights">
+                        Variants
+                        <i class="fa-solid fa-right-long"></i>
+                      </a>
+                      <a class="product-link" href="#product-highlights">
+                        Viewroom
+                        <i class="fa-solid fa-right-long"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="product">
+                  <div class="product-container">
+                    <div class="product-specification"></div>
+                    <div class="product-description">
+                      <h4>Model S7X</h4>
+                      <p>
+                        Lorem ipsum dolor sit amet elit. Non dolorum dolor ,
+                        nostrum ? Lorem ipsum dolor sit amet elit , nobis?
+                      </p>
+                    </div>
+                    <div class="product-specification-container">
+                      <i class="fa-solid fa-volume-high"></i>
+                      <p>Speaker Jack</p>
+                      <i class="fa-solid fa-headphones-simple"></i>
+                      <p>Headphone Jack</p>
+                      <i class="fa-solid fa-sliders"></i>
+                      <p>Synthesizer Jack</p>
+                      <div class="product-links">
+                        <a class="product-link" href="#product-highlights">
+                          Specifications
+                        </a>
+                      </div>
+                    </div>
+                    <img
+                      src="./res/products/acoustic/acoustic-grand-s7x.png"
+                      alt=""
+                    />
+                    <div class="product-links">
+                      <a class="product-link" href="#product-highlights">
+                        Variants
+                        <i class="fa-solid fa-right-long"></i>
+                      </a>
+                      <a class="product-link" href="#product-highlights">
+                        Viewroom
+                        <i class="fa-solid fa-right-long"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="product">
+                  <div class="product-container">
+                    <div class="product-specification"></div>
+                    <div class="product-description">
+                      <h4>Model U1</h4>
+                      <p>
+                        Lorem ipsum dolor sit amet elit. Non dolorum dolor ,
+                        nostrum ? Lorem ipsum dolor sit amet elit , nobis?
+                      </p>
+                    </div>
+                    <div class="product-specification-container">
+                      <i class="fa-solid fa-volume-high"></i>
+                      <p>Speaker Jack</p>
+                      <i class="fa-solid fa-headphones-simple"></i>
+                      <p>Headphone Jack</p>
+                      <i class="fa-solid fa-sliders"></i>
+                      <p>Synthesizer Jack</p>
+                      <div class="product-links">
+                        <a class="product-link" href="#product-highlights">
+                          Specifications
+                        </a>
+                      </div>
+                    </div>
+                    <img
+                      src="./res/products/acoustic/acoustic-baby-U1.png"
+                      alt=""
+                    />
+                    <div class="product-links">
+                      <a class="product-link" href="#product-highlights">
+                        Variants
+                        <i class="fa-solid fa-right-long"></i>
+                      </a>
+                      <a class="product-link" href="#product-highlights">
+                        Viewroom
+                        <i class="fa-solid fa-right-long"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="product">
+                  <div class="product-container">
+                    <div class="product-specification"></div>
+                    <div class="product-description">
+                      <h4>Model YD14</h4>
+                      <p>
+                        Lorem ipsum dolor sit amet elit. Non dolorum dolor ,
+                        nostrum ? Lorem ipsum dolor sit amet elit , nobis?
+                      </p>
+                    </div>
+                    <div class="product-specification-container">
+                      <i class="fa-solid fa-volume-high"></i>
+                      <p>Speaker Jack</p>
+                      <i class="fa-solid fa-headphones-simple"></i>
+                      <p>Headphone Jack</p>
+                      <i class="fa-solid fa-sliders"></i>
+                      <p>Synthesizer Jack</p>
+                      <div class="product-links">
+                        <a class="product-link" href="#product-highlights">
+                          Specifications
+                        </a>
+                      </div>
+                    </div>
+                    <img
+                      src="./res/products/acoustic/acoustic-baby-U1.png"
+                      alt=""
+                    />
+                    <div class="product-links">
+                      <a class="product-link" href="#product-highlights">
+                        Variants
+                        <i class="fa-solid fa-right-long"></i>
+                      </a>
+                      <a class="product-link" href="#product-highlights">
+                        Viewroom
+                        <i class="fa-solid fa-right-long"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="product">
+                  <div class="product-container">
+                    <div class="product-specification"></div>
+                    <div class="product-description">
+                      <h4>Model U3</h4>
+                      <p>
+                        Lorem ipsum dolor sit amet elit. Non dolorum dolor ,
+                        nostrum ? Lorem ipsum dolor sit amet elit , nobis?
+                      </p>
+                    </div>
+                    <div class="product-specification-container">
+                      <i class="fa-solid fa-volume-high"></i>
+                      <p>Speaker Jack</p>
+                      <i class="fa-solid fa-headphones-simple"></i>
+                      <p>Headphone Jack</p>
+                      <i class="fa-solid fa-sliders"></i>
+                      <p>Synthesizer Jack</p>
+                      <div class="product-links">
+                        <a class="product-link" href="#product-highlights">
+                          Specifications
+                        </a>
+                      </div>
+                    </div>
+                    <img
+                      src="./res/products/acoustic/acoustic-upright-U3.png"
+                      alt=""
+                    />
+                    <div class="product-links">
+                      <a class="product-link" href="#product-highlights">
+                        Variants
+                        <i class="fa-solid fa-right-long"></i>
+                      </a>
+                      <a class="product-link" href="#product-highlights">
+                        Viewroom
+                        <i class="fa-solid fa-right-long"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="product">
+                  <div class="product-container">
+                    <div class="product-specification"></div>
+                    <div class="product-description">
+                      <h4>Model X1</h4>
+                      <p>
+                        Lorem ipsum dolor sit amet elit. Non dolorum dolor ,
+                        nostrum ? Lorem ipsum dolor sit amet elit , nobis?
+                      </p>
+                    </div>
+                    <div class="product-specification-container">
+                      <i class="fa-solid fa-volume-high"></i>
+                      <p>Speaker Jack</p>
+                      <i class="fa-solid fa-headphones-simple"></i>
+                      <p>Headphone Jack</p>
+                      <i class="fa-solid fa-sliders"></i>
+                      <p>Synthesizer Jack</p>
+                      <div class="product-links">
+                        <a class="product-link" href="#product-highlights">
+                          Specifications
+                        </a>
+                      </div>
+                    </div>
+                    <img
+                      src="./res/products/acoustic/acoustic-upright-x1.png"
+                      alt=""
+                    />
+                    <div class="product-links">
+                      <a class="product-link" href="#product-highlights">
+                        Variants
+                        <i class="fa-solid fa-right-long"></i>
+                      </a>
+                      <a class="product-link" href="#product-highlights">
+                        Viewroom
+                        <i class="fa-solid fa-right-long"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-highlights-electric">
+              <div class="product-brand">
+                <h3 class="product-brand-head">electric</h3>
+                <div class="product-brand-info">
+                  <div>
+                    <span>Learn More</span>
+                    <i class="fa-solid fa-circle-info"></i>
+                  </div>
+                  <div>
+                    <p>
+                      Lorem ipsum dolor, sit amet elit. Ad officia aut amet
+                      quos! Nihil eaque quis officia culpa id! Lorem ipsum dolor
+                      sit amet, elit. Fugiat, fuga est quam! Natus, aut
+                      provident? Lorem ipsum dolor, sit amet elit. Vero, itaque.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="products-container">
+                <div class="product">
+                  <div class="product-container">
+                    <div class="product-specification">
+                      <div class="product-specification-container">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <p>Speaker Jack</p>
+                        <i class="fa-solid fa-headphones-simple"></i>
+                        <p>Headphone Jack</p>
+                        <i class="fa-solid fa-sliders"></i>
+                        <p>Synthesizer Jack</p>
+                        <div class="product-links">
+                          <a class="product-link" href="#product-highlights">
+                            Specifications
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-description">
+                      <h4>Model YDP-103</h4>
+                      <p>
+                        Lorem ipsum dolor sit amet elit. Non dolorum dolor ,
+                        nostrum ? Lorem ipsum dolor sit amet elit , nobis?
+                      </p>
+                    </div>
+                    <img
+                      src="./res/products/electric/electric-arius-YDP-103.png"
+                      alt=""
+                    />
+                    <div class="product-links">
+                      <a class="product-link" href="#product-highlights">
+                        Variants
+                        <i class="fa-solid fa-right-long"></i>
+                      </a>
+                      <a class="product-link" href="#product-highlights">
+                        Viewroom
+                        <i class="fa-solid fa-right-long"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="product">
+                  <div class="product-container">
+                    <div class="product-specification"></div>
+                    <div class="product-description">
+                      <h4>Model YDP-144</h4>
+                      <p>
+                        Lorem ipsum dolor sit amet elit. Non dolorum dolor ,
+                        nostrum ? Lorem ipsum dolor sit amet elit , nobis?
+                      </p>
+                    </div>
+                    <div class="product-specification-container">
+                      <i class="fa-solid fa-volume-high"></i>
+                      <p>Speaker Jack</p>
+                      <i class="fa-solid fa-headphones-simple"></i>
+                      <p>Headphone Jack</p>
+                      <i class="fa-solid fa-sliders"></i>
+                      <p>Synthesizer Jack</p>
+                      <div class="product-links">
+                        <a class="product-link" href="#product-highlights">
+                          Specifications
+                        </a>
+                      </div>
+                    </div>
+                    <img
+                      src="./res/products/electric/electric-arius-YDP-144.png"
+                      alt=""
+                    />
+                    <div class="product-links">
+                      <a class="product-link" href="#product-highlights">
+                        Variants
+                        <i class="fa-solid fa-right-long"></i>
+                      </a>
+                      <a class="product-link" href="#product-highlights">
+                        Viewroom
+                        <i class="fa-solid fa-right-long"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="product">
+                  <div class="product-container">
+                    <div class="product-specification"></div>
+                    <div class="product-description">
+                      <h4>Model YDP-184</h4>
+                      <p>
+                        Lorem ipsum dolor sit amet elit. Non dolorum dolor ,
+                        nostrum ? Lorem ipsum dolor sit amet elit , nobis?
+                      </p>
+                    </div>
+                    <div class="product-specification-container">
+                      <i class="fa-solid fa-volume-high"></i>
+                      <p>Speaker Jack</p>
+                      <i class="fa-solid fa-headphones-simple"></i>
+                      <p>Headphone Jack</p>
+                      <i class="fa-solid fa-sliders"></i>
+                      <p>Synthesizer Jack</p>
+                      <div class="product-links">
+                        <a class="product-link" href="#product-highlights">
+                          Specifications
+                        </a>
+                      </div>
+                    </div>
+                    <img
+                      src="./res/products/electric/electric-arius-YDP-184.png"
+                      alt=""
+                    />
+                    <div class="product-links">
+                      <a class="product-link" href="#product-highlights">
+                        Variants
+                        <i class="fa-solid fa-right-long"></i>
+                      </a>
+                      <a class="product-link" href="#product-highlights">
+                        Viewroom
+                        <i class="fa-solid fa-right-long"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="product">
+                  <div class="product-container">
+                    <div class="product-specification"></div>
+                    <div class="product-description">
+                      <h4>Model YDP-S54</h4>
+                      <p>
+                        Lorem ipsum dolor sit amet elit. Non dolorum dolor ,
+                        nostrum ? Lorem ipsum dolor sit amet elit , nobis?
+                      </p>
+                    </div>
+                    <div class="product-specification-container">
+                      <i class="fa-solid fa-volume-high"></i>
+                      <p>Speaker Jack</p>
+                      <i class="fa-solid fa-headphones-simple"></i>
+                      <p>Headphone Jack</p>
+                      <i class="fa-solid fa-sliders"></i>
+                      <p>Synthesizer Jack</p>
+                      <div class="product-links">
+                        <a class="product-link" href="#product-highlights">
+                          Specifications
+                        </a>
+                      </div>
+                    </div>
+                    <img
+                      src="./res/products/electric/electric-arius-YDP-S54.png"
+                      alt=""
+                    />
+                    <div class="product-links">
+                      <a class="product-link" href="#product-highlights">
+                        Variants
+                        <i class="fa-solid fa-right-long"></i>
+                      </a>
+                      <a class="product-link" href="#product-highlights">
+                        Viewroom
+                        <i class="fa-solid fa-right-long"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-highlights-synth">
+              <div class="product-brand">
+                <h3 class="product-brand-head">synth</h3>
+                <div class="product-brand-info">
+                  <div>
+                    <span>Learn More</span>
+                    <i class="fa-solid fa-circle-info"></i>
+                  </div>
+                  <div>
+                    <p>
+                      Lorem ipsum dolor, sit amet elit. Ad officia aut amet
+                      quos! Nihil eaque quis officia culpa id! Lorem ipsum dolor
+                      sit amet, elit. Fugiat, fuga est quam! Natus, aut
+                      provident? Lorem ipsum dolor, sit amet elit. Vero, itaque.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="products-container">
+                <div class="product">
+                  <div class="product-container">
+                    <div class="product-specification">
+                      <div class="product-specification-container">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <p>Speaker Jack</p>
+                        <i class="fa-solid fa-headphones-simple"></i>
+                        <p>Headphone Jack</p>
+                        <i class="fa-solid fa-sliders"></i>
+                        <p>Synthesizer Jack</p>
+                        <div class="product-links">
+                          <a class="product-link" href="#product-highlights">
+                            Specifications
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-description">
+                      <h4>Model Montage-2C</h4>
+                      <p>
+                        Lorem ipsum dolor sit amet elit. Non dolorum dolor ,
+                        nostrum ? Lorem ipsum dolor sit amet elit , nobis?
+                      </p>
+                    </div>
+                    <img
+                      src="./res/products/synth/synth-montage-2C.png"
+                      alt=""
+                    />
+                    <div class="product-links">
+                      <a class="product-link" href="#product-highlights">
+                        Variants
+                        <i class="fa-solid fa-right-long"></i>
+                      </a>
+                      <a class="product-link" href="#product-highlights">
+                        Viewroom
+                        <i class="fa-solid fa-right-long"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="product">
+                  <div class="product-container">
+                    <div class="product-specification"></div>
+                    <div class="product-description">
+                      <h4>Model Montage 8</h4>
+                      <p>
+                        Lorem ipsum dolor sit amet elit. Non dolorum dolor ,
+                        nostrum ? Lorem ipsum dolor sit amet elit , nobis?
+                      </p>
+                    </div>
+                    <div class="product-specification-container">
+                      <i class="fa-solid fa-volume-high"></i>
+                      <p>Speaker Jack</p>
+                      <i class="fa-solid fa-headphones-simple"></i>
+                      <p>Headphone Jack</p>
+                      <i class="fa-solid fa-sliders"></i>
+                      <p>Synthesizer Jack</p>
+                      <div class="product-links">
+                        <a class="product-link" href="#product-highlights">
+                          Specifications
+                        </a>
+                      </div>
+                    </div>
+                    <img
+                      src="./res/products/synth/synth-montage-8.png"
+                      alt=""
+                    />
+                    <div class="product-links">
+                      <a class="product-link" href="#product-highlights">
+                        Variants
+                        <i class="fa-solid fa-right-long"></i>
+                      </a>
+                      <a class="product-link" href="#product-highlights">
+                        Viewroom
+                        <i class="fa-solid fa-right-long"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="product">
+                  <div class="product-container">
+                    <div class="product-specification"></div>
+                    <div class="product-description">
+                      <h4>Model Reface-CS</h4>
+                      <p>
+                        Lorem ipsum dolor sit amet elit. Non dolorum dolor ,
+                        nostrum ? Lorem ipsum dolor sit amet elit , nobis?
+                      </p>
+                    </div>
+                    <div class="product-specification-container">
+                      <i class="fa-solid fa-volume-high"></i>
+                      <p>Speaker Jack</p>
+                      <i class="fa-solid fa-headphones-simple"></i>
+                      <p>Headphone Jack</p>
+                      <i class="fa-solid fa-sliders"></i>
+                      <p>Synthesizer Jack</p>
+                      <div class="product-links">
+                        <a class="product-link" href="#product-highlights">
+                          Specifications
+                        </a>
+                      </div>
+                    </div>
+                    <img
+                      src="./res/products/synth/synth-reface-cs.png"
+                      alt=""
+                    />
+                    <div class="product-links">
+                      <a class="product-link" href="#product-highlights">
+                        Variants
+                        <i class="fa-solid fa-right-long"></i>
+                      </a>
+                      <a class="product-link" href="#product-highlights">
+                        Viewroom
+                        <i class="fa-solid fa-right-long"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="product">
+                  <div class="product-container">
+                    <div class="product-specification"></div>
+                    <div class="product-description">
+                      <h4>Model Reface-YC</h4>
+                      <p>
+                        Lorem ipsum dolor sit amet elit. Non dolorum dolor ,
+                        nostrum ? Lorem ipsum dolor sit amet elit , nobis?
+                      </p>
+                    </div>
+                    <div class="product-specification-container">
+                      <i class="fa-solid fa-volume-high"></i>
+                      <p>Speaker Jack</p>
+                      <i class="fa-solid fa-headphones-simple"></i>
+                      <p>Headphone Jack</p>
+                      <i class="fa-solid fa-sliders"></i>
+                      <p>Synthesizer Jack</p>
+                      <div class="product-links">
+                        <a class="product-link" href="#product-highlights">
+                          Specifications
+                        </a>
+                      </div>
+                    </div>
+                    <img
+                      src="./res/products/synth/synth-reface-yc.png"
+                      alt=""
+                    />
+                    <div class="product-links">
+                      <a class="product-link" href="#product-highlights">
+                        Variants
+                        <i class="fa-solid fa-right-long"></i>
+                      </a>
+                      <a class="product-link" href="#product-highlights">
+                        Viewroom
+                        <i class="fa-solid fa-right-long"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-highlights-antique">
+              <div class="product-brand">
+                <h3 class="product-brand-head">antique</h3>
+                <div class="product-brand-info">
+                  <div>
+                    <span>Learn More</span>
+                    <i class="fa-solid fa-circle-info"></i>
+                  </div>
+                  <div>
+                    <p>
+                      Lorem ipsum dolor, sit amet elit. Ad officia aut amet
+                      quos! Nihil eaque quis officia culpa id! Lorem ipsum dolor
+                      sit amet, elit. Fugiat, fuga est quam! Natus, aut
+                      provident? Lorem ipsum dolor, sit amet elit. Vero, itaque.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="products-container">
+                <div class="product">
+                  <div class="product-container">
+                    <div class="product-specification">
+                      <div class="product-specification-container">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <p>Speaker Jack</p>
+                        <i class="fa-solid fa-headphones-simple"></i>
+                        <p>Headphone Jack</p>
+                        <i class="fa-solid fa-sliders"></i>
+                        <p>Synthesizer Jack</p>
+                        <div class="product-links">
+                          <a class="product-link" href="#product-highlights">
+                            Specifications
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-description">
+                      <h4>P660 Queen Ann</h4>
+                      <p>
+                        Lorem ipsum dolor sit amet elit. Non dolorum dolor ,
+                        nostrum ? Lorem ipsum dolor sit amet elit , nobis?
+                      </p>
+                    </div>
+                    <img
+                      src="./res/products/antique/antique-P660_Queen-Ann.png"
+                      alt=""
+                    />
+                    <div class="product-links">
+                      <a class="product-link" href="#product-highlights">
+                        Variants
+                        <i class="fa-solid fa-right-long"></i>
+                      </a>
+                      <a class="product-link" href="#product-highlights">
+                        Viewroom
+                        <i class="fa-solid fa-right-long"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="event-highlights">
+        <div class="event-highlights-container">
+          <div class="event-highlights-head">
+            <h2>Events</h2>
+          </div>
+          <div class="events">
+            <div class="events-container">
+              <div class="event composition">
+                <div class="event-container">
+                  <div class="event-container-bg">
+                    <img
+                      src="./res/events/songwriting/ryan-cayabyab.png"
+                      alt="Ryan Cayabyab"
+                    />
+                    <img
+                      src="./res/events/songwriting/ben&ben.jpg"
+                      alt="Ben&Ben"
+                    />
+                  </div>
+                  <div class="event-info">
+                    <h3>Compositions From Decades Ago to Now</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="event year-end-sale">
+                <div class="event-container">
+                  <div class="event-info">
+                    <h3>Year End Sale & Brand Showcase</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="event-dates">
+                <h3><span>'22</span> December</h3>
+                <ul>
+                  <li>
+                    <h4 class="event-date-title">12-20 year end</h4>
+                    <span class="event-date-open">open</span>
+                  </li>
+                  <li>
+                    <h4 class="event-date-title">12-15 mass choir</h4>
+                    <span class="event-date-close">closed</span>
+                  </li>
+                  <li>
+                    <h4 class="event-date-title">12-08 bull this</h4>
+                    <span class="event-date-close">closed</span>
+                  </li>
+                  <li>
+                    <h4 class="event-date-title">12-04 acoustic huel</h4>
+                    <span class="event-date-close">closed</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="affiliated-universities">
+      <div class="affiliated-universities-container">
+        <div class="affiliated-universities-head">
+          <h2>Affiliated Universities</h2>
+        </div>
+        <div class="affiliated-universities-logo">
+          <div class="affiliated-universities-logo-container"></div>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer">
+      <div class="footer-container">
+        <div class="footer-head">
+          <h2>Resources</h2>
+        </div>
+        <div class="footer-content">
+          <h3 class="footer-item-head footer-faq">
+            faq <span class="footer-head-underline"></span>
+          </h3>
+          <div class="footer-item-content">
+            <a href="#footer">
+              <h4><i class="fa-regular fa-square-plus"></i> about us</h4>
+            </a>
+            <a href="#footer">
+              <h4><i class="fa-regular fa-square-plus"></i> news</h4>
+            </a>
+          </div>
+          <h3 class="footer-item-head footer-contact">
+            contact <span class="footer-head-underline"></span>
+          </h3>
+          <div class="footer-item-content">
+            <a href="#footer">
+              <h4><i class="fa-regular fa-square-plus"></i> nearest dealer</h4>
+            </a>
+            <a href="#footer">
+              <h4><i class="fa-regular fa-square-plus"></i> order status</h4>
+            </a>
+          </div>
+          <h3 class="footer-item-head footer-service">
+            service <span class="footer-head-underline"></span>
+          </h3>
+          <div class="footer-item-content">
+            <a href="#footer">
+              <h4><i class="fa-regular fa-square-plus"></i> product recall</h4>
+            </a>
+            <a href="#footer">
+              <h4><i class="fa-regular fa-square-plus"></i> franchising</h4>
+            </a>
+            <a href="#footer">
+              <h4>
+                <i class="fa-regular fa-square-plus"></i> customer support
+              </h4>
+            </a>
+          </div>
+          <h3 class="footer-item-head footer-terms">
+            terms <span class="footer-head-underline"></span>
+          </h3>
+          <div class="footer-item-content">
+            <a href="#footer">
+              <h4><i class="fa-regular fa-square-plus"></i> online terms</h4>
+            </a>
+            <a href="#footer">
+              <h4>
+                <i class="fa-regular fa-square-plus"></i> legal information
+              </h4>
+            </a>
+          </div>
+          <h3 class="footer-item-head footer-privacy">
+            <a href="#footer"
+              >privacy <span class="footer-head-underline"></span
+            ></a>
+          </h3>
+          <h3 class="footer-item-head footer-stuff">
+            <a href="#footer"
+              >stuff <span class="footer-head-underline"></span
+            ></a>
+          </h3>
+          <div class="footer-links">
+            <a href="#"><i class="fa-solid fa-turn-up"></i></a>
+            <a href="#footer"><i class="fa-brands fa-amazon"></i></a>
+            <a href="#footer"> <i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#footer"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+
+          <div class="footer-item-content website-logo-container">
+            <h1 class="website-logo footer-logo">
+              <span>Engel /Haft<span class="logo-break">.</span></span
+              ><sup
+                ><sup><sup>&copy;</sup></sup></sup
+              >
+            </h1>
+          </div>
+        </div>
+        <p>
+          Copyright <sup><i class="fa-regular fa-copyright"></i></sup> Yutaka
+          CGLM. All rights reserved <span class="footer-date"></span>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

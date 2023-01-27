@@ -1,0 +1,228 @@
+@media screen and (max-width: 890px) {
+  h2 {
+    font-size: 25px;
+  }
+
+  /* -------- */
+  /* HEADER */
+  /* -------- */
+
+  header {
+    height: 700px;
+    --header-right-p-ff-size: 15px;
+  }
+
+  /* -------- */
+  /* NAVIGATION  &  SUPPORT*/
+  /* -------- */
+
+  nav,
+  .support {
+    --support-i-ff-size: 20px;
+    --support-btn-border-px: 1px;
+  }
+
+  /* -------- */
+  /* FEATURED PRODUCTS */
+  /* -------- */
+
+  .product-highlights-container {
+    --product-hightlights-padding-right: 1rem;
+    --product-hightlights-padding-left: 1rem;
+  }
+
+  .product-highlights-brands {
+    --item-width: 290px;
+
+    max-width: 890px;
+    min-width: 580px;
+  }
+  .product-highlights-acoustic,
+  .product-highlights-acoustic,
+  .product-highlights-electric,
+  .product-highlights-synth,
+  .product-highlights-antique {
+    max-width: 290px;
+  }
+
+  /* -------- */
+  /* PRODUCT HEAD */
+
+  .product-brand {
+    --head-title-indent: 0px;
+    --head-title-translate: 30px;
+
+    --head-title-acoustic-ff-size: 35px;
+    --head-title-electric-ff-size: 40px;
+    --head-title-synth-ff-size: 27.5px;
+    --head-title-antique-ff-size: 35px;
+
+    --head-bg-opac: 0.45;
+
+    --more-hover-ff-size: 20px;
+    --more-padding-top: 0px;
+    --more-height: 35px;
+
+    width: 290px;
+    height: 100px;
+  }
+  .product-brand:hover {
+    --head-title-indent: 0px;
+    --head-title-translate: 30px;
+
+    --head-title-acoustic-ff-size: 35px;
+    --head-title-electric-ff-size: 40px;
+    --head-title-synth-ff-size: 27.5px;
+    --head-title-antique-ff-size: 35px;
+
+    --head-bg-opac: 0.45;
+
+    --more-hover-ff-size: 20px;
+    --more-padding-top: 0;
+    --more-height: 35px;
+  }
+  .product-brand-head {
+    text-align: center;
+  }
+
+  .product-brand-info {
+    display: none;
+  }
+
+  /* -------- */
+  /* PRODUCTS */
+
+  .products-container {
+    width: 290px;
+    height: 425px;
+  }
+
+  .product {
+    --width: 290px;
+    width: var(--width);
+  }
+
+  .product-container {
+    --specification-width: 0.1fr 0.9fr;
+    --specification-bottom-right-rad: 0%;
+    --specification-position-left: -400px;
+
+    --description-padding-left: 1.75rem;
+
+    --product-model-margin-bottom: 1rem;
+
+    --product-links-des-translate-x: 35px;
+    --product-links-spec-translate-x: 485px;
+    --product-links-gap: 0.5rem;
+  }
+  .product-container:hover {
+    --specification-width: 0.1fr 0.9fr;
+    --specification-bottom-right-rad: 0%;
+    --specification-position-left: -400px;
+
+    --description-padding-left: 1.75rem;
+
+    --product-model-margin-bottom: 1rem;
+
+    --product-links-des-translate-x: 55px;
+    --product-links-spec-translate-x: 485px;
+    --product-links-gap: 0.75rem;
+  }
+  .product-container > img {
+    width: 150px;
+
+    top: 170px;
+    left: 20px;
+  }
+
+  .product-container .product-links {
+    grid-template-columns: auto auto;
+  }
+  .product-links {
+    top: 300px;
+    font-size: 10px;
+  }
+  .product-specification-container .product-links {
+    top: 360px;
+  }
+
+  .product-description > h4 {
+    font-size: 20px;
+  }
+  .product-description > p {
+    padding-left: 8rem;
+    font-size: 12.5px;
+  }
+
+  /* -------- */
+  /* EVENTS */
+  /* -------- */
+
+  .event-highlights-container {
+    --event-hightlights-padding-left: 1rem;
+    --event-hightlights-padding-right: 1rem;
+
+    --event-height: 175px;
+
+    --event-info-padding-top: 70px;
+    --event-info-title-ff-size: 22.5px;
+
+    --event-dates-head-height: 60px;
+    --event-dates-head-padding-top: 10px;
+    --event-dates-head-ff-size: 22.5px;
+    --event-dates-items-height: 45px;
+    --event-dates-items-padding-top: 10px;
+    --event-dates-items-ff-size: 15px;
+  }
+
+  .events-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, var(--event-height)) 1.5fr;
+    grid-template-areas:
+      "a"
+      "b"
+      "c";
+  }
+
+  .event-container:hover {
+    --event-info-title-ff-size: 25px;
+    --event-ff-stroke: 0.25px;
+  }
+
+  .event-info:hover {
+    --event-info-padding-top: 65px;
+  }
+  .event-dates > ul > li:hover {
+    --event-dates-items-ff-size: 17.5px;
+  }
+
+  /* -------- */
+  /* AFFILIATED UNIVERSITIES */
+  /* -------- */
+
+  .affiliated-universities-container {
+    --affiliated-uni-h: 85px 140px;
+    --affiliated-img-p-top: 30%;
+  }
+  .affiliated-universities-logo-container {
+    --logo-width: 100px;
+    --logo-height: 160px;
+
+    gap: 1.5rem;
+  }
+
+  /* -------- */
+  /* FOOTER */
+  /* -------- */
+
+  .footer-container {
+    --footer-padding-right: 0;
+    --footer-padding-bot: 1rem;
+    --footer-head-paddig-top: 1.5rem;
+    --footer-content-item-width: 0.25fr;
+    --footer-item-head: 0.2fr;
+    --footer-i-ff-size: 20px;
+    --footer-logo-ff-size: 20px;
+    --footer-logo-sup-ff-size: 10px;
+  }
+}
