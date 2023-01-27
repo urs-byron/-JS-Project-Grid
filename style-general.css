@@ -105,7 +105,7 @@ header {
   max-width: var(--page-max-width-g);
   height: 100%;
   margin: 0 auto;
-  border-radius: 0 0 15px 0;
+  border-radius: 0 0 15px 15px;
 
   display: grid;
   grid-template-columns: var(--header-left-bg-width) 1fr;
@@ -223,9 +223,6 @@ header {
 /* -------- */
 /* HEADER INFO [RIGHT] */
 
-.header-bg-container {
-  overflow: hidden;
-}
 .header-info {
   width: 100%;
   height: 100%;
@@ -242,6 +239,8 @@ header {
 .header-info-bg {
   width: 100%;
   height: 100%;
+
+  border-radius: 0 0 15px 0;
   animation: header-info-bs var(--page-ani-g);
 
   z-index: 0;
@@ -785,8 +784,6 @@ nav {
 }
 @media screen and (max-width: 1024px) {
   nav {
-    --nav-public-list-a-ff-size: 30px;
-
     --nav-primary-height: 400px;
     --nav-primary-li-padding-right: 1.25rem;
     --nav-primary-li-padding-left: 1.25rem;
@@ -798,7 +795,6 @@ nav {
   nav {
     --nav-position-top: 0;
     --nav-all-text-font-size: 11.5px;
-    --nav-public-list-a-ff-size: 25px;
     --nav-primary-width: 125px;
     --nav-primary-height: 300px;
     --nav-secondary-ul-li-height: 30px;
@@ -814,7 +810,8 @@ nav {
 
 .support {
   position: fixed;
-  top: 245px;
+  /* top: 245px; */
+  bottom: 1rem;
   right: var(--support-position-right, 0);
 
   z-index: 90;
@@ -827,10 +824,6 @@ nav {
   border: var(--support-btn-border-px, 3px) solid black;
   border-style: solid none solid solid;
   border-radius: 10px 0 0 10px;
-
-  position: absolute;
-  top: 400px;
-  right: 0;
 
   z-index: 10;
 
@@ -857,8 +850,8 @@ nav {
   border: 3px solid black;
   border-radius: 15px;
 
-  position: absolute;
-  top: 90px;
+  position: fixed;
+  bottom: var(--support-window-pos-bottom, 5rem);
   right: var(--support-window-pos-right, -20rem);
   opacity: var(--support-window-opacity, 0);
 
@@ -951,7 +944,6 @@ nav {
 @media screen and (max-width: 1024px) {
   .support {
     --support-position-right: 0;
-    --support-i-ff-size: 22.5px;
   }
 }
 
@@ -1814,6 +1806,7 @@ footer {
 .footer-container {
   max-width: var(--page-max-width-g);
   height: 100%;
+
   border-radius: 15px 15px 0 0;
   margin: 0 auto;
 

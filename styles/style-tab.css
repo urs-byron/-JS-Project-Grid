@@ -13,13 +13,27 @@
   }
 
   /* -------- */
-  /* NAVIGATION  &  SUPPORT*/
+  /* NAVIGATION */
   /* -------- */
 
-  nav,
+  nav {
+    --nav-public-list-a-ff-size: 20px;
+  }
+
+  /* -------- */
+  /* SUPPORT */
+  /* -------- */
+
   .support {
     --support-i-ff-size: 20px;
-    --support-btn-border-px: 1px;
+  }
+
+  .support-window {
+    --support-window-pos-bottom: 1rem;
+  }
+
+  .show-support-window {
+    --support-window-pos-right: 3.5rem;
   }
 
   /* -------- */

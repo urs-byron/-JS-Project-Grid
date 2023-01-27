@@ -19,13 +19,13 @@
   .support-btn {
     top: 100px;
   }
-  .support-btn:hover + .support-window {
+  /* .support-btn:hover + .support-window {
     right: 4rem;
-  }
+  } */
 
-  .support-window {
+  /* .support-window {
     top: -140px;
-  }
+  } */
 
   /* -------- */
   /* FEATURED PRODUCTS */
