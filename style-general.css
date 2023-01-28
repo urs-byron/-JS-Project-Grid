@@ -22,6 +22,10 @@
   --page-ani-g: 30s ease-out 0s infinite;
 }
 
+body {
+  --sidebar-right-space: 105px;
+}
+
 h2 {
   font-size: 35px;
   font-family: "Oswald", sans-serif;
@@ -76,6 +80,8 @@ a:active {
 /* -------- */
 
 header {
+  padding-right: var(--sidebar-right-space);
+
   --header-left-bg-width: 480px;
 
   --header-logo-brands-width: 800px;
@@ -100,6 +106,8 @@ header {
 
   width: 100vw;
   height: var(--page-max-height-g);
+
+  transition: padding 0.5s ease;
 }
 .header-container {
   max-width: var(--page-max-width-g);
@@ -584,6 +592,79 @@ header {
 }
 
 /* -------- */
+/* SIDEBAR [RIGHT] */
+/* -------- */
+
+.sidebar-right-toggle {
+  padding: var(--sidebar-right-toggle-padding, 0.65rem);
+  border: var(--sidebar-right-toggle-border-px, 2px) solid black;
+  border-radius: 10px;
+
+  position: fixed;
+  top: var(--sidebar-right-toggle-top, 0.5rem);
+  right: var(--sidebar-right-toggle-right, 1.5rem);
+
+  z-index: 100;
+
+  background-color: gray;
+  box-shadow: inset var(--sidebar-right-tog-box-sh-x, 0px) 0 5px 0px
+    rgba(255, 255, 255, var(--sidebar-right-tog-box-sh-opacity, 0));
+
+  cursor: pointer;
+
+  color: var(--sidebar-tog-color, white);
+  font-size: var(--sidebar-right-toggle-ff-size, 25px);
+
+  transition: rotate 0.52s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+.rotate-sidebar-right-toggle {
+  --sidebar-right-tog-box-sh-x: -100px;
+  --sidebar-right-tog-box-sh-opacity: 1;
+  rotate: 180deg;
+
+  --sidebar-tog-color: black;
+}
+
+.sidebar-right {
+  width: var(--sidebar-right-w, 100px);
+  height: 90vh;
+  padding: 1rem 0 1rem 0;
+  border: var(--sidebar-right-border-px, 3px) solid black;
+  border-style: solid none none solid;
+  border-radius: 10px 0 0 0;
+
+  display: grid;
+  justify-content: center;
+  align-content: space-between;
+
+  position: fixed;
+  bottom: 0;
+  right: var(--sidebar-right-right, 0);
+
+  z-index: 90;
+
+  background-color: #6a687a;
+
+  transition: all 0.5s ease;
+}
+
+.hide-sidebar-right {
+  --sidebar-right-right: -10rem;
+}
+
+@media screen and (min-width: 1500px) {
+  .sidebar-right-toggle {
+    --sidebar-right-toggle-top: 1rem;
+    --sidebar-right-toggle-right: calc(
+      calc(calc(calc(100vw - var(--page-max-width-g)) / 2)) + 1.5rem
+    );
+  }
+  .sidebar-right {
+    --sidebar-right: calc(calc(calc(100vw - var(--page-max-width-g)) / 2));
+  }
+}
+
+/* -------- */
 /* NAVIGATION */
 /* -------- */
 
@@ -596,25 +677,16 @@ nav {
   --nav-transition-g: 0.2s ease;
 
   margin: 0 auto;
-  position: fixed;
-  top: var(--nav-position-top, 0);
-  right: var(--nav-position-right, 0);
-
-  z-index: 100;
 }
 
 .public-list {
-  margin-top: 1rem;
-
   list-style-type: none;
 }
 .public-list > li {
-  padding: 0.75rem;
-  border: var(--public-list-li-border-px, 3px) solid black;
-  border-style: solid none solid solid;
-  border-radius: var(--nav-public-list-li-border-radius, 10px) 0 0
-    var(--nav-public-list-li-border-radius, 10px);
-  margin-bottom: 2rem;
+  padding: var(--public-list-li-padding, 0.75rem);
+  border: var(--public-list-li-border-px, 2px) solid black;
+  border-radius: var(--nav-public-list-li-border-radius, 10px);
+  margin-bottom: 1rem;
 
   background-color: gray;
   box-shadow: inset var(--nav-public-list-li-box-sh-x, 0) 0 5px 0px
@@ -651,8 +723,8 @@ nav {
   display: grid;
   grid-template-rows: repeat(5, 1fr);
   position: absolute;
-  top: 20px;
-  right: 102.5%;
+  top: 1rem;
+  right: 120%;
 
   background-color: white;
 
@@ -777,53 +849,23 @@ nav {
   --nav-secondary-a-color: black;
 }
 
-@media screen and (min-width: 1500px) {
-  nav {
-    --nav-position-right: calc(calc(calc(100vw - var(--page-max-width-g)) / 2));
-  }
-}
-@media screen and (max-width: 1024px) {
-  nav {
-    --nav-primary-height: 400px;
-    --nav-primary-li-padding-right: 1.25rem;
-    --nav-primary-li-padding-left: 1.25rem;
-    --nav-secondary-ul-width: 140px;
-    --nav-secondary-ul-li-height: 40px;
-  }
-}
-@media screen and (max-width: 720px) {
-  nav {
-    --nav-position-top: 0;
-    --nav-all-text-font-size: 11.5px;
-    --nav-primary-width: 125px;
-    --nav-primary-height: 300px;
-    --nav-secondary-ul-li-height: 30px;
-  }
-  .primary-list > li:hover {
-    --nav-primary-li-padding-right: 1.1rem;
-  }
-}
-
 /* -------- */
 /* SUPPORT */
 /* -------- */
 
 .support {
-  position: fixed;
-  /* top: 245px; */
-  bottom: 1rem;
-  right: var(--support-position-right, 0);
-
-  z-index: 90;
+  /* right: var(--support-position-right, 0); */
 
   font-family: "Montserrat", sans-serif;
+
+  text-align: center;
 }
 
 .support-btn {
   padding: 0.75rem;
-  border: var(--support-btn-border-px, 3px) solid black;
-  border-style: solid none solid solid;
-  border-radius: 10px 0 0 10px;
+  border: var(--support-btn-border-px, 2px) solid black;
+  border-radius: 10px;
+  /* margin: 0 1.2rem; */
 
   z-index: 10;
 
@@ -954,13 +996,16 @@ nav {
 .product-highlights {
   width: 100vw;
   height: auto;
+  padding-right: var(--sidebar-right-space);
+
+  transition: padding 0.5s ease;
 }
 
 .product-highlights-container {
   max-width: calc(var(--page-max-width-g) - 6rem);
   height: 100%;
-  padding: 0 var(--product-hightlights-padding-right, 7.5rem) 0
-    var(--product-hightlights-padding-left, 3rem);
+  /* padding: 0 var(--product-hightlights-padding-right, 7.5rem) 0
+    var(--product-hightlights-padding-left, 3rem); */
   margin: 0 auto;
 
   overflow: hidden;
@@ -1503,13 +1548,16 @@ nav {
 .event-highlights {
   width: 100vw;
   height: auto;
+  padding-right: var(--sidebar-right-space);
+
+  transition: padding 0.5s ease;
 }
 
 .event-highlights-container {
   max-width: var(--page-max-width-g);
   height: 100%;
-  padding: 0 var(--event-hightlights-padding-right, 5.75rem) 0
-    var(--event-hightlights-padding-left, 1.25rem);
+  /* padding: 0 var(--event-hightlights-padding-right, 5.75rem) 0
+    var(--event-hightlights-padding-left, 1.25rem); */
   margin: 0 auto;
 
   overflow: hidden;
@@ -1711,6 +1759,9 @@ nav {
 .affiliated-universities {
   width: 100vw;
   max-height: 300px;
+  padding-right: var(--sidebar-right-space);
+
+  transition: padding 0.5s ease;
 }
 
 .affiliated-universities-container {
@@ -1801,6 +1852,9 @@ nav {
 footer {
   width: 100vw;
   max-height: auto;
+  padding-right: var(--sidebar-right-space);
+
+  transition: padding 0.5s ease;
 }
 
 .footer-container {
