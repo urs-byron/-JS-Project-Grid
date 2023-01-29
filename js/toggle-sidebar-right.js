@@ -3,6 +3,8 @@ const sidebar_right = document.querySelector(".sidebar-right");
 const html_body = document.querySelector("body");
 
 sidebar_right_toggle.addEventListener("click", function (e) {
+  primary_menu.classList.remove("show-primary-list");
+
   if (!sidebar_right.classList.contains("hide-sidebar-right")) {
     html_body.style.setProperty("--sidebar-right-space", "0");
   } else {

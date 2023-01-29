@@ -727,7 +727,7 @@ nav {
   display: grid;
   grid-template-rows: repeat(5, 1fr);
   position: absolute;
-  top: 1rem;
+  top: 0rem;
   right: 120%;
 
   background-color: white;

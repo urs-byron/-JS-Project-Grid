@@ -4,10 +4,7 @@ document
   .querySelector(".primary-list-hover")
   .addEventListener("click", function (element) {
     if (element.target.classList.contains("primary-list-hover")) {
-      document
-        .querySelector(".primary-list")
-        .classList.toggle("show-primary-list");
-      hideSecondaryFx(document.querySelector(".primary-list a"));
+      hidePrimaryFx();
     }
   });
 
@@ -35,4 +32,9 @@ function hideSecondaryFx(e) {
     if (secondary_ul !== e.querySelector(".secondary-ul"))
       secondary_ul.classList.remove("show-secondary-list");
   });
+}
+
+function hidePrimaryFx() {
+  primary_menu.classList.toggle("show-primary-list");
+  hideSecondaryFx(document.querySelector(".primary-list a"));
 }
