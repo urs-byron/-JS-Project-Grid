@@ -1,6 +1,9 @@
+const html_body = document.querySelector("body");
+
 const sidebar_right_toggle = document.querySelector(".sidebar-right-toggle");
 const sidebar_right = document.querySelector(".sidebar-right");
-const html_body = document.querySelector("body");
+
+const support_window = document.querySelector(".support-window");
 
 sidebar_right_toggle.addEventListener("click", function (e) {
   primary_menu.classList.remove("show-primary-list");
@@ -19,6 +22,10 @@ sidebar_right_toggle.addEventListener("click", function (e) {
   e.currentTarget.classList.toggle("rotate-sidebar-right-toggle");
 
   sidebar_right.classList.toggle("hide-sidebar-right");
+
+  if (support_window.classList.contains("show-support-window")) {
+    rightSupportWindow();
+  }
 });
 
 const tabMediaQuery = "(max-width: 890px)";
@@ -36,6 +43,7 @@ tabMediaQueryMatch.addEventListener("change", (tab_event) => {
     sidebar_right.classList.remove("hide-sidebar-right");
     html_body.style.setProperty("--sidebar-right-space", "105px");
   }
+  rightSupportWindow();
 });
 
 mobMediaQueryMatch.addEventListener("change", (mob_event) => {
@@ -48,4 +56,19 @@ mobMediaQueryMatch.addEventListener("change", (mob_event) => {
       html_body.style.setProperty("--sidebar-right-space", "85px");
     }
   }
+  rightSupportWindow();
 });
+
+const rightSupportWindow = () => {
+  if (sidebar_right.classList.contains("hide-sidebar-right")) {
+    support_window.style.setProperty("--support-window-pos-right", "1rem");
+  } else {
+    if (window.innerWidth > 890) {
+      support_window.style.setProperty("--support-window-pos-right", "7rem");
+    } else if (window.innerWidth <= 890 && window.innerWidth > 414) {
+      support_window.style.setProperty("--support-window-pos-right", "5.5rem");
+    } else if (window.innerWidth <= 414) {
+      support_window.style.setProperty("--support-window-pos-right", "4.5rem");
+    }
+  }
+};

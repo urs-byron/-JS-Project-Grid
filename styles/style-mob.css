@@ -16,10 +16,6 @@
     --support-i-ff-size: 18px;
   }
 
-  .show-support-window {
-    --support-window-pos-right: 5.5rem;
-  }
-
   /* -------- */
   /* FEATURED PRODUCTS */
   /* -------- */
@@ -102,6 +98,10 @@
   .support {
     --support-i-ff-size: 12.5px;
     --support-btn-border-px: 1px;
+  }
+
+  .show-support-window {
+    --support-window-pos-right: 4.5rem;
   }
 
   /* -------- */
