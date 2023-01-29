@@ -16,6 +16,10 @@
     --header-right-p-ff-size: 15px;
   }
 
+  /* -------- */
+  /* SIDEBAR [RIGHT] */
+  /* -------- */
+
   .sidebar-right {
     --sidebar-right-border-px: 2px;
     --sidebar-right-w: 80px;
@@ -55,18 +59,12 @@
 
   .support {
     --support-i-ff-size: 20px;
-  }
-
-  .support-window {
     --support-window-pos-bottom: 1rem;
-  }
-
-  .support-btn {
-    margin: 0 0.65rem;
+    --support-btn-margin: 0 0.65rem;
   }
 
   .show-support-window {
-    --support-window-pos-right: 3.5rem;
+    --support-window-pos-right: 5.5rem;
   }
 
   /* -------- */

@@ -16,13 +16,9 @@
     --support-i-ff-size: 18px;
   }
 
-  /* .support-btn:hover + .support-window {
-    right: 4rem;
-  } */
-
-  /* .support-window {
-    top: -140px;
-  } */
+  .show-support-window {
+    --support-window-pos-right: 5.5rem;
+  }
 
   /* -------- */
   /* FEATURED PRODUCTS */
@@ -71,6 +67,10 @@
     line-height: 1.5rem;
   }
 
+  /* -------- */
+  /* SIDEBAR [RIGHT] */
+  /* -------- */
+
   .sidebar-right-toggle {
     --sidebar-right-toggle-border-px: 1px;
     --sidebar-right-toggle-top: 1rem;
@@ -101,13 +101,7 @@
 
   .support {
     --support-i-ff-size: 12.5px;
-  }
-  .support-btn {
-    border: 1px solid black;
-  }
-
-  .support-btn:hover + .support-window {
-    right: 3rem;
+    --support-btn-border-px: 1px;
   }
 
   /* -------- */

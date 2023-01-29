@@ -22,6 +22,10 @@
   --page-ani-g: 30s ease-out 0s infinite;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   --sidebar-right-space: 105px;
 }
@@ -627,7 +631,7 @@ header {
 
 .sidebar-right {
   width: var(--sidebar-right-w, 100px);
-  height: 90vh;
+  height: var(--sidebar-right-h, 90vh);
   padding: 1rem 0 1rem 0;
   border: var(--sidebar-right-border-px, 3px) solid black;
   border-style: solid none none solid;
@@ -854,25 +858,22 @@ nav {
 /* -------- */
 
 .support {
-  /* right: var(--support-position-right, 0); */
-
   font-family: "Montserrat", sans-serif;
 
   text-align: center;
+  transition: all 0.2s ease;
 }
 
 .support-btn {
   padding: 0.75rem;
   border: var(--support-btn-border-px, 2px) solid black;
   border-radius: 10px;
-  /* margin: 0 1.2rem; */
-
-  z-index: 10;
+  margin: var(--support-btn-margin, 0);
 
   background: gray;
   box-shadow: inset var(--support-box-sh-x, 0px) 0 0 0px rgba(255, 255, 255, 1);
 
-  transition: box-shadow 0.2s ease;
+  transition: all 0.2s ease;
 }
 .support-btn:hover {
   --support-box-sh-x: -100px;
@@ -881,8 +882,9 @@ nav {
   color: red;
   font-size: var(--support-i-ff-size, 25px);
 }
+
 .show-support-window {
-  --support-window-pos-right: 0.5rem;
+  --support-window-pos-right: 7rem;
   --support-window-opacity: 1;
 }
 
@@ -893,7 +895,7 @@ nav {
   border-radius: 15px;
 
   position: fixed;
-  bottom: var(--support-window-pos-bottom, 5rem);
+  bottom: var(--support-window-pos-bottom, 1rem);
   right: var(--support-window-pos-right, -20rem);
   opacity: var(--support-window-opacity, 0);
 
