@@ -38,6 +38,10 @@ tabMediaQueryMatch.addEventListener("change", (tab_event) => {
     sidebar_right_toggle.classList.add("rotate-sidebar-right-toggle");
     sidebar_right.classList.add("hide-sidebar-right");
     html_body.style.setProperty("--sidebar-right-space", "0");
+
+    document
+      .querySelector(".primary-list")
+      .classList.remove("show-primary-list");
   } else {
     sidebar_right_toggle.classList.remove("rotate-sidebar-right-toggle");
     sidebar_right.classList.remove("hide-sidebar-right");
@@ -62,13 +66,20 @@ mobMediaQueryMatch.addEventListener("change", (mob_event) => {
 const rightSupportWindow = () => {
   if (sidebar_right.classList.contains("hide-sidebar-right")) {
     support_window.style.setProperty("--support-window-pos-right", "1rem");
-  } else {
-    if (window.innerWidth > 890) {
-      support_window.style.setProperty("--support-window-pos-right", "7rem");
-    } else if (window.innerWidth <= 890 && window.innerWidth > 414) {
-      support_window.style.setProperty("--support-window-pos-right", "5.5rem");
-    } else if (window.innerWidth <= 414) {
-      support_window.style.setProperty("--support-window-pos-right", "4.5rem");
+    if (!support_window.classList.contains("show-support-window")) {
+      rightVisibleSupportWWindow();
     }
+  } else {
+    rightVisibleSupportWWindow();
+  }
+};
+
+const rightVisibleSupportWWindow = () => {
+  if (window.innerWidth > 890) {
+    support_window.style.setProperty("--support-window-pos-right", "7rem");
+  } else if (window.innerWidth <= 890 && window.innerWidth > 414) {
+    support_window.style.setProperty("--support-window-pos-right", "5.5rem");
+  } else if (window.innerWidth <= 414) {
+    support_window.style.setProperty("--support-window-pos-right", "4.5rem");
   }
 };

@@ -884,7 +884,8 @@ nav {
 }
 
 .show-support-window {
-  --support-window-pos-right: 7rem;
+  --support-window-scale: 1 1;
+  --support-window-z: 100;
   --support-window-opacity: 1;
 }
 
@@ -895,16 +896,21 @@ nav {
   border-radius: 15px;
 
   position: fixed;
-  bottom: var(--support-window-pos-bottom, 1rem);
-  right: var(--support-window-pos-right, -20rem);
-  opacity: var(--support-window-opacity, 0);
+  bottom: 1rem;
+  right: var(--support-window-pos-right);
+
+  scale: var(--support-window-scale, 0 1);
+  transform-origin: right;
+
+  z-index: var(--support-window-z, -100);
 
   display: grid;
-  grid-template-rows: 35px 1fr 70px;
+  grid-template-rows: 40px 1fr 70px;
 
   background: white;
+  opacity: var(--support-window-opacity, 0);
 
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 .support-window-tab {
   padding-right: 1rem;

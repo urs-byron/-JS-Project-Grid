@@ -19,12 +19,12 @@ document
   });
 });
 
+const suppoer_window = document.querySelector(".support-window");
+
 document
   .querySelector(".support-btn")
   .addEventListener("click", function (element) {
-    document
-      .querySelector(".support-window")
-      .classList.toggle("show-support-window");
+    suppoer_window.classList.toggle("show-support-window");
   });
 
 function hideSecondaryFx(e) {
