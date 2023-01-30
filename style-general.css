@@ -132,6 +132,7 @@ header {
   overflow: hidden;
   border-radius: 0 0 0 15px;
 }
+
 .header-bg {
   display: grid;
   grid-template-columns: repeat(4, var(--header-left-bg-width));
@@ -565,7 +566,11 @@ header {
 
 @media screen and (min-width: 1025px) {
   .header-bg-container {
-    cursor: url("./res/misc/header-bg-cursor-120.png"), auto;
+    cursor: url("./res/misc/play-header-music.png"), auto;
+  }
+
+  .header-bg-container-pause {
+    cursor: url("./res/misc/pause-header-music.png"), auto;
   }
 }
 @media screen and (max-width: 1024px) {
