@@ -1789,13 +1789,9 @@ nav {
 }
 
 .affiliated-universities-head {
-  padding: 42.5px var(--affiliated-university-padding-right, 4rem) 0 0;
+  padding: 42.5px 0;
 
   text-align: center;
-}
-
-.affiliated-universities-head > h2 {
-  translate: 0 -50%;
 }
 
 .affiliated-universities-logo {
