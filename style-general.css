@@ -27,7 +27,7 @@ html {
 }
 
 body {
-  --sidebar-right-space: 105px;
+  --sidebar-right-space: 0 105px 0 0.4rem;
 }
 
 h2 {
