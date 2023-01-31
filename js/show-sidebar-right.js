@@ -9,14 +9,14 @@ sidebar_right_toggle.addEventListener("click", function (e) {
   primary_menu.classList.remove("show-primary-list");
 
   if (!sidebar_right.classList.contains("hide-sidebar-right")) {
-    html_body.style.setProperty("--sidebar-right-space", "0");
+    html_body.style.setProperty("--sidebar-right-space", "0 0.4rem");
   } else {
     if (window.innerWidth > 890) {
-      html_body.style.setProperty("--sidebar-right-space", "105px");
+      html_body.style.setProperty("--sidebar-right-space", "0 105px 0 0.4rem");
     } else if (window.innerWidth <= 890 && window.innerWidth > 414) {
-      html_body.style.setProperty("--sidebar-right-space", "85px");
+      html_body.style.setProperty("--sidebar-right-space", "0 85px 0 0.4rem");
     } else if (window.innerWidth <= 414) {
-      html_body.style.setProperty("--sidebar-right-space", "70px");
+      html_body.style.setProperty("--sidebar-right-space", "0 70px 0 0.4rem");
     }
   }
   e.currentTarget.classList.toggle("rotate-sidebar-right-toggle");
@@ -37,7 +37,7 @@ tabMediaQueryMatch.addEventListener("change", (tab_event) => {
   if (tab_event.matches) {
     sidebar_right_toggle.classList.add("rotate-sidebar-right-toggle");
     sidebar_right.classList.add("hide-sidebar-right");
-    html_body.style.setProperty("--sidebar-right-space", "0");
+    html_body.style.setProperty("--sidebar-right-space", "0 0.4rem");
 
     document
       .querySelector(".primary-list")
@@ -45,7 +45,7 @@ tabMediaQueryMatch.addEventListener("change", (tab_event) => {
   } else {
     sidebar_right_toggle.classList.remove("rotate-sidebar-right-toggle");
     sidebar_right.classList.remove("hide-sidebar-right");
-    html_body.style.setProperty("--sidebar-right-space", "105px");
+    html_body.style.setProperty("--sidebar-right-space", "0 105px 0 0.4rem");
   }
   rightSupportWindow();
 });
@@ -53,11 +53,11 @@ tabMediaQueryMatch.addEventListener("change", (tab_event) => {
 mobMediaQueryMatch.addEventListener("change", (mob_event) => {
   if (mob_event.matches) {
     if (!sidebar_right.classList.contains("hide-sidebar-right")) {
-      html_body.style.setProperty("--sidebar-right-space", "70px");
+      html_body.style.setProperty("--sidebar-right-space", "0 70px 0 0.4rem");
     }
   } else {
     if (!sidebar_right.classList.contains("hide-sidebar-right")) {
-      html_body.style.setProperty("--sidebar-right-space", "85px");
+      html_body.style.setProperty("--sidebar-right-space", "0 85px 0 0.4rem");
     }
   }
   rightSupportWindow();

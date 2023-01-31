@@ -84,7 +84,7 @@ a:active {
 /* -------- */
 
 header {
-  padding-right: var(--sidebar-right-space);
+  padding: var(--sidebar-right-space);
 
   --header-left-bg-width: 480px;
 
@@ -311,20 +311,20 @@ header {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 100px repeat(3, auto);
-  align-content: flex-end;
-  gap: var(--header-right-text-gap, 5rem);
+  align-content: center;
+  gap: var(--header-right-text-gap, 3rem);
 
   z-index: 10;
   text-align: center;
 }
 .header-title {
   font-family: "Oswald", sans-serif;
-  font-size: var(--header-right-title-ff-size, 70px);
+  font-size: var(--header-right-title-ff-size, 50px);
   font-weight: 500;
 }
 .header-p {
   font-family: "Montserrat", sans-serif;
-  font-size: var(--header-right-p-ff-size, 20px);
+  font-size: var(--header-right-p-ff-size, 15px);
   font-weight: 500;
   line-height: 2.25rem;
 }
@@ -346,7 +346,7 @@ header {
   grid-template-columns: repeat(4, 100%);
 
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: var(--header-right-reviews-ff-size, 20px);
+  font-size: var(--header-right-reviews-ff-size, 15px);
 
   animation: header-reviews var(--page-ani-g);
 }
@@ -364,7 +364,7 @@ header {
   font-style: italic;
 }
 .header-reviews-container cite {
-  font-size: var(--header-right-cite-ff-size, 18px);
+  font-size: var(--header-right-cite-ff-size, 12.5px);
   font-style: normal;
 }
 .header-reviews-container span {
@@ -576,7 +576,7 @@ header {
 @media screen and (max-width: 1024px) {
   header {
     /* HEADER */
-    --header-right-title-ff-size: 50px;
+    --header-right-title-ff-size: 40px;
     --header-right-p-ff-size: 15px;
     --header-right-span-ff-size: 17.5px;
     --header-right-text-gap: 2.5rem;
@@ -589,7 +589,7 @@ header {
     --header-right-antique-ff-size: 29.75px;
 
     --header-right-reviews-ff-size: 15px;
-    --header-right-cite-ff-size: 13.5px;
+    --header-right-cite-ff-size: 10px;
 
     --header-logo-brands-top: 45%;
   }
@@ -1011,7 +1011,7 @@ nav {
 .product-highlights {
   width: 100vw;
   height: auto;
-  padding-right: var(--sidebar-right-space);
+  padding: var(--sidebar-right-space);
 
   transition: padding 0.5s ease;
 }
@@ -1563,7 +1563,7 @@ nav {
 .event-highlights {
   width: 100vw;
   height: auto;
-  padding-right: var(--sidebar-right-space);
+  padding: var(--sidebar-right-space);
 
   transition: padding 0.5s ease;
 }
@@ -1774,7 +1774,7 @@ nav {
 .affiliated-universities {
   width: 100vw;
   max-height: 300px;
-  padding-right: var(--sidebar-right-space);
+  padding: var(--sidebar-right-space);
 
   transition: padding 0.5s ease;
 }
@@ -1863,7 +1863,7 @@ nav {
 footer {
   width: 100vw;
   max-height: auto;
-  padding-right: var(--sidebar-right-space);
+  padding: var(--sidebar-right-space);
 
   transition: padding 0.5s ease;
 }
