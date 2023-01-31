@@ -1,59 +1,59 @@
 const university_logo_set = [
   {
     name: "Adventist University of the Philippines",
-    src: "./res/affiliated-universities-logo/aup-logo.png",
+    src: "./res/affiliated-universities/affiliated-universities-logo/aup-logo.png",
   },
   {
     name: "Centro Escolar University",
-    src: "./res/affiliated-universities-logo/ceu-logo.png",
+    src: "./res/affiliated-universities/affiliated-universities-logo/ceu-logo.png",
   },
   {
     name: "De La Salle University",
-    src: "./res/affiliated-universities-logo/dlsu-logo.png",
+    src: "./res/affiliated-universities/affiliated-universities-logo/dlsu-logo.png",
   },
   {
     name: "Lourdes College",
-    src: "./res/affiliated-universities-logo/lc-logo.png",
+    src: "./res/affiliated-universities/affiliated-universities-logo/lc-logo.png",
   },
   {
     name: "Liceo de Cagayan University",
-    src: "./res/affiliated-universities-logo/ldcu-logo.png",
+    src: "./res/affiliated-universities/affiliated-universities-logo/ldcu-logo.png",
   },
   {
     name: "Pamantasan ng Lungsod ng Maynila",
-    src: "./res/affiliated-universities-logo/plm-logo.png",
+    src: "./res/affiliated-universities/affiliated-universities-logo/plm-logo.png",
   },
   {
     name: "Philippine Normal University",
-    src: "./res/affiliated-universities-logo/pnu-logo.png",
+    src: "./res/affiliated-universities/affiliated-universities-logo/pnu-logo.png",
   },
   {
     name: "Santa Isabela College of Maynila",
-    src: "./res/affiliated-universities-logo/sic-logo.png",
+    src: "./res/affiliated-universities/affiliated-universities-logo/sic-logo.png",
   },
   {
     name: "Siliman University",
-    src: "./res/affiliated-universities-logo/sili-logo.png",
+    src: "./res/affiliated-universities/affiliated-universities-logo/sili-logo.png",
   },
   {
     name: "University of the Immaculate Conception",
-    src: "./res/affiliated-universities-logo/uic-logo.png",
+    src: "./res/affiliated-universities/affiliated-universities-logo/uic-logo.png",
   },
   {
     name: "University of the Philippines",
-    src: "./res/affiliated-universities-logo/up-logo.png",
+    src: "./res/affiliated-universities/affiliated-universities-logo/up-logo.png",
   },
   {
     name: "University of Rizal System",
-    src: "./res/affiliated-universities-logo/ur-logo.png",
+    src: "./res/affiliated-universities/affiliated-universities-logo/ur-logo.png",
   },
   {
     name: "University of San Agustin",
-    src: "./res/affiliated-universities-logo/us-ag-logo.png",
+    src: "./res/affiliated-universities/affiliated-universities-logo/us-ag-logo.png",
   },
   {
     name: "University of Santo Tomas",
-    src: "./res/affiliated-universities-logo/ust-logo.png",
+    src: "./res/affiliated-universities/affiliated-universities-logo/ust-logo.png",
   },
 ];
 

@@ -680,10 +680,9 @@ header {
 nav {
   --nav-public-list-li-box-sh: inset var(--nav-public-list-li-box-sh-x, 0) 0 5px
     0px rgba(255, 255, 255, 1);
-
-  --nav-all-text-font-size: 16px;
-
+  --nav-all-text-font-size: 13px;
   --nav-transition-g: 0.1s ease;
+  --nav-primary-height: 300px;
 
   margin: 0 auto;
 }
@@ -721,7 +720,7 @@ nav {
 
 .primary-list {
   width: var(--nav-primary-width, 180px);
-  height: var(--nav-primary-height, 500px);
+  height: var(--nav-primary-height);
   border: var(--nav-primary-border, 2px solid black);
   border-radius: 7.5px;
 
@@ -755,6 +754,7 @@ nav {
   font-weight: normal;
 }
 .primary-list > li {
+  height: 60px;
   box-shadow: inset 0px 0px 150px 0px
     rgba(0, 0, 0, var(--nav-primary-li-box-sh-opac, 0));
 
@@ -774,13 +774,9 @@ nav {
     color var(--nav-transition-g);
 }
 
-/* .primary-list > li:hover {
+.primary-list > li:hover {
   --nav-primary-li-padding-right: 1.75rem;
-  --nav-primary-li-box-sh-opac: 0.5;
-  --nav-primary-li-a-color: white;
-} */
-/* .primary-list > li:hover > a {
-} */
+}
 
 .show-primary-list {
   --nav-primary-scale-x: 1;
@@ -796,7 +792,7 @@ nav {
   display: grid;
   grid-template-rows: repeat(
     var(--grid-row-count),
-    var(--nav-secondary-ul-li-height, 50px)
+    var(--nav-secondary-ul-li-height, 40px)
   );
 
   position: absolute;

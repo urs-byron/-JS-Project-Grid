@@ -96,6 +96,9 @@
     top: 0rem;
     right: 4.25rem;
   }
+  .primary-list .fa-solid {
+    rotate: -90deg;
+  }
   .primary-list > li {
     height: 60px;
     padding-top: 20px;
@@ -122,18 +125,6 @@
     top: 2.75em;
     right: 0px;
   }
-  .tutoring-ul {
-    --grid-row-count: 4;
-  }
-  .careers-ul {
-    --grid-row-count: 3;
-  }
-  .community-ul {
-    --grid-row-count: 3;
-  }
-  .resources-ul {
-    --grid-row-count: 4;
-  }
   .show-secondary-list {
     --nav-secondary-scale: 1;
     --nav-secondary-opacity: 1;
@@ -156,20 +147,6 @@
 
     transition: box-shadow var(--nav-transition-g),
       padding var(--nav-transition-g);
-  }
-  .secondary-ul > li:hover {
-    --secondary-ul-pad-right: 2.5rem;
-    --nav-secondary-ul-li-box-sh-opac: 0;
-  }
-
-  .secondary-ul > li > a {
-    color: var(--nav-secondary-a-color, white);
-    font-size: var(--nav-all-text-font-size);
-    text-decoration: none;
-    transition: color var(--nav-transition-g);
-  }
-  .secondary-ul > li:hover > a {
-    --nav-secondary-a-color: black;
   }
 
   /* -------- */

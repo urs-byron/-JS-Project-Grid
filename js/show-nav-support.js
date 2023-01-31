@@ -1,21 +1,47 @@
 // TOGGLE PRIMARY NAVI
 
 const primary_menu = document.querySelector(".primary-list");
-const primary_menu_li = document.querySelector(".primary-list > li");
+const primary_menu_li = document.querySelectorAll(".primary-list > li");
+const not_small_mob_mq = window.matchMedia("(min-width:415px");
 
-// setPrimary_li_height();
+not_small_mob_mq.addEventListener("change", (event) => {
+  if (event.matches) {
+    set_primary_li_height();
+  } else {
+    const secondary_uls = [
+      ...document.querySelectorAll(".primary-list .secondary-ul"),
+    ];
+
+    secondary_uls.forEach((ul) => {
+      if (ul.classList.contains("show-secondary-list")) {
+        const primary_ul_height = primary_menu.getBoundingClientRect().height;
+        const primary_li_height =
+          ul.parentElement.getBoundingClientRect().height;
+        const secondary_li_height = [...ul.children].length * 31;
+
+        primary_menu.style.height = `${
+          primary_ul_height + secondary_li_height
+        }px`;
+        ul.parentElement.style.height = `${
+          primary_li_height + secondary_li_height
+        }px`;
+      }
+    });
+  }
+});
 
 document
   .querySelector(".primary-list-hover")
   .addEventListener("click", function (element) {
     if (element.target.classList.contains("primary-list-hover")) {
+      set_primary_li_height();
       hidePrimaryFx();
     }
   });
 
 [...primary_menu.children].forEach((primary_menu_li) => {
   primary_menu_li.addEventListener("click", function (element) {
-    setPrimary_li_height();
+    set_primary_li_height();
 
     primary_menu.style.height = `302px`;
     if (element.currentTarget.getElementsByTagName("ul").length) {
@@ -55,7 +81,8 @@ function hideSecondaryFx(e) {
   });
 }
 
-function setPrimary_li_height() {
+function set_primary_li_height() {
+  primary_menu.style.height = "300px";
   [...primary_menu.children].forEach((menu_li) => {
     menu_li.style.height = "60px";
   });
