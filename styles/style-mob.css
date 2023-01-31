@@ -82,14 +82,95 @@
   /* NAVIGATION */
   /* -------- */
 
-  nav {
-    --public-list-li-padding: 0.65rem;
-    --public-list-li-border-px: 1px;
-    --nav-public-list-a-ff-size: 15px;
+  /* DIFFERENT UI FOR MOBILES NAVI */
+
+  .primary-list {
+    width: calc(100vw - 4.25rem);
+    border: 2px solid black;
+    border-radius: 0;
+    padding: 0;
+
+    display: block;
+
+    position: fixed;
+    top: 0rem;
+    right: 4.25rem;
   }
-  /* .public-list > li {
-    border: 1px solid black;
-  } */
+  .primary-list > li {
+    height: 60px;
+    padding-top: 20px;
+
+    align-content: flex-start;
+  }
+  .expand-primary-li {
+    height: 100px !important;
+  }
+
+  .secondary-ul {
+    width: calc(calc(100vw - 4.25rem) - 4px);
+    border-style: none;
+    border-radius: 0px;
+
+    transform: scale(1, var(--nav-secondary-scale, 0));
+    transform-origin: top;
+
+    grid-template-rows: repeat(
+      var(--grid-row-count),
+      var(--nav-secondary-ul-li-height, 50px)
+    );
+
+    top: 2.75em;
+    right: 0px;
+  }
+  .tutoring-ul {
+    --grid-row-count: 4;
+  }
+  .careers-ul {
+    --grid-row-count: 3;
+  }
+  .community-ul {
+    --grid-row-count: 3;
+  }
+  .resources-ul {
+    --grid-row-count: 4;
+  }
+  .show-secondary-list {
+    --nav-secondary-scale: 1;
+    --nav-secondary-opacity: 1;
+
+    height: auto !important;
+
+    transition: all var(--nav-transition-g);
+  }
+  .secondary-ul > li {
+    width: 100%;
+    padding-right: var(--secondary-ul-pad-right, 2rem);
+    height: 100%;
+
+    display: grid;
+    justify-content: right;
+    align-content: center;
+
+    box-shadow: inset 0px 0px 150px 0px
+      rgba(0, 0, 0, var(--nav-secondary-ul-li-box-sh-opac, 0.5));
+
+    transition: box-shadow var(--nav-transition-g),
+      padding var(--nav-transition-g);
+  }
+  .secondary-ul > li:hover {
+    --secondary-ul-pad-right: 2.5rem;
+    --nav-secondary-ul-li-box-sh-opac: 0;
+  }
+
+  .secondary-ul > li > a {
+    color: var(--nav-secondary-a-color, white);
+    font-size: var(--nav-all-text-font-size);
+    text-decoration: none;
+    transition: color var(--nav-transition-g);
+  }
+  .secondary-ul > li:hover > a {
+    --nav-secondary-a-color: black;
+  }
 
   /* -------- */
   /* SUPPORT */

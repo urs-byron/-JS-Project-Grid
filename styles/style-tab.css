@@ -36,8 +36,8 @@
   /* -------- */
 
   nav {
-    --nav-primary-li-padding-right: 1.25rem;
-    --nav-primary-li-padding-left: 1.25rem;
+    --nav-primary-li-padding-right: 0.75rem;
+    --nav-primary-li-padding-left: 0.75rem;
     --nav-secondary-ul-width: 140px;
 
     --nav-position-top: 0;
