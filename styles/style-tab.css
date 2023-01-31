@@ -1,6 +1,6 @@
 @media screen and (max-width: 890px) {
   body {
-    --sidebar-right-space: 85px;
+    --sidebar-right-space: 0 85px 0 0.4rem;
   }
 
   h2 {

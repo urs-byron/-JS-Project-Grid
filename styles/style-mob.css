@@ -35,7 +35,7 @@
 
 @media screen and (max-width: 414px) {
   body {
-    --sidebar-right-space: 70px;
+    --sidebar-right-space: 0 70px 0 0.4rem;
   }
 
   /* -------- */
