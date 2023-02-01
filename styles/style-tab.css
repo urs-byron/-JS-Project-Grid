@@ -205,38 +205,31 @@
     --event-hightlights-padding-left: 1rem;
     --event-hightlights-padding-right: 1rem;
 
-    --event-height: 175px;
-
-    --event-info-padding-top: 70px;
-    --event-info-title-ff-size: 22.5px;
+    --event-info-title-ff-size: 20px;
 
     --event-dates-head-height: 60px;
-    --event-dates-head-padding-top: 10px;
-    --event-dates-head-ff-size: 22.5px;
+    --event-dates-head-ff-size: 20px;
+
+    --event-dates-avail-ff-size: 12.5px;
     --event-dates-items-height: 45px;
-    --event-dates-items-padding-top: 10px;
-    --event-dates-items-ff-size: 15px;
   }
 
   .events-container {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, var(--event-height)) 1.5fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto repeat(2, 150px);
     grid-template-areas:
-      "a"
-      "b"
-      "c";
+      "e e"
+      "a b"
+      "c d";
   }
 
   .event-container:hover {
-    --event-info-title-ff-size: 25px;
+    --event-info-title-ff-size: 22.5px;
     --event-ff-stroke: 0.25px;
   }
 
-  .event-info:hover {
-    --event-info-padding-top: 65px;
-  }
   .event-dates > ul > li:hover {
-    --event-dates-items-ff-size: 17.5px;
+    --event-dates-items-ff-size: 14px;
   }
 
   /* -------- */

@@ -182,27 +182,16 @@
   /* -------- */
 
   .event-highlights-container {
-    --event-height: 150px;
-    --event-info-padding-top: 55px;
-    --event-info-title-ff-size: 20px;
+    --event-info-title-ff-size: 15px;
 
-    --event-dates-head-ff-size: 20px;
-    --event-dates-items-padding-top: 12.5px;
+    --event-dates-head-ff-size: 15px;
+    --event-dates-items-ff-size: 10px;
   }
   .event-container:hover {
-    --event-info-title-ff-size: 20px;
-  }
-  .composition {
-    --event-info-padding-top: 40px;
-  }
-  .composition .event-info:hover {
-    --event-info-padding-top: 40px;
-  }
-  .event-info:hover {
-    --event-info-padding-top: 55px;
+    --event-info-title-ff-size: 17.5px;
   }
   .event-dates > ul > li:hover {
-    --event-dates-items-ff-size: 15px;
+    --event-dates-items-ff-size: 10px;
   }
 
   /* -------- */
