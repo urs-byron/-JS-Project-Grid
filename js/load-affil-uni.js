@@ -1,5 +1,8 @@
+// const uni_logo_url =
+//   "/01_personal_project/P_Site_Grid/res/affiliated-universities/affiliated-universities.json";
 const uni_logo_url =
-  "/01_personal_project/P_Site_Grid/res/affiliated-universities/affiliated-universities.json";
+  "/res/affiliated-universities/affiliated-universities.json";
+
 const page = document.querySelector("body");
 const uni_logo_container = document.querySelector(
   ".affiliated-universities-logo-container"

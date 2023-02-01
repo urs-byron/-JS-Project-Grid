@@ -1625,16 +1625,6 @@ nav {
   gap: 1rem;
 }
 
-.composition {
-  grid-area: a;
-}
-.year-end-sale {
-  grid-area: b;
-}
-.event-dates {
-  grid-area: c;
-}
-
 .event-container {
   height: var(--event-height, 200px);
 
@@ -1647,6 +1637,7 @@ nav {
 }
 
 .composition {
+  grid-area: a;
   background-color: #f1db92;
 }
 .composition .event-container-bg {
@@ -1659,6 +1650,7 @@ nav {
 }
 
 .year-end-sale {
+  grid-area: b;
   background: url("./res/events/sales/sales-showcase-bg.jpg") center / cover
     no-repeat;
 }
@@ -1691,6 +1683,7 @@ nav {
 }
 
 .event-dates {
+  grid-area: c;
   border-radius: 15px;
 
   display: grid;
