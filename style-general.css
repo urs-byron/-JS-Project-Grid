@@ -80,6 +80,23 @@ a:active {
 }
 
 /* -------- */
+/* GENERAL LOADING */
+/* -------- */
+
+.gen-loading-container {
+  width: 100%;
+  padding-top: 2rem;
+
+  text-align: center;
+}
+.gen-loading {
+  margin: 0 auto;
+}
+.hide-gen-loading {
+  display: none;
+}
+
+/* -------- */
 /* HEADER */
 /* -------- */
 

@@ -1,96 +1,52 @@
-const university_logo_set = [
-  {
-    name: "Adventist University of the Philippines",
-    src: "./res/affiliated-universities/affiliated-universities-logo/aup-logo.png",
-  },
-  {
-    name: "Centro Escolar University",
-    src: "./res/affiliated-universities/affiliated-universities-logo/ceu-logo.png",
-  },
-  {
-    name: "De La Salle University",
-    src: "./res/affiliated-universities/affiliated-universities-logo/dlsu-logo.png",
-  },
-  {
-    name: "Lourdes College",
-    src: "./res/affiliated-universities/affiliated-universities-logo/lc-logo.png",
-  },
-  {
-    name: "Liceo de Cagayan University",
-    src: "./res/affiliated-universities/affiliated-universities-logo/ldcu-logo.png",
-  },
-  {
-    name: "Pamantasan ng Lungsod ng Maynila",
-    src: "./res/affiliated-universities/affiliated-universities-logo/plm-logo.png",
-  },
-  {
-    name: "Philippine Normal University",
-    src: "./res/affiliated-universities/affiliated-universities-logo/pnu-logo.png",
-  },
-  {
-    name: "Santa Isabela College of Maynila",
-    src: "./res/affiliated-universities/affiliated-universities-logo/sic-logo.png",
-  },
-  {
-    name: "Siliman University",
-    src: "./res/affiliated-universities/affiliated-universities-logo/sili-logo.png",
-  },
-  {
-    name: "University of the Immaculate Conception",
-    src: "./res/affiliated-universities/affiliated-universities-logo/uic-logo.png",
-  },
-  {
-    name: "University of the Philippines",
-    src: "./res/affiliated-universities/affiliated-universities-logo/up-logo.png",
-  },
-  {
-    name: "University of Rizal System",
-    src: "./res/affiliated-universities/affiliated-universities-logo/ur-logo.png",
-  },
-  {
-    name: "University of San Agustin",
-    src: "./res/affiliated-universities/affiliated-universities-logo/us-ag-logo.png",
-  },
-  {
-    name: "University of Santo Tomas",
-    src: "./res/affiliated-universities/affiliated-universities-logo/ust-logo.png",
-  },
-];
-
+const uni_logo_url =
+  "/01_personal_project/P_Site_Grid/res/affiliated-universities/affiliated-universities.json";
+const page = document.querySelector("body");
 const uni_logo_container = document.querySelector(
   ".affiliated-universities-logo-container"
 );
-const page = document.querySelector("body");
+const gen_loading = document.querySelector(".gen-loading-container");
 
-window.addEventListener("DOMContentLoaded", (element) => {
-  uni_logo_container.innerHTML = "";
-
-  university_logo_set.forEach((logo) => {
-    const logo_set = document.createElement("div");
-    logo_set.classList.add("affiliated-university-img");
-
-    const logo_over_bg = document.createElement("div");
-    logo_over_bg.classList.add("affiliated-university-over-bg");
-    logo_over_bg.setAttribute("title", `${logo.name}`);
-
-    const logo_img = document.createElement("img");
-    logo_img.setAttribute("src", logo.src);
-    logo_img.setAttribute("title", `${logo.name}`);
-    logo_img.setAttribute("alt", `${logo.name} Logo`);
-
-    logo_set.appendChild(logo_over_bg);
-    logo_set.appendChild(logo_img);
-
-    uni_logo_container.appendChild(logo_set);
-  });
-  setAffiliatedUniTransX();
+window.addEventListener("DOMContentLoaded", async (element) => {
+  try {
+    uni_logo_container.innerHTML = "";
+    const res = await fetch(`${window.location.origin}` + uni_logo_url);
+    const data = await res.json();
+    gen_loading.classList.add("hide-gen-loading");
+    setUniLogos(data.uni_logo);
+    setAffiliatedUniTransX();
+  } catch (error) {
+    throw new Error(error);
+  }
 });
 
 window.addEventListener("resize", () => {
   setAffiliatedUniTransX();
 });
 
-function setAffiliatedUniTransX() {
+const setUniLogos = (uni_logo_set) => {
+  uni_logo_set.forEach(({ name: uni_name, src: uni_logo }) => {
+    {
+      const logo_set = document.createElement("div");
+      logo_set.classList.add("affiliated-university-img");
+
+      const logo_over_bg = document.createElement("div");
+      logo_over_bg.classList.add("affiliated-university-over-bg");
+      logo_over_bg.setAttribute("title", `${uni_name}`);
+
+      const logo_img = document.createElement("img");
+      logo_img.setAttribute("src", uni_logo);
+      logo_img.setAttribute("title", `${uni_name}`);
+      logo_img.setAttribute("alt", `${uni_name} Logo`);
+
+      logo_set.appendChild(logo_over_bg);
+      logo_set.appendChild(logo_img);
+
+      uni_logo_container.appendChild(logo_set);
+    }
+  });
+};
+
+const setAffiliatedUniTransX = () => {
   uni_logo_container.style.setProperty(
     "--logo-width-translate",
     -(
@@ -99,4 +55,4 @@ function setAffiliatedUniTransX() {
       page.getBoundingClientRect().width
     ) + "px"
   );
-}
+};
