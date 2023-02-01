@@ -1,6 +1,6 @@
-// const uni_logo_url =
-//   "/01_personal_project/P_Site_Grid/res/affiliated-universities/affiliated-universities.json";
-const uni_logo_url =
+const netlify_uni_logo_url =
+  "/01_personal_project/P_Site_Grid/res/affiliated-universities/affiliated-universities.json";
+const self_uni_logo_url =
   "/res/affiliated-universities/affiliated-universities.json";
 
 const page = document.querySelector("body");
@@ -12,7 +12,16 @@ const gen_loading = document.querySelector(".gen-loading-container");
 window.addEventListener("DOMContentLoaded", async (element) => {
   try {
     uni_logo_container.innerHTML = "";
-    const res = await fetch(`${window.location.origin}` + uni_logo_url);
+    let res = {};
+    if (
+      window.location.origin === "https://sensational-llama-e030d4.netlify.app"
+    ) {
+      res = await fetch(
+        "https://sensational-llama-e030d4.netlify.app" + self_uni_logo_url
+      );
+    } else {
+      res = await fetch("http://127.0.0.1:5500" + netlify_uni_logo_url);
+    }
     const data = await res.json();
     gen_loading.classList.add("hide-gen-loading");
     setUniLogos(data.uni_logo);
