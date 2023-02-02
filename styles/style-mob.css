@@ -190,7 +190,7 @@
   .event-container:hover {
     --event-info-title-ff-size: 17.5px;
   }
-  .event-dates > ul > li:hover {
+  .event-dates-container > ul > li:hover {
     --event-dates-items-ff-size: 10px;
   }
 

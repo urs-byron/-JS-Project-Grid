@@ -1616,15 +1616,24 @@ nav {
 
 .events-container {
   display: grid;
+  grid-template-areas: "main-events event-dates";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0.5rem;
+}
 
-  grid-template-areas:
-    "a a b b e e e e"
-    "a a b b e e e e"
-    "c c d d e e e e"
-    "c c d d e e e e";
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  gap: 1rem;
+.main-events {
+  grid-area: main-events;
+}
+.main-events-container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-areas: "week-1 week-2" "week-3 week-4";
+
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0.5rem;
 }
 
 .event-container {
@@ -1638,26 +1647,26 @@ nav {
   --event-info-title-ff-size: 28px;
 }
 
-.composition {
-  grid-area: a;
+.week-1 {
+  grid-area: week-1;
   background: url("./res/events/events/composition_guide_bg.jpg") center / cover
     no-repeat;
 }
 
-.sale {
-  grid-area: b;
+.week-2 {
+  grid-area: week-2;
   background: url("./res/events/events/sales-showcase-bg.jpg") center / cover
     no-repeat;
 }
 
-.ambassadors {
-  grid-area: c;
+.week-3 {
+  grid-area: week-3;
   background: url("./res/events/events/brand_ambassadors_bg.jpg") center / cover
     no-repeat;
 }
 
-.pianists {
-  grid-area: d;
+.week-4 {
+  grid-area: week-4;
   background: url("./res/events/events/modern_pianists_bg.jpg") center / cover
     no-repeat;
 }
@@ -1674,6 +1683,7 @@ nav {
   align-content: center;
 
   font-family: "Oswald", sans-serif;
+  text-transform: capitalize;
 
   transition: all 0.2s;
 }
@@ -1686,7 +1696,9 @@ nav {
 }
 
 .event-dates {
-  grid-area: e;
+  grid-area: event-dates;
+}
+.event-dates-container {
   border-radius: 10px;
 
   display: grid;
@@ -1701,11 +1713,11 @@ nav {
   text-align: center;
 }
 
-.event-dates > h3,
-.event-dates > ul > li {
+.event-dates-container > h3,
+.event-dates-container > ul > li {
   box-shadow: inset 200px 200px 0px 0px rgba(0, 0, 0, 0.75);
 }
-.event-dates > h3 {
+.event-dates-container > h3 {
   padding-top: calc(
     calc(var(--event-dates-head-height, 65px) / 2) -
       calc(var(--event-dates-head-ff-size, 25px) / 2)
@@ -1714,17 +1726,17 @@ nav {
   font-family: "Oswald", sans-serif;
   text-decoration: underline;
 }
-.event-dates > h3 > span {
+.event-dates-container > h3 > span {
   color: rgb(185, 120, 0);
 }
 
-.event-dates > ul {
+.event-dates-container > ul {
   display: grid;
   grid-template-rows: repeat(4, 60px);
 
   list-style: none;
 }
-.event-dates > ul > li {
+.event-dates-container > ul > li {
   height: 100%;
 
   display: grid;
@@ -1738,17 +1750,17 @@ nav {
 
   transition: box-shadow 0.2s;
 }
-.event-dates > ul > li:hover {
+.event-dates-container > ul > li:hover {
   --event-bs-opac: 0.25;
-  --event-dates-items-ff-size: 18px;
+  --event-dates-items-ff-size: 13px;
   --text-decor: underline;
 }
 
-.event-dates > ul > li > * {
+.event-dates-container > ul > li > * {
   display: grid;
   align-content: center;
 }
-.event-dates > ul > li > span {
+.event-dates-container > ul > li > span {
   font-size: var(--event-dates-avail-ff-size, 17.5px);
 }
 

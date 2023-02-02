@@ -218,9 +218,9 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto repeat(2, 150px);
     grid-template-areas:
-      "e e"
-      "a b"
-      "c d";
+      "event-dates event-dates"
+      "main-events main-events"
+      "main-events main-events";
   }
 
   .event-container:hover {
@@ -228,7 +228,7 @@
     --event-ff-stroke: 0.25px;
   }
 
-  .event-dates > ul > li:hover {
+  .event-dates-container > ul > li:hover {
     --event-dates-items-ff-size: 14px;
   }
 
