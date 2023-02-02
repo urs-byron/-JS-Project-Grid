@@ -323,7 +323,7 @@ header {
 
 .header-text-container {
   height: 100%;
-  padding: var(--header-right-text-padding, 2rem 5rem 5rem 5rem);
+  padding: var(--header-right-text-padding, 2rem 3rem 3rem 3rem);
 
   display: grid;
   grid-template-columns: 1fr;
@@ -1706,6 +1706,10 @@ nav {
   box-shadow: inset 200px 200px 0px 0px rgba(0, 0, 0, 0.75);
 }
 .event-dates > h3 {
+  padding-top: calc(
+    calc(var(--event-dates-head-height, 65px) / 2) -
+      calc(var(--event-dates-head-ff-size, 25px) / 2)
+  );
   font-size: var(--event-dates-head-ff-size, 25px);
   font-family: "Oswald", sans-serif;
   text-decoration: underline;
