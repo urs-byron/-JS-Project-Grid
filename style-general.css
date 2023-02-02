@@ -1649,26 +1649,18 @@ nav {
 
 .week-1 {
   grid-area: week-1;
-  background: url("./res/events/events/composition_guide_bg.jpg") center / cover
-    no-repeat;
 }
 
 .week-2 {
   grid-area: week-2;
-  background: url("./res/events/events/sales-showcase-bg.jpg") center / cover
-    no-repeat;
 }
 
 .week-3 {
   grid-area: week-3;
-  background: url("./res/events/events/brand_ambassadors_bg.jpg") center / cover
-    no-repeat;
 }
 
 .week-4 {
   grid-area: week-4;
-  background: url("./res/events/events/modern_pianists_bg.jpg") center / cover
-    no-repeat;
 }
 
 .event-info {
@@ -1704,8 +1696,7 @@ nav {
   display: grid;
   grid-template-rows: var(--event-dates-head-height, 65px) auto;
 
-  background: url("./res/events/event-dates/event-dates-bg.jpg") center / cover
-    no-repeat;
+  background: url("") center / cover no-repeat;
 
   overflow: hidden;
 
@@ -1725,6 +1716,7 @@ nav {
   font-size: var(--event-dates-head-ff-size, 25px);
   font-family: "Oswald", sans-serif;
   text-decoration: underline;
+  text-transform: capitalize;
 }
 .event-dates-container > h3 > span {
   color: rgb(185, 120, 0);

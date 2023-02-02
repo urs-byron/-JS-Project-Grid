@@ -1,0 +1,55 @@
+{
+  "december_events": {
+    "date": {
+      "month": "december",
+      "year": 2022
+    },
+    "events": [
+      {
+        "name": "acoustic huel",
+        "date": {
+          "month": 12,
+          "day": 4,
+          "year": 2022
+        },
+        "type": "week-1",
+        "banner": "./res/events/events/composition_guide_bg.jpg",
+        "availability": "close"
+      },
+      {
+        "name": "bull this",
+        "date": {
+          "month": 12,
+          "day": 8,
+          "year": 2022
+        },
+        "type": "week-2",
+        "banner": "./res/events/events/sales-showcase-bg.jpg",
+        "availability": "close"
+      },
+      {
+        "name": "mass choir",
+        "date": {
+          "month": 12,
+          "day": 21,
+          "year": 2022
+        },
+        "type": "week-3",
+        "banner": "./res/events/events/brand_ambassadors_bg.jpg",
+        "availability": "close"
+      },
+      {
+        "name": "year end",
+        "date": {
+          "month": 12,
+          "day": 28,
+          "year": 2022
+        },
+        "type": "week-4",
+        "banner": "./res/events/events/modern_pianists_bg.jpg",
+        "availability": "open"
+      }
+    ],
+    "banner": "./res/events/event-dates/event-dates-bg.jpg"
+  }
+}

@@ -7,11 +7,12 @@ const page = document.querySelector("body");
 const uni_logo_container = document.querySelector(
   ".affiliated-universities-logo-container"
 );
-const gen_loading = document.querySelector(".gen-loading-container");
+const gen_loading = document.querySelector(
+  ".affiliated-universities-logo .gen-loading-container"
+);
 
 window.addEventListener("DOMContentLoaded", async (element) => {
   try {
-    uni_logo_container.innerHTML = "";
     let res = {};
     if (
       window.location.origin === "https://sensational-llama-e030d4.netlify.app"
