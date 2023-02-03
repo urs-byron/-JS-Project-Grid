@@ -1,13 +1,12 @@
-import { uni_logo_url } from "../js/util-var.js";
-import { event_json_url } from "../js/util-var.js";
+import { uni_logo_url, event_json_url } from "./js/util-var.js";
 
 import {
   HTMLUniLogos,
   CSSAffiliatedUniTransX,
   LoadAffiliatedUniversities,
-} from "../js/load-affil-uni.js";
+} from "./js/load-affil-uni.js";
 
-import { LoadMainEvents, LoadEventDates } from "../js/load-main-events.js";
+import { LoadMainEvents, LoadEventDates } from "./js/load-main-events.js";
 
 window.addEventListener("DOMContentLoaded", (element) => {
   try {
