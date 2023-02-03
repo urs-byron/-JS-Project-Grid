@@ -1,9 +1,13 @@
-const html_body = document.querySelector("body");
+import { getElement } from "./util-fx.js";
 
-const sidebar_right_toggle = document.querySelector(".sidebar-right-toggle");
-const sidebar_right = document.querySelector(".sidebar-right");
+const html_body = getElement("body");
 
-const support_window = document.querySelector(".support-window");
+const sidebar_right_toggle = getElement(".sidebar-right-toggle");
+const sidebar_right = getElement(".sidebar-right");
+
+const primary_menu = getElement(".primary-list");
+
+const support_window = getElement(".support-window");
 
 sidebar_right_toggle.addEventListener("click", function (e) {
   primary_menu.classList.remove("show-primary-list");
@@ -39,9 +43,7 @@ tabMediaQueryMatch.addEventListener("change", (tab_event) => {
     sidebar_right.classList.add("hide-sidebar-right");
     html_body.style.setProperty("--sidebar-right-space", "0 0.4rem");
 
-    document
-      .querySelector(".primary-list")
-      .classList.remove("show-primary-list");
+    getElement(".primary-list").classList.remove("show-primary-list");
   } else {
     sidebar_right_toggle.classList.remove("rotate-sidebar-right-toggle");
     sidebar_right.classList.remove("hide-sidebar-right");

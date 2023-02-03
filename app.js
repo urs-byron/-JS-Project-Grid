@@ -1,20 +1,35 @@
 import { uni_logo_url, event_json_url } from "./js/util-var.js";
 
+import { hidePreLoader } from "./js/util-preloader.js";
+
 import {
   HTMLUniLogos,
   CSSAffiliatedUniTransX,
   LoadAffiliatedUniversities,
-} from "./js/load-affil-uni.js";
+} from "./js/util-affil-uni.js";
 
-import { LoadMainEvents, LoadEventDates } from "./js/load-main-events.js";
+import { LoadMainEvents, LoadEventDates } from "./js/util-main-events.js";
 
-window.addEventListener("DOMContentLoaded", (element) => {
+import { setFooterYear } from "./js/util-footer.js";
+
+window.addEventListener("DOMContentLoaded", async (element) => {
   try {
     LoadAffiliatedUniversities(uni_logo_url);
+
     LoadMainEvents(event_json_url);
     LoadEventDates(event_json_url);
+
+    setFooterYear();
   } catch (error) {
     throw new Error(error);
+  }
+});
+
+window.addEventListener("load", (element) => {
+  try {
+    hidePreLoader();
+  } catch (err) {
+    throw new Error(err);
   }
 });
 
