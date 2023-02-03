@@ -1,69 +1,7 @@
-const event_json_url = "/res/events/events.json";
-
-window.addEventListener("DOMContentLoaded", async (element) => {
-  try {
-    const container = getElement(".main-events-container");
-    const loader = getElement(".main-events .gen-loading-container");
-    const data = await getData(event_json_url);
-
-    const name_type_bg = data.december_events.events.map(
-      ({ name, type, banner }) => {
-        return { name, type, banner };
-      }
-    );
-
-    loader.classList.add("hide-gen-loading");
-    HTMLEventNameType(container, name_type_bg);
-  } catch (error) {
-    throw new Error(error);
-  }
-});
-
-window.addEventListener("DOMContentLoaded", async (element) => {
-  try {
-    const container = getElement(".event-dates-container");
-    const loader = getElement(".event-dates .gen-loading-container");
-    const data = await getData(event_json_url);
-
-    loader.classList.add("hide-gen-loading");
-    HTMLEventDates(container, data);
-  } catch (error) {
-    throw new Error(error);
-  }
-});
-
-const getElement = (mark) => {
-  const element = document.querySelector(mark);
-  if (element === null) {
-    throw new Error("Element with that class/id does not exist");
-  }
-  return element;
-};
-const getElements = (mark) => {
-  const element = document.querySelectorAll(mark);
-  if (element === null) {
-    throw new Error("Element with that class/id does not exist");
-  }
-  return element;
-};
-const getData = async (url_param) => {
-  let res = {};
-  if (
-    window.location.origin !== "https://sensational-llama-e030d4.netlify.app"
-  ) {
-    res = await fetch(
-      `http://127.0.0.1:5500/01_personal_project/P_Site_Grid${url_param}`
-    );
-  } else {
-    res = await fetch(
-      `https://sensational-llama-e030d4.netlify.app${url_param}`
-    );
-  }
-  return (data = await res.json());
-};
+import { getElement, getData } from "./util-fx.js";
 
 const HTMLEventNameType = (cont, obj) => {
-  for ({ name: event_name, type: event_week, banner: event_bg } of obj) {
+  for (const { name: event_name, type: event_week, banner: event_bg } of obj) {
     const HTML_event = document.createElement("div");
     const HTML_event_container = document.createElement("div");
     const HTML_event_info = document.createElement("div");
@@ -127,7 +65,8 @@ const HTMLEventDates = (cont, obj) => {
   const events_head = HTMLEventDatesHead(obj.december_events.date);
   const events_ul = document.createElement("ul");
   const event_dates = [];
-  for (event_info of obj.december_events.events) {
+  // const event_dates = obj.december_events.events.map((event_info) => {});
+  for (const event_info of obj.december_events.events) {
     event_dates.push(HTMLEventDate(event_info));
   }
   event_dates.forEach((li) => {
@@ -140,51 +79,27 @@ const HTMLEventDates = (cont, obj) => {
   cont.appendChild(events_ul);
 };
 
-// <div class="event week-1">
-//   <div class="event-container">
-//     <div class="event-info">
-//       <h3>acoustic huel</h3>
-//     </div>
-//   </div>
-// </div>
-// <div class="event week-2">
-//   <div class="event-container">
-//     <div class="event-info">
-//       <h3>bull this</h3>
-//     </div>
-//   </div>
-// </div>
-// <div class="event week-3">
-//   <div class="event-container">
-//     <div class="event-info">
-//       <h3>mass choir</h3>
-//     </div>
-//   </div>
-// </div>
-// <div class="event week-4">
-//   <div class="event-container">
-//     <div class="event-info">
-//       <h3>year end</h3>
-//     </div>
-//   </div>
-// </div>
+const LoadMainEvents = async (event_json_url) => {
+  const container = getElement(".main-events-container");
+  const loader = getElement(".main-events .gen-loading-container");
+  const data = await getData(event_json_url);
 
-// <h3><span>'22</span> December</h3>
-// <ul>
-//   <li>
-//     <h4 class="event-date-title">12-04 acoustic huel</h4>
-//     <span class="event-date-close">closed</span>
-//   </li>
-//   <li>
-//     <h4 class="event-date-title">12-08 bull this</h4>
-//     <span class="event-date-close">closed</span>
-//   </li>
-//   <li>
-//     <h4 class="event-date-title">12-21 mass choir</h4>
-//     <span class="event-date-close">closed</span>
-//   </li>
-//   <li>
-//     <h4 class="event-date-title">12-28 year end</h4>
-//     <span class="event-date-open">open</span>
-//   </li>
-// </ul>
+  const name_type_bg = data.december_events.events.map(
+    ({ name, type, banner }) => {
+      return { name, type, banner };
+    }
+  );
+
+  loader.classList.add("hide-gen-loading");
+  HTMLEventNameType(container, name_type_bg);
+};
+const LoadEventDates = async (event_json_url) => {
+  const container = getElement(".event-dates-container");
+  const loader = getElement(".event-dates .gen-loading-container");
+  const data = await getData(event_json_url);
+
+  loader.classList.add("hide-gen-loading");
+  HTMLEventDates(container, data);
+};
+
+export { LoadMainEvents, LoadEventDates };
