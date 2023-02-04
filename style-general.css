@@ -1,6 +1,7 @@
 @import url("./res/fontawesome-free-6.2.0-web/css/all.min.css");
 
 @import url("https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&family=Courgette&family=Gemunu+Libre:wght@700&family=Montserrat:ital,wght@0,200;0,400;0,700;1,400;1,700&family=Oswald:wght@200;400;500;600;700&family=Press+Start+2P&family=Special+Elite&display=swap");
+
 /*  
     font-family: 'Charmonman', cursive;
     font-family: 'Montserrat', sans-serif;
@@ -1069,13 +1070,13 @@ nav {
   height: auto;
 
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
   grid-template-rows: 1fr;
   gap: 1rem;
 }
 
 .product-brand {
-  width: 390px;
+  width: 300px;
   height: 300px;
   border-radius: 10px;
 
@@ -1087,22 +1088,7 @@ nav {
 
   transition: box-shadow var(--product-gen-transition-duration);
 }
-.product-highlights-acoustic .product-brand {
-  background: url("./res/header-bg/header-bg-acoustic.jpg") center center /
-    cover no-repeat;
-}
-.product-highlights-electric .product-brand {
-  background: url("./res/header-bg/header-bg-electric.jpg") center / cover
-    no-repeat;
-}
-.product-highlights-synth .product-brand {
-  background: url("./res/header-bg/header-bg-synth.jpg") center center / cover
-    no-repeat;
-}
-.product-highlights-antique .product-brand {
-  background: url("./res/header-bg/header-bg-antique.jpg") center 30% / cover
-    no-repeat;
-}
+
 .product-brand:hover {
   --head-title-translate: 20px;
 
@@ -1197,6 +1183,7 @@ nav {
 
   font-size: var(--more-hover-ff-size, 27.5px);
   text-indent: 17.5px;
+  text-transform: capitalize;
 
   transition: padding-top var(--product-gen-transition-duration),
     font-size var(--product-gen-transition-duration);
@@ -1221,7 +1208,7 @@ nav {
   width: 125%;
 
   color: white;
-  font-size: 16px;
+  font-size: 12px;
   font-family: "Montserrat", sans-serif;
   font-weight: normal;
   letter-spacing: 0.1rem;
@@ -1249,6 +1236,35 @@ nav {
 .product-highlights-electric .product,
 .product-highlights-synth .product {
   animation: product-four-move-gen 100s ease 0s infinite;
+}
+
+.product-navi {
+  height: 100%;
+  width: 100%;
+  padding: 0.75rem 0;
+
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+.product-navi-container {
+  display: grid;
+  gap: 1rem;
+}
+
+.current-product-navi-item {
+  --product-navi-item-border-clr: black;
+  --product-navi-item-bg: white;
+}
+.product-navi-item {
+  height: 10px;
+  width: 10px;
+  border: 1px solid var(--product-navi-item-border-clr, white);
+  border-radius: 50%;
+
+  background-color: var(--product-navi-item-bg, gray);
+
+  cursor: pointer;
 }
 
 @keyframes product-six-move-gen {
@@ -1389,21 +1405,6 @@ nav {
 }
 
 .product-container {
-  /* --piano-position-left: 60px; */
-
-  /* --specification-width: 0.075fr 0.925fr; */
-  /* --specification-bottom-right-rad: 0%; */
-  /* --specification-position-left: -400px; */
-
-  /* --description-padding-left: 20rem; */
-
-  /* --product-model-margin-bottom: 2.5rem; */
-
-  /* --product-links-translate-x: 450px; */
-  /* --product-links-icon-margin-left: 0; */
-  /* --product-links-gap: 3.5rem; */
-  /* --product-links-icon-ff-size: normal; */
-
   --product-gen-transition-duration: 0.7s ease;
 
   height: 100%;
@@ -1484,6 +1485,7 @@ nav {
   font-family: "Oswald", sans-serif;
   letter-spacing: 0.1rem;
   font-weight: bold;
+  text-transform: capitalize;
   text-decoration: none;
   white-space: nowrap;
 
@@ -1538,6 +1540,7 @@ nav {
 
   font-family: "Oswald", sans-serif;
   font-size: 1.25rem;
+  text-transform: capitalize;
 }
 .product-specification-container i {
   width: 50px;

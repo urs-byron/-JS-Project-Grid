@@ -1,0 +1,311 @@
+{
+  "brands": {
+    "acoustic": {
+      "name": "acoustic",
+      "description": "Lorem ipsum dolor, sit amet elit. Ad officia aut amet quos! Nihil eaque quis officia culpa id! Lorem ipsum dolor sit amet, elit. Fugiat, fuga est quam! Natus, aut provident? Lorem ipsum dolor, sit amet elit. Vero, itaque.",
+      "products": [
+        {
+          "model": "GB1K",
+          "brand": "acoustic",
+          "description": "Lorem ipsum dolor sit amet elit. Non dolorum dolor , nostrum ? Lorem ipsum dolor sit amet elit , nobis?",
+          "specification": {
+            "link": "#product-highlights",
+            "items": ["grand piano", "wireless power", "ethernet capable"]
+          },
+          "gallery": {
+            "link": "#product-highlights",
+            "display": "./res/products/acoustic/acoustic-grand-gb1k.png",
+            "items": [
+              "./res/products/acoustic/acoustic-grand-gb1k.png",
+              "./res/products/acoustic/acoustic-grand-gb1k.png",
+              "./res/products/acoustic/acoustic-grand-gb1k.png"
+            ]
+          }
+        },
+        {
+          "model": "S7X",
+          "brand": "acoustic",
+          "description": "Lorem ipsum dolor sit amet elit. Non dolorum dolor , nostrum ? Lorem ipsum dolor sit amet elit , nobis?",
+          "specification": {
+            "link": "#product-highlights",
+            "items": ["cordless jack", "fast process", "grand piano"]
+          },
+          "gallery": {
+            "link": "#product-highlights",
+            "display": "./res/products/acoustic/acoustic-grand-s7x.png",
+            "items": [
+              "./res/products/acoustic/acoustic-grand-s7x.png",
+              "./res/products/acoustic/acoustic-grand-s7x.png"
+            ]
+          }
+        },
+        {
+          "model": "U1",
+          "brand": "acoustic",
+          "description": "Lorem ipsum dolor sit amet elit. Non dolorum dolor , nostrum ? Lorem ipsum dolor sit amet elit , nobis?",
+          "specification": {
+            "link": "#product-highlights",
+            "items": ["infrared signal", "bluetooth ready", "baby grand"]
+          },
+          "gallery": {
+            "link": "#product-highlights",
+            "display": "./res/products/acoustic/acoustic-baby-U1.png",
+            "items": [
+              "./res/products/acoustic/acoustic-baby-U1.png",
+              "./res/products/acoustic/acoustic-baby-U1.png",
+              "./res/products/acoustic/acoustic-baby-U1.png"
+            ]
+          }
+        },
+        {
+          "model": "YD14",
+          "brand": "acoustic",
+          "description": "Lorem ipsum dolor sit amet elit. Non dolorum dolor , nostrum ? Lorem ipsum dolor sit amet elit , nobis?",
+          "specification": {
+            "link": "#product-highlights",
+            "items": ["fast process", "baby grand", "bluetooth ready"]
+          },
+          "gallery": {
+            "link": "#product-highlights",
+            "display": "./res/products/acoustic/acoustic-baby-yd14.png",
+            "items": [
+              "./res/products/acoustic/acoustic-baby-yd14.png",
+              "./res/products/acoustic/acoustic-baby-yd14.png",
+              "./res/products/acoustic/acoustic-baby-yd14.png"
+            ]
+          }
+        },
+        {
+          "model": "U3",
+          "brand": "acoustic",
+          "description": "Lorem ipsum dolor sit amet elit. Non dolorum dolor , nostrum ? Lorem ipsum dolor sit amet elit , nobis?",
+          "specification": {
+            "link": "#product-highlights",
+            "items": ["upright", "cordless jack", "infrared signal"]
+          },
+          "gallery": {
+            "link": "#product-highlights",
+            "display": "./res/products/acoustic/acoustic-upright-U3.png",
+            "items": [
+              "./res/products/acoustic/acoustic-upright-U3.png",
+              "./res/products/acoustic/acoustic-upright-U3.png",
+              "./res/products/acoustic/acoustic-upright-U3.png"
+            ]
+          }
+        },
+        {
+          "model": "X1",
+          "brand": "acoustic",
+          "description": "Lorem ipsum dolor sit amet elit. Non dolorum dolor , nostrum ? Lorem ipsum dolor sit amet elit , nobis?",
+          "specification": {
+            "link": "#product-highlights",
+            "items": ["ethernet capable", "wireless power", "upright"]
+          },
+          "gallery": {
+            "link": "#product-highlights",
+            "display": "./res/products/acoustic/acoustic-upright-x1.png",
+            "items": [
+              "./res/products/acoustic/acoustic-upright-x1.png",
+              "./res/products/acoustic/acoustic-upright-x1.png",
+              "./res/products/acoustic/acoustic-upright-x1.png"
+            ]
+          }
+        }
+      ],
+      "banner": "./res/header-bg/header-bg-acoustic.jpg",
+      "misc": {
+        "style": ".product-highlights-acoustic"
+      }
+    },
+    "electric": {
+      "name": "electric",
+      "description": "Lorem ipsum dolor, sit amet elit. Ad officia aut amet quos! Nihil eaque quis officia culpa id! Lorem ipsum dolor sit amet, elit. Fugiat, fuga est quam! Natus, aut provident? Lorem ipsum dolor, sit amet elit. Vero, itaque.",
+      "products": [
+        {
+          "model": "YDP-103",
+          "brand": "electric",
+          "description": "Lorem ipsum dolor sit amet elit. Non dolorum dolor , nostrum ? Lorem ipsum dolor sit amet elit , nobis?",
+          "specification": {
+            "link": "#product-highlights",
+            "items": ["keyboard", "wireless power", "ethernet capable"]
+          },
+          "gallery": {
+            "link": "#product-highlights",
+            "display": "./res/products/electric/electric-arius-YDP-103.png",
+            "items": [
+              "./res/products/electric/electric-arius-YDP-103.png",
+              "./res/products/electric/electric-arius-YDP-103.png",
+              "./res/products/electric/electric-arius-YDP-103.png"
+            ]
+          }
+        },
+        {
+          "model": "YDP-144",
+          "brand": "electric",
+          "description": "Lorem ipsum dolor sit amet elit. Non dolorum dolor , nostrum ? Lorem ipsum dolor sit amet elit , nobis?",
+          "specification": {
+            "link": "#product-highlights",
+            "items": ["cordless jack", "fast process", "keyboard"]
+          },
+          "gallery": {
+            "link": "#product-highlights",
+            "display": "./res/products/electric/electric-arius-YDP-144.png",
+            "items": [
+              "./res/products/electric/electric-arius-YDP-144.png",
+              "./res/products/electric/electric-arius-YDP-144.png"
+            ]
+          }
+        },
+        {
+          "model": "YDP-184",
+          "brand": "electric",
+          "description": "Lorem ipsum dolor sit amet elit. Non dolorum dolor , nostrum ? Lorem ipsum dolor sit amet elit , nobis?",
+          "specification": {
+            "link": "#product-highlights",
+            "items": ["infrared signal", "bluetooth ready", "keyboard"]
+          },
+          "gallery": {
+            "link": "#product-highlights",
+            "display": "./res/products/electric/electric-arius-YDP-184.png",
+            "items": [
+              "./res/products/electric/electric-arius-YDP-184.png",
+              "./res/products/electric/electric-arius-YDP-184.png",
+              "./res/products/electric/electric-arius-YDP-184.png"
+            ]
+          }
+        },
+        {
+          "model": "YDP-S54",
+          "brand": "electric",
+          "description": "Lorem ipsum dolor sit amet elit. Non dolorum dolor , nostrum ? Lorem ipsum dolor sit amet elit , nobis?",
+          "specification": {
+            "link": "#product-highlights",
+            "items": ["fast process", "keyboard", "bluetooth ready"]
+          },
+          "gallery": {
+            "link": "#product-highlights",
+            "display": "./res/products/electric/electric-arius-YDP-S54.png",
+            "items": [
+              "./res/products/electric/electric-arius-YDP-S54.png",
+              "./res/products/electric/electric-arius-YDP-S54.png",
+              "./res/products/electric/electric-arius-YDP-S54.png"
+            ]
+          }
+        }
+      ],
+      "banner": "./res/header-bg/header-bg-electric.jpg",
+      "misc": {
+        "style": ".product-highlights-electric"
+      }
+    },
+    "synth": {
+      "name": "synth",
+      "description": "Lorem ipsum dolor, sit amet elit. Ad officia aut amet quos! Nihil eaque quis officia culpa id! Lorem ipsum dolor sit amet, elit. Fugiat, fuga est quam! Natus, aut provident? Lorem ipsum dolor, sit amet elit. Vero, itaque.",
+      "products": [
+        {
+          "model": "Montage-2C",
+          "brand": "synth",
+          "description": "Lorem ipsum dolor sit amet elit. Non dolorum dolor , nostrum ? Lorem ipsum dolor sit amet elit , nobis?",
+          "specification": {
+            "link": "#product-highlights",
+            "items": ["synthesizer", "wireless power", "ethernet capable"]
+          },
+          "gallery": {
+            "link": "#product-highlights",
+            "display": "./res/products/synth/synth-montage-2C.png",
+            "items": [
+              "./res/products/synth/synth-montage-2C.png",
+              "./res/products/synth/synth-montage-2C.png",
+              "./res/products/synth/synth-montage-2C.png"
+            ]
+          }
+        },
+        {
+          "model": "Montage-8",
+          "brand": "synth",
+          "description": "Lorem ipsum dolor sit amet elit. Non dolorum dolor , nostrum ? Lorem ipsum dolor sit amet elit , nobis?",
+          "specification": {
+            "link": "#product-highlights",
+            "items": ["cordless jack", "fast process", "synth"]
+          },
+          "gallery": {
+            "link": "#product-highlights",
+            "display": "./res/products/synth/synth-montage-8.png",
+            "items": [
+              "./res/products/synth/synth-montage-8.png",
+              "./res/products/synth/synth-montage-8.png"
+            ]
+          }
+        },
+        {
+          "model": "Reface-CS",
+          "brand": "synth",
+          "description": "Lorem ipsum dolor sit amet elit. Non dolorum dolor , nostrum ? Lorem ipsum dolor sit amet elit , nobis?",
+          "specification": {
+            "link": "#product-highlights",
+            "items": ["infrared signal", "bluetooth ready", "synth"]
+          },
+          "gallery": {
+            "link": "#product-highlights",
+            "display": "./res/products/synth/synth-reface-cs.png",
+            "items": [
+              "./res/products/synth/synth-reface-cs.png",
+              "./res/products/synth/synth-reface-cs.png",
+              "./res/products/synth/synth-reface-cs.png"
+            ]
+          }
+        },
+        {
+          "model": "Reface-YC",
+          "brand": "synth",
+          "description": "Lorem ipsum dolor sit amet elit. Non dolorum dolor , nostrum ? Lorem ipsum dolor sit amet elit , nobis?",
+          "specification": {
+            "link": "#product-highlights",
+            "items": ["fast process", "synth", "bluetooth ready"]
+          },
+          "gallery": {
+            "link": "#product-highlights",
+            "display": "./res/products/synth/synth-reface-yc.png",
+            "items": [
+              "./res/products/synth/synth-reface-yc.png",
+              "./res/products/synth/synth-reface-yc.png",
+              "./res/products/synth/synth-reface-yc.png"
+            ]
+          }
+        }
+      ],
+      "banner": "./res/header-bg/header-bg-synth.jpg",
+      "misc": {
+        "style": ".product-highlights-synth"
+      }
+    },
+    "antique": {
+      "name": "antique",
+      "description": "Lorem ipsum dolor, sit amet elit. Ad officia aut amet quos! Nihil eaque quis officia culpa id! Lorem ipsum dolor sit amet, elit. Fugiat, fuga est quam! Natus, aut provident? Lorem ipsum dolor, sit amet elit. Vero, itaque.",
+      "products": [
+        {
+          "model": "P660 Queen Ann",
+          "brand": "antique",
+          "description": "Lorem ipsum dolor sit amet elit. Non dolorum dolor , nostrum ? Lorem ipsum dolor sit amet elit , nobis?",
+          "specification": {
+            "link": "#product-highlights",
+            "items": ["upright", "almost wrecked", "no amp"]
+          },
+          "gallery": {
+            "link": "#product-highlights",
+            "display": "./res/products/antique/antique-P660_Queen-Ann.png",
+            "items": [
+              "./res/products/antique/antique-P660_Queen-Ann.png",
+              "./res/products/antique/antique-P660_Queen-Ann.png",
+              "./res/products/antique/antique-P660_Queen-Ann.png"
+            ]
+          }
+        }
+      ],
+      "banner": "./res/header-bg/header-bg-antique.jpg",
+      "misc": {
+        "style": ".product-highlights-antique"
+      }
+    }
+  }
+}

@@ -36,7 +36,7 @@
     margin: 0;
 
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto auto auto;
   }
 
   /* -------- */
@@ -45,8 +45,6 @@
   .product-brand {
     /* --head-title-indent: 0px; */
     --head-title-translate: 20px;
-
-    --head-bg-opac: 0.45;
 
     --info-indent: 150px;
     --info-translate-y: 65px;
@@ -178,6 +176,14 @@
     top: 350px;
   }
 
+  .product-navi {
+    padding: 0 0.75rem;
+  }
+
+  .product-navi-container {
+    --product-navi--items: 1;
+    grid-template-columns: repeat(var(--product-navi--items), 1fr);
+  }
   /* -------- */
   /* EVENTS */
   /* -------- */
