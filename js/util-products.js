@@ -1,9 +1,9 @@
-import { products_json_url } from "./util-var.js";
-
 import { getElement, getElements, getData } from "./util-fx.js";
 
 const LoadBrandHead = async (data) => {
-  const cont = getElement(`${data.misc.style} .product-brand`);
+  const cont = document.createElement("div");
+  cont.classList.add(`product-brand`);
+
   const { name: prod_brand, description: prod_desc, banner: prod_bg } = data;
 
   const head = document.createElement("h3");
@@ -38,10 +38,13 @@ const LoadBrandHead = async (data) => {
   cont.style.background = `url("${prod_bg}") center / cover`;
   cont.appendChild(head);
   cont.appendChild(info);
+
+  return cont;
 };
 
 const LoadBrandProducts = async (data) => {
-  const cont = getElement(`${data.misc.style} .products-container`);
+  const cont = document.createElement("div");
+  cont.classList.add(`products-container`);
 
   const products = data.products.map((product) => {
     const {
@@ -153,12 +156,15 @@ const LoadBrandProducts = async (data) => {
     prod.appendChild(prod_cont);
     cont.appendChild(prod);
   });
+
+  return cont;
 };
 
 const LoadBrandProductsNavi = async (data) => {
-  const prod_nav_cont = getElement(
-    `${data.misc.style} .product-navi-container`
-  );
+  const prod_nav_cont = document.createElement("div");
+  prod_nav_cont.classList.add("product-navi-container");
+  const prod_nav = document.createElement("div");
+  prod_nav.classList.add("product-navi");
 
   prod_nav_cont.style.setProperty(
     "--product-navi--items",
@@ -170,19 +176,32 @@ const LoadBrandProductsNavi = async (data) => {
     prod_nav.classList.add("product-navi-item");
     prod_nav_cont.appendChild(prod_nav);
   }
+  prod_nav.appendChild(prod_nav_cont);
+
+  return prod_nav;
 };
 
 const LoadBrands = async (url) => {
   const data = await getData(url);
+  const cont = getElement(".product-highlights-brands");
   const loader = getElement(
     ".product-highlights-brands .gen-loading-container"
   );
 
   loader.classList.add("hide-gen-loading");
   for (const brand in data.brands) {
-    await LoadBrandHead(data.brands[brand]);
-    await LoadBrandProducts(data.brands[brand]);
-    await LoadBrandProductsNavi(data.brands[brand]);
+    const HTMLBrand = document.createElement("div");
+    HTMLBrand.classList.add(`${data.brands[brand].misc.style.slice(1)}`);
+
+    const HTMLBrandHead = await LoadBrandHead(data.brands[brand]);
+    const HTMLBrandProducts = await LoadBrandProducts(data.brands[brand]);
+    const HTMLBrandNavi = await LoadBrandProductsNavi(data.brands[brand]);
+
+    HTMLBrand.appendChild(HTMLBrandHead);
+    HTMLBrand.appendChild(HTMLBrandProducts);
+    HTMLBrand.appendChild(HTMLBrandNavi);
+
+    cont.appendChild(HTMLBrand);
   }
 };
 
