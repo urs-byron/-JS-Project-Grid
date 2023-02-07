@@ -1,4 +1,5 @@
-import { getElement, getElements, getData } from "./util-fx.js";
+import { getElement, getElements, getData, getCSSVar } from "./util-fx.js";
+import { stn_screen, sml_screen, tab_screen } from "./util-var.js";
 
 const LoadBrandHead = async (data) => {
   const cont = document.createElement("div");
@@ -45,6 +46,8 @@ const LoadBrandHead = async (data) => {
 const LoadBrandProducts = async (data) => {
   const cont = document.createElement("div");
   cont.classList.add(`products-container`);
+  const prods = document.createElement("div");
+  prods.classList.add(`products`);
 
   const products = data.products.map((product) => {
     const {
@@ -120,7 +123,7 @@ const LoadBrandProducts = async (data) => {
     const prod_var = document.createElement("a");
     prod_var.classList.add("product-link");
     prod_var.setAttribute("href", product.spec_link);
-    const prod_var_text = document.createTextNode("variants");
+    const prod_var_text = document.createTextNode("variants ");
 
     const prod_var_symb = document.createElement("i");
     prod_var_symb.classList.add("fa-solid", "fa-right-long");
@@ -131,7 +134,7 @@ const LoadBrandProducts = async (data) => {
     const prod_room = document.createElement("a");
     prod_room.classList.add("product-link");
     prod_room.setAttribute("href", product.spec_link);
-    const prod_room_text = document.createTextNode("viewroom");
+    const prod_room_text = document.createTextNode("viewroom ");
 
     const prod_room_symb = document.createElement("i");
     prod_room_symb.classList.add("fa-solid", "fa-right-long");
@@ -157,7 +160,9 @@ const LoadBrandProducts = async (data) => {
     cont.appendChild(prod);
   });
 
-  return cont;
+  prods.appendChild(cont);
+
+  return prods;
 };
 
 const LoadBrandProductsNavi = async (data) => {
@@ -206,3 +211,146 @@ const LoadBrands = async (url) => {
 };
 
 export { LoadBrands };
+
+const checkLoadedHTML = () => {
+  if (document.querySelector(".products-container")) {
+    [...getElements(".products-container")].forEach((cont) => {
+      const allElements = getElements(".products-container *");
+      allElements.forEach((e) => {
+        e.setAttribute("draggable", "false");
+        e.classList.add("no-select-highlight");
+      });
+
+      const cont_navi = [
+        ...cont.parentElement.nextElementSibling.firstChild.children,
+      ];
+
+      // PRODUCT GRAB MECHANISM
+
+      const cont_prods = cont.children.length;
+      let oldX = 0,
+        newX = 0,
+        firstX = 0,
+        standardWidth = 0,
+        mqdWidth = 0,
+        oldTravX = 0,
+        newTravX = `0px`,
+        firstTravX = 0,
+        widthSwipe = 90,
+        currentProd = 0;
+
+      const changeProdsContTransX = () => {
+        mqdWidth = standardWidth = parseInt(
+          getCSSVar(cont, "--product-width").replace("px", "")
+        );
+        if (getCSSVar(cont, "--products-container-move").slice(0, 1) === "-") {
+          cont.style.setProperty(
+            "--products-container-move",
+            `-${currentProd * mqdWidth}px`
+          );
+        } else {
+          cont.style.setProperty("--products-container-move", `${0}px`);
+        }
+      };
+      const changeMovingX = (y) => {
+        newX = y.clientX;
+
+        const oldTravX = parseInt(
+          getCSSVar(y.currentTarget, "--products-container-move").replace(
+            "px",
+            ""
+          )
+        );
+
+        newTravX = oldTravX + newX - oldX;
+        y.currentTarget.style.setProperty(
+          "--products-container-move",
+          `${newTravX}px`
+        );
+        oldX = y.clientX;
+      };
+      const changeMouseUpX = (x, modifiedX, prodCount) => {
+        x.currentTarget.style.setProperty(
+          "--products-container-move",
+          `${modifiedX}px`
+        );
+        currentProd += prodCount;
+      };
+
+      changeProdsContTransX();
+      window.addEventListener("resize", (e) => {
+        changeProdsContTransX();
+      });
+
+      cont.addEventListener("mousedown", function (x) {
+        x.currentTarget.classList.remove("products-container-move-timing");
+        oldX = x.clientX;
+        firstX = x.clientX;
+        standardWidth = parseInt(
+          getCSSVar(x.currentTarget, "--product-width").replace("px", "")
+        );
+        firstTravX = parseInt(
+          getCSSVar(x.currentTarget, "--products-container-move").replace(
+            "px",
+            ""
+          )
+        );
+        oldTravX = firstTravX;
+
+        x.currentTarget.addEventListener("mousemove", changeMovingX);
+      });
+
+      cont.addEventListener("mouseup", function (x) {
+        x.currentTarget.removeEventListener("mousemove", changeMovingX);
+
+        const diffX = firstX - newX;
+
+        if (diffX < -1 * widthSwipe) {
+          if (firstTravX === 0) {
+            changeMouseUpX(x, oldTravX, 0);
+          } else {
+            changeMouseUpX(x, oldTravX + standardWidth, -1);
+          }
+        } else if (diffX > widthSwipe) {
+          if (firstTravX === -1 * standardWidth * (cont_prods - 1)) {
+            changeMouseUpX(x, oldTravX, 0);
+          } else {
+            changeMouseUpX(x, oldTravX - standardWidth, 1);
+          }
+        } else {
+          changeMouseUpX(x, oldTravX, 0);
+        }
+
+        x.currentTarget.classList.add("products-container-move-timing");
+        cont_navi.forEach((item) => {
+          item.classList.remove("current-product-navi-item");
+        });
+        cont_navi[currentProd].classList.add("current-product-navi-item");
+      });
+
+      // PRODUCT NAVI MECHANISM
+      cont_navi[currentProd].classList.add("current-product-navi-item");
+
+      cont_navi.forEach((navi_item, index) => {
+        const prod_index = index;
+        navi_item.addEventListener("click", (e) => {
+          cont.classList.add("products-container-move-timing");
+
+          cont_navi.forEach((navi_item) => {
+            navi_item.classList.remove("current-product-navi-item");
+          });
+          e.currentTarget.classList.add("current-product-navi-item");
+
+          cont.style.setProperty(
+            "--products-container-move",
+            `-${mqdWidth * index}px`
+          );
+        });
+      });
+    });
+  } else {
+    setTimeout(checkLoadedHTML, 1500);
+  }
+};
+
+checkLoadedHTML();

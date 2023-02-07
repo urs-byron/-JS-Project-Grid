@@ -31,4 +31,8 @@ const getData = async (url_param) => {
   return data;
 };
 
-export { getElement, getElements, getData };
+const getCSSVar = (e, mark) => {
+  return getComputedStyle(e).getPropertyValue(mark);
+};
+
+export { getElement, getElements, getData, getCSSVar };

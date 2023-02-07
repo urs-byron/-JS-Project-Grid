@@ -134,14 +134,15 @@
   /* PRODUCTS */
 
   .products-container {
-    width: 290px;
+    --product-width: 290px;
+
+    /* width: 290px; */
     height: 425px;
   }
 
-  .product {
-    --width: 290px;
+  /* .product {
     width: var(--width);
-  }
+  } */
 
   .product-container {
     --specification-width: 0.1fr 0.9fr;

@@ -101,14 +101,14 @@
   /* PRODUCTS */
 
   .products-container {
-    width: 550px;
+    --product-width: 550px;
+
+    /* width: 550px; */
     height: 425px;
     border-radius: 10px;
   }
 
   .product {
-    --width: 550px;
-    width: var(--width);
     height: 100%;
   }
 
