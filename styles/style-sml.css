@@ -103,7 +103,6 @@
   .products-container {
     --product-width: 550px;
 
-    /* width: 550px; */
     height: 425px;
     border-radius: 10px;
   }

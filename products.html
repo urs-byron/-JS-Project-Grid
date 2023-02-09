@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- TITLE -->
+    <title>Music Shop</title>
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="./res/favicon.ico" />
+    <!-- STYLES -->
+    <link rel="stylesheet" href="./style-general.css" />
+    <link rel="stylesheet" href="./styles/style-sml.css" />
+    <link rel="stylesheet" href="./styles/style-tab.css" />
+    <link rel="stylesheet" href="./styles/style-mob.css" />
+    <!-- JS -->
+    <script type="module" src="./js/show-sidebar-right.js" defer></script>
+    <script type="module" src="./js/show-nav-support.js" defer></script>
+    <script type="module" src="./js/show-footer-item-lists.js" defer></script>
+  </head>
+  <body>
+    <!-- <div class="preloader">
+      <img src="./res/misc/preloader.gif" alt="" />
+    </div> -->
+
+    <aside class="sidebar-right-toggle">
+      <i class="fa-solid fa-angles-right"></i>
+    </aside>
+    <div class="sidebar-right">
+      <nav id="navigation">
+        <div class="nav-container">
+          <ul class="public-list">
+            <li>
+              <a href="#navigation"
+                ><i class="fa-solid fa-user-large-slash"></i>
+                <!-- <i class="fa-solid fa-user"></i> -->
+              </a>
+            </li>
+            <li class="primary-list-hover">
+              <a href="#navigation"
+                ><i class="primary-list-hover fa-solid fa-ellipsis-vertical"></i
+              ></a>
+              <ul class="primary-list">
+                <li class="tutoring-li">
+                  <a href="#navigation">
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <h4>Tutoring</h4>
+                  </a>
+                  <ul class="tutoring-ul secondary-ul">
+                    <li><a href="#navigation">Courses</a></li>
+                    <li><a href="#navigation">Faculty</a></li>
+                    <li><a href="#navigation">Certificates</a></li>
+                    <li><a href="#navigation">Affiliates</a></li>
+                  </ul>
+                </li>
+                <li class="events-li">
+                  <a href="#events">
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <h4>Events</h4>
+                  </a>
+                </li>
+                <li class="careers-li">
+                  <a href="#navigation">
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <h4>Careers</h4>
+                  </a>
+                  <ul class="careers-ul secondary-ul">
+                    <li><a href="#">Internship</a></li>
+                    <li><a href="#">Teaching</a></li>
+                    <li><a href="#">Developer</a></li>
+                  </ul>
+                </li>
+                <li class="community-li">
+                  <a href="#navigation">
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <h4>Community</h4>
+                  </a>
+                  <ul class="community-ul secondary-ul">
+                    <li><a href="#">Forums</a></li>
+                    <li><a href="#">Classes</a></li>
+                    <li><a href="#">Bands</a></li>
+                  </ul>
+                </li>
+                <li class="resources-li">
+                  <a href="#navigation">
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <h4>Resources</h4>
+                  </a>
+                  <ul class="resources-ul secondary-ul">
+                    <li><a href="#">Books</a></li>
+                    <li><a href="#">Lessons</a></li>
+                    <li><a href="#">Prinouts</a></li>
+                    <li><a href="#">Audio</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#navigation"
+                ><i class="fa-solid fa-cart-shopping"></i
+              ></a>
+            </li>
+            <li>
+              <a href="./products.html"
+                ><i class="fa-solid fa-magnifying-glass"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="support" id="support">
+        <div class="support-btn">
+          <a href="#support"><i class="fa-regular fa-comments"></i></a>
+        </div>
+        <div class="support-window">
+          <div class="support-window-tab">
+            <i class="fa-solid fa-ellipsis"></i
+            ><i class="fa-solid fa-compress"></i>
+          </div>
+          <div class="support-head">Welcome to <span>Engel /Haft</span></div>
+          <div class="support-start">
+            <a class="support-start-text" href="#">
+              <i class="fa-solid fa-headphones"></i>
+              <span>Chat Support</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="product-selection">
+      <div class="product-selection-container">
+        <div class="product-selection-head">
+          <h2>Products</h2>
+        </div>
+
+        <div class="product-selection-content">
+          <aside class="product-filter">
+            <div class="product-filter-container">
+              <fieldset>
+                <legend>Filter Products</legend>
+                <form action="">
+                  <div class="product-search">
+                    <div
+                      class="product-search-container product-filter-container"
+                    >
+                      <div class="product-search-head">
+                        <h3>Search</h3>
+                      </div>
+                      <div class="product-search-content">
+                        <input
+                          type="text"
+                          name="productName"
+                          id="productName"
+                          placeholder="e.g. GB1K"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="product-price">
+                    <div
+                      class="product-price-container product-filter-container"
+                    >
+                      <div class="product-price-head">
+                        <h3>Price</h3>
+                      </div>
+                      <div class="product-price-content">
+                        <ul>
+                          <li>
+                            <label for="minProductPrice">
+                              <span>from</span><span>&#8369;</span>
+                            </label>
+                            <input
+                              type="number"
+                              name="minProductPrice"
+                              id="minProductPrice"
+                              placeholder="0"
+                              min="0"
+                              max="0"
+                            />
+                          </li>
+                          <li>
+                            <label for="minProductPrice">
+                              <span>to</span><span>&#8369;</span>
+                            </label>
+                            <input
+                              type="number"
+                              name="maxProductPrice"
+                              id="maxProductPrice"
+                              placeholder="0"
+                              min="0"
+                              max="0"
+                            />
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="product-brands">
+                    <div
+                      class="product-brands-container product-filter-container"
+                    >
+                      <div class="product-brands-head">
+                        <h3>Brands <i class="fa-solid fa-chevron-down"></i></h3>
+                      </div>
+                      <div class="product-brands-content">
+                        <ul>
+                          <li>
+                            <input
+                              type="checkbox"
+                              name="productBrand"
+                              id="electric"
+                              value="electric"
+                            />
+                            <label for="electric">electric</label>
+                          </li>
+                          <li>
+                            <input
+                              type="checkbox"
+                              name="productBrand"
+                              id="synth"
+                              value="synth"
+                            />
+                            <label for="synth">synth</label>
+                          </li>
+                          <li>
+                            <input
+                              type="checkbox"
+                              name="productBrand"
+                              id="synth"
+                              value="synth"
+                            />
+                            <label for="synth">synth</label>
+                          </li>
+                          <li>
+                            <input
+                              type="checkbox"
+                              name="productBrand"
+                              id="antique"
+                              value="antique"
+                            />
+                            <label for="antique">antique</label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="product-functions">
+                    <div
+                      class="product-brands-container product-filter-container"
+                    >
+                      <div class="product-functions-head">
+                        <h3>
+                          Functions <i class="fa-solid fa-chevron-down"></i>
+                        </h3>
+                      </div>
+                      <div class="product-functions-content">
+                        <ul>
+                          <li>
+                            <input
+                              type="checkbox"
+                              name="productBrand"
+                              id="grandPiano"
+                              value="grandPiano"
+                            />
+                            <label for="grandPiano">grand piano</label>
+                          </li>
+                          <li>
+                            <input
+                              type="checkbox"
+                              name="productBrand"
+                              id="babyGrand"
+                              value="babyGrand"
+                            />
+                            <label for="babyGrand">baby grand piano</label>
+                          </li>
+                          <li>
+                            <input
+                              type="checkbox"
+                              name="productBrand"
+                              id="uprightPiano"
+                              value="uprightPiano"
+                            />
+                            <label for="uprightPiano">upright piano</label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="product-filter-reset">
+                    <div class="product-filter-reset-container">
+                      <input type="reset" value="reset" />
+                    </div>
+                  </div>
+                </form>
+              </fieldset>
+            </div>
+          </aside>
+          <div class="filtered-products">
+            <div class="filtered-products-container">
+              <!-- <div class="gen-loading-container">
+              <img
+                src="./res/misc/gen-loading.gif"
+                alt="loading ..."
+                class="gen-loading"
+              />
+            </div> -->
+              <div class="matched-product">
+                <div class="matched-product-container">
+                  <div class="product-img">
+                    <img
+                      src="./res/products/acoustic/acoustic-baby-U1.png"
+                      alt=""
+                    />
+                    <div class="product-act">
+                      <i class="fa-solid fa-cart-plus"></i
+                      ><i class="fa-solid fa-tags"></i>
+                    </div>
+                  </div>
+                  <div class="product-name">
+                    <h4>Baby U1</h4>
+                    <span>&#8369; 1000</span>
+                  </div>
+                </div>
+              </div>
+              <div class="matched-product">
+                <div class="matched-product-container">
+                  <div class="product-img">
+                    <img
+                      src="./res/products/acoustic/acoustic-baby-U1.png"
+                      alt=""
+                    />
+                    <div class="product-act">
+                      <i class="fa-solid fa-cart-plus"></i
+                      ><i class="fa-solid fa-tags"></i>
+                    </div>
+                  </div>
+                  <div class="product-name">
+                    <h4>Baby U1</h4>
+                    <span>&#8369; 1000</span>
+                  </div>
+                </div>
+              </div>
+              <div class="matched-product">
+                <div class="matched-product-container">
+                  <div class="product-img">
+                    <img
+                      src="./res/products/acoustic/acoustic-baby-U1.png"
+                      alt=""
+                    />
+                    <div class="product-act">
+                      <i class="fa-solid fa-cart-plus"></i
+                      ><i class="fa-solid fa-tags"></i>
+                    </div>
+                  </div>
+                  <div class="product-name">
+                    <h4>Baby U1</h4>
+                    <span>&#8369; 1000</span>
+                  </div>
+                </div>
+              </div>
+              <div class="matched-product">
+                <div class="matched-product-container">
+                  <div class="product-img">
+                    <img
+                      src="./res/products/acoustic/acoustic-baby-U1.png"
+                      alt=""
+                    />
+                    <div class="product-act">
+                      <i class="fa-solid fa-cart-plus"></i
+                      ><i class="fa-solid fa-tags"></i>
+                    </div>
+                  </div>
+                  <div class="product-name">
+                    <h4>Baby U1</h4>
+                    <span>&#8369; 1000</span>
+                  </div>
+                </div>
+              </div>
+              <div class="matched-product">
+                <div class="matched-product-container">
+                  <div class="product-img">
+                    <img
+                      src="./res/products/acoustic/acoustic-baby-U1.png"
+                      alt=""
+                    />
+                    <div class="product-act">
+                      <i class="fa-solid fa-cart-plus"></i
+                      ><i class="fa-solid fa-tags"></i>
+                    </div>
+                  </div>
+                  <div class="product-name">
+                    <h4>Baby U1</h4>
+                    <span>&#8369; 1000</span>
+                  </div>
+                </div>
+              </div>
+              <div class="matched-product">
+                <div class="matched-product-container">
+                  <div class="product-img">
+                    <img
+                      src="./res/products/acoustic/acoustic-baby-U1.png"
+                      alt=""
+                    />
+                    <div class="product-act">
+                      <i class="fa-solid fa-cart-plus"></i
+                      ><i class="fa-solid fa-tags"></i>
+                    </div>
+                  </div>
+                  <div class="product-name">
+                    <h4>Baby U1</h4>
+                    <span>&#8369; 1000</span>
+                  </div>
+                </div>
+              </div>
+              <div class="matched-product">
+                <div class="matched-product-container">
+                  <div class="product-img">
+                    <img
+                      src="./res/products/acoustic/acoustic-baby-U1.png"
+                      alt=""
+                    />
+                    <div class="product-act">
+                      <i class="fa-solid fa-cart-plus"></i
+                      ><i class="fa-solid fa-tags"></i>
+                    </div>
+                  </div>
+                  <div class="product-name">
+                    <h4>Baby U1</h4>
+                    <span>&#8369; 1000</span>
+                  </div>
+                </div>
+              </div>
+              <div class="matched-product">
+                <div class="matched-product-container">
+                  <div class="product-img">
+                    <img
+                      src="./res/products/acoustic/acoustic-baby-U1.png"
+                      alt=""
+                    />
+                    <div class="product-act">
+                      <i class="fa-solid fa-cart-plus"></i
+                      ><i class="fa-solid fa-tags"></i>
+                    </div>
+                  </div>
+                  <div class="product-name">
+                    <h4>Baby U1</h4>
+                    <span>&#8369; 1000</span>
+                  </div>
+                </div>
+              </div>
+              <div class="matched-product">
+                <div class="matched-product-container">
+                  <div class="product-img">
+                    <img
+                      src="./res/products/acoustic/acoustic-baby-U1.png"
+                      alt=""
+                    />
+                    <div class="product-act">
+                      <i class="fa-solid fa-cart-plus"></i
+                      ><i class="fa-solid fa-tags"></i>
+                    </div>
+                  </div>
+                  <div class="product-name">
+                    <h4>Baby U1</h4>
+                    <span>&#8369; 1000</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer">
+      <div class="footer-container">
+        <div class="footer-head">
+          <h2>Resources</h2>
+        </div>
+        <div class="footer-content">
+          <h3 class="footer-item-head footer-faq">
+            faq <span class="footer-head-underline"></span>
+          </h3>
+          <div class="footer-item-content">
+            <a href="#footer">
+              <h4><i class="fa-regular fa-square-plus"></i> about us</h4>
+            </a>
+            <a href="#footer">
+              <h4><i class="fa-regular fa-square-plus"></i> news</h4>
+            </a>
+          </div>
+          <h3 class="footer-item-head footer-contact">
+            contact <span class="footer-head-underline"></span>
+          </h3>
+          <div class="footer-item-content">
+            <a href="#footer">
+              <h4><i class="fa-regular fa-square-plus"></i> nearest dealer</h4>
+            </a>
+            <a href="#footer">
+              <h4><i class="fa-regular fa-square-plus"></i> order status</h4>
+            </a>
+          </div>
+          <h3 class="footer-item-head footer-service">
+            service <span class="footer-head-underline"></span>
+          </h3>
+          <div class="footer-item-content">
+            <a href="#footer">
+              <h4><i class="fa-regular fa-square-plus"></i> product recall</h4>
+            </a>
+            <a href="#footer">
+              <h4><i class="fa-regular fa-square-plus"></i> franchising</h4>
+            </a>
+            <a href="#footer">
+              <h4>
+                <i class="fa-regular fa-square-plus"></i> customer support
+              </h4>
+            </a>
+          </div>
+          <h3 class="footer-item-head footer-terms">
+            terms <span class="footer-head-underline"></span>
+          </h3>
+          <div class="footer-item-content">
+            <a href="#footer">
+              <h4><i class="fa-regular fa-square-plus"></i> online terms</h4>
+            </a>
+            <a href="#footer">
+              <h4>
+                <i class="fa-regular fa-square-plus"></i> legal information
+              </h4>
+            </a>
+          </div>
+          <h3 class="footer-item-head footer-privacy">
+            <a href="#footer"
+              >privacy <span class="footer-head-underline"></span
+            ></a>
+          </h3>
+          <h3 class="footer-item-head footer-stuff">
+            <a href="#footer"
+              >stuff <span class="footer-head-underline"></span
+            ></a>
+          </h3>
+          <div class="footer-links">
+            <a href="#"><i class="fa-solid fa-turn-up"></i></a>
+            <a href="#footer"><i class="fa-brands fa-amazon"></i></a>
+            <a href="#footer"> <i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#footer"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+
+          <div class="footer-item-content website-logo-container">
+            <h1 class="website-logo footer-logo">
+              <span>Engel /Haft<span class="logo-break">.</span></span
+              ><sup
+                ><sup><sup>&copy;</sup></sup></sup
+              >
+            </h1>
+          </div>
+        </div>
+        <p>
+          Copyright <sup><i class="fa-regular fa-copyright"></i></sup> Yutaka
+          CGLM. All rights reserved <span class="footer-date"></span>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
