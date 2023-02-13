@@ -20,12 +20,12 @@ import { setFooterYear } from "./js/util-footer.js";
 
 window.addEventListener("DOMContentLoaded", async (element) => {
   try {
-    LoadAffiliatedUniversities(uni_logo_url);
+    await LoadAffiliatedUniversities(uni_logo_url);
 
-    LoadBrands(products_json_url);
+    await LoadBrands(products_json_url);
 
-    LoadMainEvents(event_json_url);
-    LoadEventDates(event_json_url);
+    await LoadMainEvents(event_json_url);
+    await LoadEventDates(event_json_url);
 
     setFooterYear();
   } catch (error) {

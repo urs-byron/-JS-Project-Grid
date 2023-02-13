@@ -1946,7 +1946,10 @@ footer {
   --product-filter-ff-size: 14px;
   --product-filter-fieldset-pad: 0.5rem;
   --product-filter-fieldset-border-rad: 10px;
+  --product-filter-input-border-rad: 3px;
+  --product-filter-btn-ff-size: 16px;
   --product-filter-search-input-h: 30px;
+  --product-search-btn-w: 35px;
   --product-filter-price-input-h: 25px;
 
   max-width: var(--page-max-width-g);
@@ -1973,22 +1976,18 @@ footer {
   font-size: var(--product-filter-ff-size);
   text-transform: capitalize;
 }
-.product-filter-container fieldset {
+.product-filter-container form {
   padding: var(--product-filter-fieldset-pad);
+}
+.product-filter-container fieldset {
   border-radius: var(--product-filter-fieldset-border-rad);
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.25rem;
 }
 .product-filter-container legend {
   padding: 0 0.35rem;
-}
-.product-filter-container form {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.75rem;
-}
-.product-filter-container input {
-  font-family: "Montserrat", sans-serif !important;
-  font-size: var(--product-filter-ff-size);
-  text-transform: capitalize !important;
 }
 
 /* FILTER CONTENT */
@@ -2000,27 +1999,104 @@ footer {
 }
 .product-filter-container input {
   border: 1px solid black;
-  border-radius: 3px;
+  border-radius: var(--product-filter-input-border-rad);
 
   background-color: white;
+
+  font-family: "Montserrat", sans-serif !important;
+  font-size: var(--product-filter-ff-size);
 }
 
-.product-price-content ul,
-.product-brands-content ul,
-.product-functions-content ul {
+.product-price-content ul {
   display: grid;
   grid-template-columns: 1fr;
   gap: 0.25rem;
+}
 
+.product-filter-head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  justify-content: space-between;
+}
+
+.product-brands-content ul,
+.product-specs-content ul {
   list-style-type: none;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+/* FILTER ENABLER */
+.filter-enabler {
+  width: 40px;
+  height: 100%;
+  border: 0.5px solid black;
+  border-radius: 40px;
+
+  cursor: pointer;
+
+  overflow: hidden;
+}
+.product-filter-enabled {
+  --filter-enabler-bg: gray;
+  --filter-enabler-btn-transX: calc(35px - 100%);
+  --filter-btn-i-clr: rgb(75, 75, 75);
+  --filter-btn-i-clr: blackw;
+}
+.filter-enabler-container {
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--filter-enabler-bg, white);
+
+  transition: background-color 0.3s ease;
+}
+.filter-enabler-btn {
+  width: auto;
+  height: 100%;
+
+  background-color: var(--filter-enabler-bg, white);
+
+  transition: background-color 0.3s ease;
+}
+.filter-enabler-btn i {
+  border-radius: 40px;
+
+  background-color: white;
+
+  translate: var(--filter-enabler-btn-transX, 2.5px) 0;
+
+  color: var(--filter-btn-i-clr, black);
+
+  transition: color 0.25s ease, translate 0.3s ease;
 }
 
 /* SEARCH */
 
+.product-search-content {
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 3px;
+
+  display: grid;
+  grid-template-columns: 1fr var(--product-search-btn-w);
+  gap: 0.25rem;
+}
 .product-search-content input {
   width: 100%;
   height: var(--product-filter-search-input-h);
   padding: 0 0.25rem;
+  border: none;
+}
+.product-search-content button {
+  border: none;
+  border-radius: var(--product-filter-input-border-rad);
+
+  background-color: black;
+
+  color: white;
+  font-size: var(--product-filter-btn-ff-size);
 }
 
 /* PRICE */
@@ -2044,6 +2120,28 @@ footer {
   padding: 0 0.25rem;
 }
 
+/* BRANDS */
+
+/* .product-brands-content,
+.product-specs-content { */
+.product-brands-content {
+  height: auto !important;
+}
+/* .product-brands-content ul,
+.product-specs-content ul { */
+.product-brands-content ul {
+  --product-filter-brand-h: 48px;
+
+  scale: 1 var(--product-filter-scale-y, 1);
+  transform-origin: top;
+
+  transition: height 0.2s ease, scale 0.2s ease;
+}
+
+.scale-cont-y {
+  --product-filter-scale-y: 0;
+}
+
 /* SUBMIT & RESET */
 
 .product-filter-reset-container {
@@ -2053,7 +2151,7 @@ footer {
 .product-filter-reset-container input {
   padding: 0.25rem 0.5rem;
   border: 1px solid black;
-  border-radius: 3.5px;
+  border-radius: var(--product-filter-input-border-rad);
 
   background-color: black;
 
@@ -2174,7 +2272,7 @@ footer {
   border-radius: 0 0 var(--product-act-bor-rad) var(--product-act-bor-rad);
 
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.65fr 0.35fr;
   align-items: center;
 
   background-color: black;

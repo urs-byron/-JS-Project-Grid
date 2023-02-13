@@ -14,14 +14,18 @@
     <link rel="stylesheet" href="./styles/style-tab.css" />
     <link rel="stylesheet" href="./styles/style-mob.css" />
     <!-- JS -->
+    <script type="module" src="./products.js" defer></script>
     <script type="module" src="./js/show-sidebar-right.js" defer></script>
     <script type="module" src="./js/show-nav-support.js" defer></script>
     <script type="module" src="./js/show-footer-item-lists.js" defer></script>
+    <script type="module" src="./js/show-brands-specs.js" defer></script>
+    <script type="module" src="./js/util-product-filter.js" defer></script>
+    <script type="module" src="./js/filter-product.js" defer></script>
   </head>
   <body>
-    <!-- <div class="preloader">
+    <div class="preloader">
       <img src="./res/misc/preloader.gif" alt="" />
-    </div> -->
+    </div>
 
     <aside class="sidebar-right-toggle">
       <i class="fa-solid fa-angles-right"></i>
@@ -138,9 +142,9 @@
         <div class="product-selection-content">
           <aside class="product-filter">
             <div class="product-filter-container">
-              <fieldset>
-                <legend>Filter Products</legend>
-                <form action="">
+              <form action="products.html" method="GET">
+                <fieldset>
+                  <legend>Filter Products</legend>
                   <div class="product-search">
                     <div
                       class="product-search-container product-filter-container"
@@ -151,44 +155,59 @@
                       <div class="product-search-content">
                         <input
                           type="text"
-                          name="productName"
-                          id="productName"
+                          name="product-name"
+                          id="product-name"
                           placeholder="e.g. GB1K"
                         />
+
+                        <button
+                          type="submit"
+                          name="filter-product-btn"
+                          id="filter-product-btn"
+                        >
+                          <i class="fa-solid fa-filter"></i>
+                        </button>
                       </div>
                     </div>
                   </div>
 
-                  <div class="product-price">
+                  <div class="product-price product-filter-w-toggle">
                     <div
                       class="product-price-container product-filter-container"
                     >
-                      <div class="product-price-head">
+                      <div class="product-price-head product-filter-head">
                         <h3>Price</h3>
+                        <span class="filter-enabler">
+                          <div class="filter-enabler-container">
+                            <span class="filter-enabler-btn"
+                              ><i class="fa-regular fa-circle"></i
+                            ></span>
+                          </div>
+                        </span>
                       </div>
                       <div class="product-price-content">
                         <ul>
                           <li>
-                            <label for="minProductPrice">
+                            <label for="min-product-price">
                               <span>from</span><span>&#8369;</span>
                             </label>
                             <input
                               type="number"
-                              name="minProductPrice"
-                              id="minProductPrice"
+                              name="min-product-price"
+                              id="min-product-price"
                               placeholder="0"
                               min="0"
                               max="0"
                             />
                           </li>
                           <li>
-                            <label for="minProductPrice">
+                            <label for="max-product-price">
                               <span>to</span><span>&#8369;</span>
                             </label>
                             <input
                               type="number"
-                              name="maxProductPrice"
-                              id="maxProductPrice"
+                              name="max-product-price"
+                              id="max-product-price"
                               placeholder="0"
                               min="0"
                               max="0"
@@ -199,95 +218,44 @@
                     </div>
                   </div>
 
-                  <div class="product-brands">
+                  <div class="product-brands product-filter-w-toggle">
                     <div
                       class="product-brands-container product-filter-container"
                     >
-                      <div class="product-brands-head">
+                      <div class="product-brands-head product-filter-head">
                         <h3>Brands <i class="fa-solid fa-chevron-down"></i></h3>
+                        <span class="filter-enabler">
+                          <div class="filter-enabler-container">
+                            <span class="filter-enabler-btn"
+                              ><i class="fa-regular fa-circle"></i
+                            ></span>
+                          </div>
+                        </span>
                       </div>
                       <div class="product-brands-content">
-                        <ul>
-                          <li>
-                            <input
-                              type="checkbox"
-                              name="productBrand"
-                              id="electric"
-                              value="electric"
-                            />
-                            <label for="electric">electric</label>
-                          </li>
-                          <li>
-                            <input
-                              type="checkbox"
-                              name="productBrand"
-                              id="synth"
-                              value="synth"
-                            />
-                            <label for="synth">synth</label>
-                          </li>
-                          <li>
-                            <input
-                              type="checkbox"
-                              name="productBrand"
-                              id="synth"
-                              value="synth"
-                            />
-                            <label for="synth">synth</label>
-                          </li>
-                          <li>
-                            <input
-                              type="checkbox"
-                              name="productBrand"
-                              id="antique"
-                              value="antique"
-                            />
-                            <label for="antique">antique</label>
-                          </li>
-                        </ul>
+                        <ul></ul>
                       </div>
                     </div>
                   </div>
 
-                  <div class="product-functions">
+                  <div class="product-specs product-filter-w-toggle">
                     <div
                       class="product-brands-container product-filter-container"
                     >
-                      <div class="product-functions-head">
+                      <div class="product-specs-head product-filter-head">
                         <h3>
                           Functions <i class="fa-solid fa-chevron-down"></i>
                         </h3>
+                        <span class="filter-enabler">
+                          <div class="filter-enabler-container">
+                            <span class="filter-enabler-btn"
+                              ><i class="fa-regular fa-circle"></i
+                            ></span>
+                          </div>
+                        </span>
                       </div>
-                      <div class="product-functions-content">
-                        <ul>
-                          <li>
-                            <input
-                              type="checkbox"
-                              name="productBrand"
-                              id="grandPiano"
-                              value="grandPiano"
-                            />
-                            <label for="grandPiano">grand piano</label>
-                          </li>
-                          <li>
-                            <input
-                              type="checkbox"
-                              name="productBrand"
-                              id="babyGrand"
-                              value="babyGrand"
-                            />
-                            <label for="babyGrand">baby grand piano</label>
-                          </li>
-                          <li>
-                            <input
-                              type="checkbox"
-                              name="productBrand"
-                              id="uprightPiano"
-                              value="uprightPiano"
-                            />
-                            <label for="uprightPiano">upright piano</label>
-                          </li>
-                        </ul>
+                      <div class="product-specs-content">
+                        <ul></ul>
                       </div>
                     </div>
                   </div>
@@ -297,182 +265,19 @@
                       <input type="reset" value="reset" />
                     </div>
                   </div>
-                </form>
-              </fieldset>
+                </fieldset>
+              </form>
             </div>
           </aside>
           <div class="filtered-products">
-            <div class="filtered-products-container">
-              <!-- <div class="gen-loading-container">
+            <div class="gen-loading-container">
               <img
                 src="./res/misc/gen-loading.gif"
                 alt="loading ..."
                 class="gen-loading"
               />
-            </div> -->
-              <div class="matched-product">
-                <div class="matched-product-container">
-                  <div class="product-img">
-                    <img
-                      src="./res/products/acoustic/acoustic-baby-U1.png"
-                      alt=""
-                    />
-                    <div class="product-act">
-                      <i class="fa-solid fa-cart-plus"></i
-                      ><i class="fa-solid fa-tags"></i>
-                    </div>
-                  </div>
-                  <div class="product-name">
-                    <h4>Baby U1</h4>
-                    <span>&#8369; 1000</span>
-                  </div>
-                </div>
-              </div>
-              <div class="matched-product">
-                <div class="matched-product-container">
-                  <div class="product-img">
-                    <img
-                      src="./res/products/acoustic/acoustic-baby-U1.png"
-                      alt=""
-                    />
-                    <div class="product-act">
-                      <i class="fa-solid fa-cart-plus"></i
-                      ><i class="fa-solid fa-tags"></i>
-                    </div>
-                  </div>
-                  <div class="product-name">
-                    <h4>Baby U1</h4>
-                    <span>&#8369; 1000</span>
-                  </div>
-                </div>
-              </div>
-              <div class="matched-product">
-                <div class="matched-product-container">
-                  <div class="product-img">
-                    <img
-                      src="./res/products/acoustic/acoustic-baby-U1.png"
-                      alt=""
-                    />
-                    <div class="product-act">
-                      <i class="fa-solid fa-cart-plus"></i
-                      ><i class="fa-solid fa-tags"></i>
-                    </div>
-                  </div>
-                  <div class="product-name">
-                    <h4>Baby U1</h4>
-                    <span>&#8369; 1000</span>
-                  </div>
-                </div>
-              </div>
-              <div class="matched-product">
-                <div class="matched-product-container">
-                  <div class="product-img">
-                    <img
-                      src="./res/products/acoustic/acoustic-baby-U1.png"
-                      alt=""
-                    />
-                    <div class="product-act">
-                      <i class="fa-solid fa-cart-plus"></i
-                      ><i class="fa-solid fa-tags"></i>
-                    </div>
-                  </div>
-                  <div class="product-name">
-                    <h4>Baby U1</h4>
-                    <span>&#8369; 1000</span>
-                  </div>
-                </div>
-              </div>
-              <div class="matched-product">
-                <div class="matched-product-container">
-                  <div class="product-img">
-                    <img
-                      src="./res/products/acoustic/acoustic-baby-U1.png"
-                      alt=""
-                    />
-                    <div class="product-act">
-                      <i class="fa-solid fa-cart-plus"></i
-                      ><i class="fa-solid fa-tags"></i>
-                    </div>
-                  </div>
-                  <div class="product-name">
-                    <h4>Baby U1</h4>
-                    <span>&#8369; 1000</span>
-                  </div>
-                </div>
-              </div>
-              <div class="matched-product">
-                <div class="matched-product-container">
-                  <div class="product-img">
-                    <img
-                      src="./res/products/acoustic/acoustic-baby-U1.png"
-                      alt=""
-                    />
-                    <div class="product-act">
-                      <i class="fa-solid fa-cart-plus"></i
-                      ><i class="fa-solid fa-tags"></i>
-                    </div>
-                  </div>
-                  <div class="product-name">
-                    <h4>Baby U1</h4>
-                    <span>&#8369; 1000</span>
-                  </div>
-                </div>
-              </div>
-              <div class="matched-product">
-                <div class="matched-product-container">
-                  <div class="product-img">
-                    <img
-                      src="./res/products/acoustic/acoustic-baby-U1.png"
-                      alt=""
-                    />
-                    <div class="product-act">
-                      <i class="fa-solid fa-cart-plus"></i
-                      ><i class="fa-solid fa-tags"></i>
-                    </div>
-                  </div>
-                  <div class="product-name">
-                    <h4>Baby U1</h4>
-                    <span>&#8369; 1000</span>
-                  </div>
-                </div>
-              </div>
-              <div class="matched-product">
-                <div class="matched-product-container">
-                  <div class="product-img">
-                    <img
-                      src="./res/products/acoustic/acoustic-baby-U1.png"
-                      alt=""
-                    />
-                    <div class="product-act">
-                      <i class="fa-solid fa-cart-plus"></i
-                      ><i class="fa-solid fa-tags"></i>
-                    </div>
-                  </div>
-                  <div class="product-name">
-                    <h4>Baby U1</h4>
-                    <span>&#8369; 1000</span>
-                  </div>
-                </div>
-              </div>
-              <div class="matched-product">
-                <div class="matched-product-container">
-                  <div class="product-img">
-                    <img
-                      src="./res/products/acoustic/acoustic-baby-U1.png"
-                      alt=""
-                    />
-                    <div class="product-act">
-                      <i class="fa-solid fa-cart-plus"></i
-                      ><i class="fa-solid fa-tags"></i>
-                    </div>
-                  </div>
-                  <div class="product-name">
-                    <h4>Baby U1</h4>
-                    <span>&#8369; 1000</span>
-                  </div>
-                </div>
-              </div>
             </div>
+            <div class="filtered-products-container"></div>
           </div>
         </div>
       </div>

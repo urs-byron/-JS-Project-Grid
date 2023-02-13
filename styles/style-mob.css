@@ -49,6 +49,8 @@
 
   .product-selection-container {
     --product-filter-ff-size: 10px;
+    --product-search-btn-w: 30px;
+    --product-filter-btn-ff-size: 12px;
   }
   .filtered-products-container {
     --matched-product-w: 180px;
@@ -273,5 +275,8 @@
 
   .footer-links {
     grid-template-columns: repeat(4, 0.25fr);
+  }
+  .product-brands-content ul {
+    --product-filter-brand-h: 42px;
   }
 }

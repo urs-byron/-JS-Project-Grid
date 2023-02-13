@@ -44,6 +44,7 @@
         {
           "model": "U1",
           "brand": "acoustic",
+          "price": 100000,
           "description": "Lorem ipsum dolor sit amet elit. Non dolorum dolor , nostrum ? Lorem ipsum dolor sit amet elit , nobis?",
           "specification": {
             "link": "#product-highlights",
@@ -237,7 +238,7 @@
           "description": "Lorem ipsum dolor sit amet elit. Non dolorum dolor , nostrum ? Lorem ipsum dolor sit amet elit , nobis?",
           "specification": {
             "link": "#product-highlights",
-            "items": ["cordless jack", "fast process", "synth"]
+            "items": ["cordless jack", "fast process", "synthesizer"]
           },
           "gallery": {
             "link": "#product-highlights",
@@ -255,7 +256,7 @@
           "description": "Lorem ipsum dolor sit amet elit. Non dolorum dolor , nostrum ? Lorem ipsum dolor sit amet elit , nobis?",
           "specification": {
             "link": "#product-highlights",
-            "items": ["infrared signal", "bluetooth ready", "synth"]
+            "items": ["infrared signal", "bluetooth ready", "synthesizer"]
           },
           "gallery": {
             "link": "#product-highlights",
@@ -274,7 +275,7 @@
           "description": "Lorem ipsum dolor sit amet elit. Non dolorum dolor , nostrum ? Lorem ipsum dolor sit amet elit , nobis?",
           "specification": {
             "link": "#product-highlights",
-            "items": ["fast process", "synth", "bluetooth ready"]
+            "items": ["fast process", "synthesizer", "bluetooth ready"]
           },
           "gallery": {
             "link": "#product-highlights",

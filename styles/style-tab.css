@@ -281,13 +281,14 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
   }
-  .product-filter-container form {
+  .product-filter-container fieldset {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(5, auto);
     grid-template-areas:
       "search search"
       "price price"
-      "brands functions"
+      "brands brands"
+      "specs specs"
       "reset reset";
 
     gap: 0;
@@ -306,10 +307,14 @@
   .product-brands {
     grid-area: brands;
   }
-  .product-functions {
-    grid-area: functions;
+  .product-specs {
+    grid-area: specs;
   }
   .product-filter-reset {
     grid-area: reset;
+  }
+
+  .product-brands-content ul {
+    --product-filter-brand-h: 20px;
   }
 }
