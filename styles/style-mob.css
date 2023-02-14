@@ -29,7 +29,10 @@
   /* -------- */
 
   .footer-container {
-    --footer-item-content-ff-size: 13px;
+    --footer-content-h: 120px;
+    --footer-padding-bot: 0px;
+    --footer-copy-h: 70px;
+    --footer-item-content-ff-size: 10px;
   }
 
   /* -------- */
@@ -244,6 +247,8 @@
 
   .footer-container {
     --footer-head-paddig-top: 0.75rem;
+
+    --footer-content-h: 0px;
     --footer-head-ff-size: 10px;
     --footer-copyright-ff-size: 5px;
 

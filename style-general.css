@@ -1781,7 +1781,9 @@ footer {
   margin: 0 auto;
 
   display: grid;
-  grid-template-rows: 85px 200px var(--footer-padding-bot, 3rem) 50px;
+  grid-template-rows:
+    60px var(--footer-content-h, 150px) var(--footer-padding-bot, 3rem)
+    var(--footer-copy-h, 40px);
 
   overflow-x: hidden;
 
@@ -1880,7 +1882,7 @@ footer {
   height: 2.5%;
 
   position: absolute;
-  bottom: var(--footer-head-underline-pos-bottom, 25%);
+  bottom: var(--footer-head-underline-pos-bottom, 5%);
   left: 0;
 
   scale: var(--footer-head-underline-scale, 0 1);
@@ -1954,6 +1956,7 @@ footer {
 
   max-width: var(--page-max-width-g);
   height: 100%;
+  margin: 0 auto;
 }
 .product-selection-content {
   display: grid;
@@ -2031,18 +2034,23 @@ footer {
 .filter-enabler {
   width: 40px;
   height: 100%;
+  padding: 3px 1px;
   border: 0.5px solid black;
   border-radius: 40px;
+
+  background-color: var(--filter-enabler-bg, white);
 
   cursor: pointer;
 
   overflow: hidden;
+
+  transition: background-color 0.3s ease;
 }
 .product-filter-enabled {
   --filter-enabler-bg: gray;
   --filter-enabler-btn-transX: calc(35px - 100%);
   --filter-btn-i-clr: rgb(75, 75, 75);
-  --filter-btn-i-clr: blackw;
+  --filter-btn-i-clr: black;
 }
 .filter-enabler-container {
   width: 100%;
@@ -2122,13 +2130,9 @@ footer {
 
 /* BRANDS */
 
-/* .product-brands-content,
-.product-specs-content { */
 .product-brands-content {
   height: auto !important;
 }
-/* .product-brands-content ul,
-.product-specs-content ul { */
 .product-brands-content ul {
   --product-filter-brand-h: 48px;
 
@@ -2145,6 +2149,7 @@ footer {
 /* SUBMIT & RESET */
 
 .product-filter-reset-container {
+  margin-bottom: 1rem;
   display: grid;
   justify-content: center;
 }
@@ -2157,6 +2162,7 @@ footer {
 
   color: white;
   font-weight: bold;
+  text-transform: uppercase;
 
   transition: background-color 0.2s ease;
 }
@@ -2181,6 +2187,7 @@ footer {
   --product-act-i-ff-size: 37.5px;
 
   padding: var(--filtered-product-pad);
+  margin-bottom: 3rem;
 
   display: grid;
 
@@ -2205,6 +2212,7 @@ footer {
 
   display: grid;
   grid-template-rows: 0.85fr 0.15fr;
+  align-content: space-between;
 }
 
 .product-img {
@@ -2213,17 +2221,20 @@ footer {
 
   width: 100%;
   height: 100%;
+  padding: 1rem;
 
   position: relative;
   top: 0;
   left: 0;
+
+  overflow: hidden;
 }
 .product-img:hover {
   --product-act-opac: 0.85;
   --product-act-ff-opac: 1;
 }
 
-.product-img > * {
+.product-act {
   width: 100%;
   height: 100%;
   padding: var(--product-img-pad);
@@ -2231,6 +2242,11 @@ footer {
   position: absolute;
   top: 0;
   left: 0;
+}
+.product-img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .product-act {
@@ -2278,5 +2294,6 @@ footer {
   background-color: black;
 
   color: white;
+  font-size: 14px;
   text-align: center;
 }

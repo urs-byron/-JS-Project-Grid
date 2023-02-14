@@ -210,8 +210,16 @@
 
   .footer-container {
     --footer-head-ff-size: 12.5px;
-    --footer-item-content-ff-size: 16px;
+    --footer-item-content-ff-size: 13px;
     --footer-logo-ff-size: 40px;
     --footer-logo-sup-ff-size: 16.8px;
+  }
+
+  /* -------- */
+  /* FOOTER */
+  /* -------- */
+
+  .footer-container {
+    --footer-copy-h: 30px;
   }
 }

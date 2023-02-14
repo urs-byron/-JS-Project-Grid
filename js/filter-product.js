@@ -134,6 +134,11 @@ const containMatchedProducts = (data) => {
     );
   }
 
+  // REMOVE LOADER
+  const loader = getElement(".filtered-products .gen-loading-container");
+  const cont = getElement(".filtered-products");
+  loader.classList.add("hide-gen-loading");
+
   // NO MATCHING SEARCH QUERY
   if (!data.length) {
     const matched_products_head_text = document.createTextNode(
@@ -145,9 +150,6 @@ const containMatchedProducts = (data) => {
 
     return;
   }
-
-  const loader = getElement(".filtered-products .gen-loading-container");
-  loader.classList.add("hide-gen-loading");
 
   data.forEach((prod) => {
     // --- IMAGE SEC //
@@ -177,7 +179,7 @@ const containMatchedProducts = (data) => {
     // --- NAME SEC //
 
     // TITLE
-    const prod_head_name = document.createTextNode(prod.model);
+    const prod_head_name = document.createTextNode(`Model ${prod.model}`);
     const prod_head = document.createElement("h4");
     prod_head.appendChild(prod_head_name);
 

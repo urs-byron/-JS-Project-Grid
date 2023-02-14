@@ -253,9 +253,12 @@
   .footer-container {
     --footer-padding-right: 0;
     --footer-padding-bot: 1rem;
-    --footer-head-paddig-top: 1.5rem;
+    --footer-copy-h: 70px;
+    --footer-head-paddig-top: 0.75rem;
     --footer-content-item-width: 0.25fr;
     --footer-item-head: 0.2fr;
+    --footer-item-content-ff-size: 11px;
+    --footer-head-ff-size: 10px;
     --footer-i-ff-size: 20px;
     --footer-logo-ff-size: 20px;
     --footer-logo-sup-ff-size: 10px;

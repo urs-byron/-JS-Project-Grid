@@ -3,7 +3,6 @@ import { getElement, getElements } from "./util-fx.js";
 // TOGGLE PRIMARY NAVI
 
 const primary_menu = getElement(".primary-list");
-const primary_menu_li = getElements(".primary-list > li");
 const not_small_mob_mq = window.matchMedia("(min-width:415px");
 
 not_small_mob_mq.addEventListener("change", (event) => {
