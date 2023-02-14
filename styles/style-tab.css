@@ -320,4 +320,38 @@
   .product-brands-content ul {
     --product-filter-brand-h: 20px;
   }
+
+  /* -------- */
+  /* PRODUCT MODEL */
+  /* -------- */
+
+  .product-model-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .product-model-gallery-container {
+    grid-template-columns: 0.75fr 0.25fr;
+    grid-template-rows: 1fr;
+  }
+
+  .product-images-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .product-model-details-container {
+    --product-model-details-container-pad: 0.75rem;
+    --product-model-head-h2-ff-size: 25px;
+    --product-model-head-span-ff-size: 17.5px;
+    --product-model-act-ff-size: 30px;
+    --product-model-act-i-pad: 0.75rem 0;
+    --product-model-text-pad: 0.5rem;
+    --product-model-text-ff-size: 14px;
+
+    grid-template-rows: repeat(3, auto);
+  }
+  .product-model-spec-set {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }

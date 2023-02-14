@@ -74,6 +74,21 @@
   .product-name {
     font-size: var(--product-filter-ff-size);
   }
+
+  /* -------- */
+  /* PRODUCT MODEL */
+  /* -------- */
+
+  .product-model-details-container {
+    --product-model-details-container-pad: 0.5rem;
+    --product-model-head-h2-ff-size: 20px;
+    --product-model-head-span-ff-size: 12.5px;
+    --product-model-act-ff-size: 22.5px;
+    --product-model-act-i-pad: 0.5rem 0;
+    --product-model-act-i-rad: 7.5px;
+    --product-model-text-pad: 0.25rem;
+    --product-model-text-ff-size: 12px;
+  }
 }
 
 @media screen and (max-width: 414px) {

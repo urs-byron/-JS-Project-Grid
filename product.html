@@ -5,27 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- TITLE -->
-    <title>Music Shop - Search Products</title>
+    <title>Music Shop - Model</title>
     <!-- FAVICON -->
     <link rel="icon" type="image/x-icon" href="./res/favicon.ico" />
     <!-- STYLES -->
     <link rel="stylesheet" href="./style-general.css" />
+    <link rel="stylesheet" href="./styles/style.product.css" />
     <link rel="stylesheet" href="./styles/style-sml.css" />
     <link rel="stylesheet" href="./styles/style-tab.css" />
     <link rel="stylesheet" href="./styles/style-mob.css" />
     <!-- JS -->
-    <script type="module" src="./products.js" defer></script>
+    <script type="module" src="./product.js" defer></script>
     <script type="module" src="./js/show-sidebar-right.js" defer></script>
     <script type="module" src="./js/show-nav-support.js" defer></script>
     <script type="module" src="./js/show-footer-item-lists.js" defer></script>
-    <script type="module" src="./js/show-brands-specs.js" defer></script>
-    <script type="module" src="./js/util-product-filter.js" defer></script>
-    <script type="module" src="./js/filter-product.js" defer></script>
   </head>
   <body>
-    <div class="preloader">
+    <!-- <div class="preloader">
       <img src="./res/misc/preloader.gif" alt="" />
-    </div>
+    </div> -->
 
     <div class="sidebar-right-toggle">
       <i class="fa-solid fa-angles-right"></i>
@@ -133,153 +131,79 @@
       </div>
     </aside>
 
-    <main class="product-selection">
-      <div class="product-selection-container">
-        <div class="product-selection-head">
-          <h2>Products</h2>
-        </div>
-
-        <div class="product-selection-content">
-          <aside class="product-filter">
-            <div class="product-filter-container">
-              <form action="products.html" method="GET">
-                <fieldset>
-                  <legend>Filter Products</legend>
-                  <div class="product-search">
-                    <div
-                      class="product-search-container product-filter-container"
-                    >
-                      <div class="product-search-head">
-                        <h3>Search</h3>
-                      </div>
-                      <div class="product-search-content">
-                        <input
-                          type="text"
-                          name="product-name"
-                          id="product-name"
-                          placeholder="e.g. GB1K"
-                        />
-
-                        <button
-                          type="submit"
-                          name="filter-product-btn"
-                          id="filter-product-btn"
-                        >
-                          <i class="fa-solid fa-filter"></i>
-                        </button>
-                      </div>
-                    </div>
+    <main>
+      <div class="product-model">
+        <div class="product-model-container">
+          <div class="product-model-gallery">
+            <div class="product-model-gallery-container">
+              <div class="product-display-image product-main-image">
+                <img
+                  src="./res/products/antique/antique-P660_Queen-Ann.png"
+                  alt=""
+                />
+              </div>
+              <div class="product-images">
+                <div class="product-images-container">
+                  <div class="product-image-item product-main-image">
+                    <img
+                      src="./res/products/antique/antique-P660_Queen-Ann.png"
+                      alt=""
+                    />
                   </div>
-
-                  <div class="product-price product-filter-w-toggle">
-                    <div
-                      class="product-price-container product-filter-container"
-                    >
-                      <div class="product-price-head product-filter-head">
-                        <h3>Price</h3>
-                        <span class="filter-enabler">
-                          <div class="filter-enabler-container">
-                            <span class="filter-enabler-btn"
-                              ><i class="fa-regular fa-circle"></i
-                            ></span>
-                          </div>
-                        </span>
-                      </div>
-                      <div class="product-price-content">
-                        <ul>
-                          <li>
-                            <label for="min-product-price">
-                              <span>from</span><span>&#8369;</span>
-                            </label>
-                            <input
-                              type="number"
-                              name="min-product-price"
-                              id="min-product-price"
-                              placeholder="0"
-                              min="0"
-                              max="0"
-                            />
-                          </li>
-                          <li>
-                            <label for="max-product-price">
-                              <span>to</span><span>&#8369;</span>
-                            </label>
-                            <input
-                              type="number"
-                              name="max-product-price"
-                              id="max-product-price"
-                              placeholder="0"
-                              min="0"
-                              max="0"
-                            />
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
+                  <div class="product-image-item">
+                    <img
+                      src="./res/products/synth/synth-montage-2C.png"
+                      alt=""
+                    />
                   </div>
-
-                  <div class="product-brands product-filter-w-toggle">
-                    <div
-                      class="product-brands-container product-filter-container"
-                    >
-                      <div class="product-brands-head product-filter-head">
-                        <h3>Brands <i class="fa-solid fa-chevron-down"></i></h3>
-                        <span class="filter-enabler">
-                          <div class="filter-enabler-container">
-                            <span class="filter-enabler-btn"
-                              ><i class="fa-regular fa-circle"></i
-                            ></span>
-                          </div>
-                        </span>
-                      </div>
-                      <div class="product-brands-content">
-                        <ul></ul>
-                      </div>
-                    </div>
+                  <div class="product-image-item">
+                    <img
+                      src="./res/products/electric/electric-arius-YDP-144.png"
+                      alt=""
+                    />
                   </div>
-
-                  <div class="product-specs product-filter-w-toggle">
-                    <div
-                      class="product-brands-container product-filter-container"
-                    >
-                      <div class="product-specs-head product-filter-head">
-                        <h3>
-                          Functions <i class="fa-solid fa-chevron-down"></i>
-                        </h3>
-                        <span class="filter-enabler">
-                          <div class="filter-enabler-container">
-                            <span class="filter-enabler-btn"
-                              ><i class="fa-regular fa-circle"></i
-                            ></span>
-                          </div>
-                        </span>
-                      </div>
-                      <div class="product-specs-content">
-                        <ul></ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="product-filter-reset">
-                    <div class="product-filter-reset-container">
-                      <input type="reset" value="reset" />
-                    </div>
-                  </div>
-                </fieldset>
-              </form>
+                </div>
+              </div>
             </div>
-          </aside>
-          <div class="filtered-products">
-            <div class="gen-loading-container">
-              <img
-                src="./res/misc/gen-loading.gif"
-                alt="loading ..."
-                class="gen-loading"
-              />
+          </div>
+
+          <div class="product-model-details">
+            <div class="product-model-details-container">
+              <div class="product-model-head">
+                <h2>Piano Something</h2>
+                <span>$ 1000</span>
+              </div>
+              <div class="product-model-act">
+                <i class="fa-solid fa-cart-plus"></i
+                ><i class="fa-regular fa-heart"></i>
+              </div>
+              <div class="product-model-text">
+                <div class="product-model-description">
+                  <h3>description</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tempore nobis quis rerum debitis odit quia, consequatur eius
+                    rem. Odio necessitatibus eum perferendis! Dolores
+                    praesentium libero dicta veritatis quaerat voluptas numquam
+                    omnis aliquid nisi nostrum minima enim architecto,
+                    doloribus, harum earum corporis ad magni officia quis soluta
+                    voluptatum, minus recusandae. Aut.
+                  </p>
+                </div>
+                <div class="product-model-specifications">
+                  <h3>specifications</h3>
+                  <div class="product-model-spec-set">
+                    <span>specification</span><span>specification</span
+                    ><span>specification</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="filtered-products-container"></div>
           </div>
         </div>
+      </div>
+      <div class="product-model-modal-gallery">
+        <div class="product-model-modal-gallery-container"></div>
       </div>
     </main>
 

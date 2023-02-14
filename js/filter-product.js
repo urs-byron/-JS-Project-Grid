@@ -78,7 +78,7 @@ const filterByBrand = (filter_obj, data) => {
 };
 
 const filterByName = (filter_obj, data) => {
-  const product_searched = new RegExp(`${filter_obj.name}`, "gi");
+  const product_searched = new RegExp(filter_obj.name, "gi");
   let products_by_name = [];
 
   for (const product of data) {
@@ -167,8 +167,19 @@ const containMatchedProducts = (data) => {
     const prod_act_info = document.createElement("i");
     prod_act_cart.classList.add("fa-solid", "fa-cart-plus");
     prod_act_info.classList.add("fa-solid", "fa-tags");
-    prod_act.appendChild(prod_act_cart);
-    prod_act.appendChild(prod_act_info);
+
+    // products.html?product-name=
+    const prod_act_cart_a = document.createElement("a");
+    const prod_act_info_a = document.createElement("a");
+    prod_act_cart_a.appendChild(prod_act_cart);
+    prod_act_info_a.appendChild(prod_act_info);
+    prod_act_info_a.setAttribute(
+      "href",
+      `product.html?product-model=${prod.model}`
+    );
+
+    prod_act.appendChild(prod_act_cart_a);
+    prod_act.appendChild(prod_act_info_a);
 
     // CONTAINER
     const prod_img_cont = document.createElement("div");
@@ -196,7 +207,6 @@ const containMatchedProducts = (data) => {
     prod_head_cont.appendChild(prod_head_span);
 
     // --- PRODUCT CONTAINER SEC //
-
     const prod_cont = document.createElement("div");
     prod_cont.classList.add("matched-product-container");
     prod_cont.appendChild(prod_img_cont);
