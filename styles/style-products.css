@@ -1,0 +1,387 @@
+@import url("../res/fontawesome-free-6.2.0-web/css/all.min.css");
+
+@import url("https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&family=Courgette&family=Gemunu+Libre:wght@700&family=Montserrat:ital,wght@0,200;0,400;0,700;1,400;1,700&family=Oswald:wght@200;400;500;600;700&family=Press+Start+2P&family=Special+Elite&display=swap");
+
+/*  
+    font-family: 'Charmonman', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    
+    font-family: 'Courgette', cursive;    
+    font-family: 'Gemunu Libre', sans-serif;
+    font-family: 'Press Start 2P', cursive;
+    font-family: 'Special Elite', cursive;
+*/
+
+/* -------- */
+/* FILTER PRODUCTS */
+/* -------- */
+
+.product-selection {
+  width: 100vw;
+  max-height: auto;
+  padding: var(--sidebar-right-space);
+
+  transition: padding 0.5s ease;
+}
+.product-selection-container {
+  --product-filter-w: 300px;
+  --product-filter-pad: 0.5rem;
+  --product-filter-ff-size: 14px;
+  --product-filter-fieldset-pad: 0.5rem;
+  --product-filter-fieldset-border-rad: 10px;
+  --product-filter-input-border-rad: 3px;
+  --product-filter-btn-ff-size: 16px;
+  --product-filter-search-input-h: 30px;
+  --product-search-btn-w: 35px;
+  --product-filter-price-input-h: 25px;
+
+  max-width: var(--page-max-width-g);
+  height: 100%;
+  margin: 0 auto;
+}
+.product-selection-head {
+  margin: 1rem 0 0.5rem 0;
+}
+.product-selection-content {
+  display: grid;
+  grid-template-columns: var(
+    --product-selection-content-gr-col,
+    var(--product-filter-w) 1fr
+  );
+  grid-template-rows: var(--product-selection-content-gr-row, auto);
+}
+
+/* -------- */
+/* FILTER */
+
+.product-filter,
+.filtered-products {
+  font-family: "Montserrat", sans-serif;
+}
+
+.product-filter-container {
+  width: 100%;
+  height: 100%;
+  padding: var(--product-filter-pad);
+
+  font-size: var(--product-filter-ff-size);
+  text-transform: capitalize;
+}
+.product-filter-container form {
+  padding: var(--product-filter-fieldset-pad);
+}
+.product-filter-container fieldset {
+  border-radius: var(--product-filter-fieldset-border-rad);
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.25rem;
+}
+.product-filter-container legend {
+  padding: 0 0.35rem;
+}
+
+/* FILTER CONTENT */
+
+.product-filter-container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 0.5rem;
+}
+.product-filter-container input {
+  border: 1px solid black;
+  border-radius: var(--product-filter-input-border-rad);
+
+  background-color: white;
+
+  font-family: "Montserrat", sans-serif !important;
+  font-size: var(--product-filter-ff-size);
+}
+
+.product-price-content ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.25rem;
+}
+
+.product-filter-head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  justify-content: space-between;
+}
+
+.product-brands-content ul,
+.product-specs-content ul {
+  list-style-type: none;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+/* FILTER ENABLER */
+.filter-enabler {
+  width: 40px;
+  height: 100%;
+  padding: 3px 1px;
+  border: 0.5px solid black;
+  border-radius: 40px;
+
+  background-color: var(--filter-enabler-bg, white);
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  transition: background-color 0.3s ease;
+}
+.product-filter-enabled {
+  --filter-enabler-bg: gray;
+  --filter-enabler-btn-transX: calc(35px - 100%);
+  --filter-btn-i-clr: rgb(75, 75, 75);
+  --filter-btn-i-clr: black;
+}
+.filter-enabler-container {
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--filter-enabler-bg, white);
+
+  transition: background-color 0.3s ease;
+}
+.filter-enabler-btn {
+  width: auto;
+  height: 100%;
+
+  background-color: var(--filter-enabler-bg, white);
+
+  transition: background-color 0.3s ease;
+}
+.filter-enabler-btn i {
+  border-radius: 40px;
+
+  background-color: white;
+
+  translate: var(--filter-enabler-btn-transX, 2.5px) 0;
+
+  color: var(--filter-btn-i-clr, black);
+
+  transition: color 0.25s ease, translate 0.3s ease;
+}
+
+/* SEARCH */
+
+.product-search-content {
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 3px;
+
+  display: grid;
+  grid-template-columns: 1fr var(--product-search-btn-w);
+  gap: 0.25rem;
+}
+.product-search-content input {
+  width: 100%;
+  height: var(--product-filter-search-input-h);
+  padding: 0 0.25rem;
+  border: none;
+}
+.product-search-content button {
+  border: none;
+  border-radius: var(--product-filter-input-border-rad);
+
+  background-color: black;
+
+  color: white;
+  font-size: var(--product-filter-btn-ff-size);
+}
+
+/* PRICE */
+
+.product-price-content li {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.product-price-content label {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+.product-price-content span {
+  border: 1ps solid black;
+}
+.product-price-content input {
+  width: 100%;
+  height: var(--product-filter-price-input-h);
+  padding: 0 0.25rem;
+}
+
+/* BRANDS */
+
+.product-brands-content {
+  height: auto !important;
+}
+.product-brands-content ul {
+  /* --product-filter-brand-h: 48px; */
+
+  scale: 1 var(--product-filter-scale-y, 1);
+  transform-origin: top;
+
+  transition: height 0.2s ease, scale 0.2s ease;
+}
+
+.scale-cont-y {
+  --product-filter-scale-y: 0;
+}
+
+/* SUBMIT & RESET */
+
+.product-filter-reset-container {
+  margin-bottom: 1rem;
+  display: grid;
+  justify-content: center;
+}
+.product-filter-reset-container input {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid black;
+  border-radius: var(--product-filter-input-border-rad);
+
+  background-color: black;
+
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  transition: background-color 0.2s ease;
+}
+
+/* -------- */
+/* MATCHED PRODUCTS */
+
+.filtered-products-container {
+  --filtered-product-pad: 0.5rem;
+
+  --matched-product-w: 250px;
+  --matched-product-h: 270px;
+
+  --product-img-pad: 0.5rem;
+
+  --product-act-pad: 0 2rem;
+  --product-act-bor-rad: 10px;
+
+  --product-act-i-h: 85px;
+  --product-act-i-w: 85px;
+  --product-act-i-pad: 20px;
+  --product-act-i-ff-size: 37.5px;
+
+  padding: var(--filtered-product-pad);
+  margin-bottom: 3rem;
+
+  display: grid;
+
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--matched-product-w), 1fr)
+  );
+  justify-items: center;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.matched-product {
+  width: var(--matched-product-w);
+  height: var(--matched-product-h);
+  border: 1px solid #a0a0a0;
+  border-radius: 10px;
+}
+.matched-product-container {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-rows: 0.85fr 0.15fr;
+  align-content: space-between;
+}
+
+.product-img {
+  --product-act-opac: 0;
+  --product-act-ff-opac: 0;
+
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+
+  position: relative;
+  top: 0;
+  left: 0;
+
+  overflow: hidden;
+}
+.product-img:hover {
+  --product-act-opac: 0.85;
+  --product-act-ff-opac: 1;
+}
+
+.product-act {
+  width: 100%;
+  height: 100%;
+  padding: var(--product-img-pad);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.product-img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.product-act {
+  padding: var(--product-act-pad);
+  border-radius: var(--product-act-bor-rad) var(--product-act-bor-rad) 0 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+
+  box-shadow: inset 1px 1px 5px 200px rgba(0, 0, 0, var(--product-act-opac));
+
+  transition: box-shadow 0.2s ease;
+}
+.product-act i {
+  width: var(--product-act-i-h);
+  height: var(--product-act-i-w);
+  padding: var(--product-act-i-pad);
+  border: 2px solid rgb(255, 255, 255, var(--product-i-opac, 0));
+  border-radius: 50%;
+
+  color: rgb(255, 255, 255, var(--product-act-ff-opac));
+  font-size: var(--product-act-i-ff-size);
+  text-align: center;
+
+  cursor: pointer;
+
+  transition: color 0.2s ease, border 0.2s ease;
+}
+
+.product-act i:hover {
+  --product-i-opac: 1;
+}
+
+.product-name {
+  border-radius: 0 0 var(--product-act-bor-rad) var(--product-act-bor-rad);
+
+  display: grid;
+  grid-template-columns: 0.65fr 0.35fr;
+  align-items: center;
+
+  background-color: black;
+
+  color: white;
+  /* font-size: ; */
+  font-size: var(--product-filter-ff-size, 14px);
+  text-align: center;
+}
