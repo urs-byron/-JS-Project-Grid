@@ -1,6 +1,5 @@
 import { getElement, getElements, getData, getCSSVar } from "./util-fx.js";
-import { products_json_url, tab_screen } from "./util-var.js";
-import { hidePreLoader } from "./util-preloader.js";
+import { products_json_url } from "./util-var.js";
 
 let model = null,
   model_gallery = [],
@@ -77,6 +76,11 @@ const HTMLProductGallery = (product_model) => {
 };
 const HTMLProductDetails = (product_model) => {
   const product_details_cont = getElement(".product-model-details-container");
+
+  // PAGE TITLE
+  getElement("title").innerText = `${
+    product_model.brand[0].toUpperCase() + product_model.brand.slice(1)
+  }: Model ${product_model.model}`;
 
   // PRODUCT DETAILS HEAD
   const prod_details_head_h2_text = document.createTextNode(
@@ -158,8 +162,10 @@ const HTMLProductDetails = (product_model) => {
 const LoadProductModel = async () => {
   try {
     const product_model = await getModel();
-    if (document.querySelector("main h2"))
+    if (document.querySelector("main h2")) {
       getElement("main").removeChild(getElement("main h2"));
+      return;
+    }
 
     getElement("main .gen-loading-container").classList.add("hide-gen-loading");
     getElement("main").style.setProperty("--product-model-disp", "block");
@@ -170,6 +176,7 @@ const LoadProductModel = async () => {
   } catch (err) {
     const page_main = getElement("main");
     const error_head = document.createElement("h2");
+    error_head.classList.add("error-message");
     const error_head_text = document.createTextNode(
       "404 Error: Model not Found"
     );
@@ -179,14 +186,8 @@ const LoadProductModel = async () => {
     page_main.appendChild(error_head);
   }
 };
-window.addEventListener("DOMContentLoaded", async function () {
-  try {
-    await LoadProductModel();
-    await hidePreLoader();
-  } catch (err) {
-    throw new Error(err);
-  }
-});
+
+export { LoadProductModel, getModel };
 
 // ----- GALLERY FUNCTIONALITIES ----- //
 
@@ -272,27 +273,13 @@ const tabChangeGalleryLimit = () => {
   tabCheckGalleryMove();
 };
 
-window.matchMedia(tab_screen).addEventListener("change", (e) => {
-  if (e.matches) {
-    tabChangeGalleryLimit();
-  } else {
-    genChangeGalleryLimit();
-  }
-});
+export {
+  tabCheckGalleryMove,
+  genCheckGalleryMove,
+  genChangeGalleryLimit,
+  tabChangeGalleryLimit,
+};
 
-window.addEventListener("DOMContentLoaded", function () {
-  if (
-    this.window.innerWidth <
-    parseInt(
-      tab_screen.slice(tab_screen.indexOf(":") + 1, tab_screen.length - 3)
-    ) +
-      1
-  ) {
-    tabCheckGalleryMove();
-  } else {
-    genCheckGalleryMove();
-  }
-});
 const nextGalleryImg = () => {
   model_images_items[model_gallery_counter].classList.remove(
     "product-main-image"

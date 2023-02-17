@@ -1,9 +1,15 @@
+body {
+  grid-template-rows: 1fr auto;
+}
 main {
   --product-model-disp: none;
 
   position: relative;
   top: 0;
   left: 0;
+
+  display: grid;
+  align-items: center;
 }
 
 /* -------- */

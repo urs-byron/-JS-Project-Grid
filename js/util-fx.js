@@ -35,4 +35,8 @@ const getCSSVar = (e, mark) => {
   return getComputedStyle(e).getPropertyValue(mark);
 };
 
-export { getElement, getElements, getData, getCSSVar };
+const hidePreLoader = () => {
+  getElement(".preloader").classList.add("hide-preloader");
+};
+
+export { getElement, getElements, getData, getCSSVar, hidePreLoader };

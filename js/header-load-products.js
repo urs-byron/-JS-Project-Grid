@@ -76,7 +76,10 @@ const LoadBrandProducts = async (data) => {
     const prod_spec_a = document.createElement("a");
     const prod_spec_a_text = document.createTextNode("specifications");
     prod_spec_a.appendChild(prod_spec_a_text);
-    prod_spec_a.setAttribute("href", product.spec_link);
+    prod_spec_a.setAttribute(
+      "href",
+      `./model.html?product-model=${product.model}`
+    );
     prod_spec_a.classList.add("product-link");
     prod_spec_link.appendChild(prod_spec_a);
     prod_spec_link.classList.add("product-links");
@@ -122,7 +125,10 @@ const LoadBrandProducts = async (data) => {
 
     const prod_var = document.createElement("a");
     prod_var.classList.add("product-link");
-    prod_var.setAttribute("href", product.spec_link);
+    prod_var.setAttribute(
+      "href",
+      `./model.html?product-model=${product.model}`
+    );
     const prod_var_text = document.createTextNode("variants ");
 
     const prod_var_symb = document.createElement("i");
@@ -133,7 +139,10 @@ const LoadBrandProducts = async (data) => {
 
     const prod_room = document.createElement("a");
     prod_room.classList.add("product-link");
-    prod_room.setAttribute("href", product.spec_link);
+    prod_room.setAttribute(
+      "href",
+      `./model.html?product-model=${product.model}`
+    );
     const prod_room_text = document.createTextNode("viewroom ");
 
     const prod_room_symb = document.createElement("i");

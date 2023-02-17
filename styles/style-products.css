@@ -1,5 +1,13 @@
 /* -------- */
 /* FILTER PRODUCTS */
+/* .error-message {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+} */
+
+/* -------- */
+/* FILTER PRODUCTS */
 /* -------- */
 
 .product-selection {
@@ -43,6 +51,11 @@
 .product-filter,
 .filtered-products {
   font-family: "Montserrat", sans-serif;
+}
+.filtered-products {
+  margin-bottom: 5rem;
+  display: grid;
+  text-align: center;
 }
 
 .product-filter-container {

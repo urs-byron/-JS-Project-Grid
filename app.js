@@ -4,17 +4,17 @@ import {
   products_json_url,
 } from "./js/util-var.js";
 
-import { hidePreLoader } from "./js/util-preloader.js";
+import { hidePreLoader } from "./js/util-fx.js";
 
 import {
   HTMLUniLogos,
   CSSAffiliatedUniTransX,
   LoadAffiliatedUniversities,
-} from "./js/util-affil-uni.js";
+} from "./js/header-load-affil-uni.js";
 
-import { LoadBrands } from "./js/util-products.js";
+import { LoadBrands } from "./js/header-load-products.js";
 
-import { LoadMainEvents, LoadEventDates } from "./js/util-main-events.js";
+import { LoadMainEvents, LoadEventDates } from "./js/header-load-events.js";
 
 import { setFooterYear } from "./js/util-footer.js";
 

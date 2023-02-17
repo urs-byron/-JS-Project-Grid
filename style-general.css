@@ -30,7 +30,13 @@ html {
 body {
   --sidebar-right-space: 0 105px 0 0.4rem;
 }
+/* EXPERIMENTAL */
+body {
+  min-height: 100vh;
 
+  display: grid;
+  align-content: space-between;
+}
 h2 {
   font-size: 35px;
   font-family: "Oswald", sans-serif;
@@ -336,7 +342,7 @@ h2 {
 }
 
 .hide-sidebar-right {
-  --sidebar-right-right: -10rem;
+  --sidebar-right-right: -20rem;
 }
 
 @media screen and (min-width: 1500px) {
@@ -347,7 +353,10 @@ h2 {
     );
   }
   .sidebar-right {
-    --sidebar-right: calc(calc(calc(100vw - var(--page-max-width-g)) / 2));
+    /* --sidebar-right: calc(calc(calc(100vw - var(--page-max-width-g)) / 2)); */
+    --sidebar-right-right: calc(
+      calc(calc(calc(100vw - var(--page-max-width-g)) / 2)) + 1.5rem
+    );
   }
 }
 

@@ -125,6 +125,7 @@ const filterBySpec = (filter_obj, data) => {
 };
 
 const containMatchedProducts = (data) => {
+  const cont = getElement(".filtered-products");
   const matched_products_container = getElement(".filtered-products-container");
 
   // SEARCH RESULT CLEANER
@@ -134,9 +135,13 @@ const containMatchedProducts = (data) => {
     );
   }
 
+  // REMOVE SEARCH MESSAGE
+  if (document.querySelector(".error-message")) {
+    cont.removeChild(getElement(".error-message"));
+  }
+
   // REMOVE LOADER
   const loader = getElement(".filtered-products .gen-loading-container");
-  const cont = getElement(".filtered-products");
   loader.classList.add("hide-gen-loading");
 
   // NO MATCHING SEARCH QUERY
@@ -144,9 +149,10 @@ const containMatchedProducts = (data) => {
     const matched_products_head_text = document.createTextNode(
       "No products matched. Try searching again!"
     );
-    const matched_products_head = document.createElement("h4");
-    matched_products_head.appendChild(matched_products_head_text);
-    matched_products_container.appendChild(matched_products_head);
+    const matched_products_message = document.createElement("h4");
+    matched_products_message.appendChild(matched_products_head_text);
+    matched_products_message.classList.add("error-message");
+    cont.appendChild(matched_products_message);
 
     return;
   }
