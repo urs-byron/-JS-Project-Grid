@@ -1,7 +1,7 @@
 import { products_json_url } from "./js/util-var.js";
 import { hidePreLoader } from "./js/util-preloader.js";
-import { filterProducts } from "./js/filter-product.js";
-import { HTMLFilterInput } from "./js/util-product-filter.js";
+import { filterProducts } from "./js/util-products-search.js";
+import { HTMLFilterInput } from "./js/util-products-get-filter.js";
 
 window.addEventListener("DOMContentLoaded", async (e) => {
   try {

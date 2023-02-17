@@ -175,7 +175,7 @@ const containMatchedProducts = (data) => {
     prod_act_info_a.appendChild(prod_act_info);
     prod_act_info_a.setAttribute(
       "href",
-      `product.html?product-model=${prod.model}`
+      `model.html?product-model=${prod.model}`
     );
 
     prod_act.appendChild(prod_act_cart_a);
