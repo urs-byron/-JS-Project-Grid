@@ -245,7 +245,7 @@ const checkLoadedHTML = () => {
         oldTravX = 0,
         newTravX = `0px`,
         firstTravX = 0,
-        widthSwipe = 90,
+        widthSwipe = 20,
         currentProd = 0;
 
       const changeProdsContTransX = () => {

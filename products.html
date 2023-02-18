@@ -17,7 +17,7 @@
     <!-- JS -->
     <script type="module" src="./products.js" defer></script>
     <script type="module" src="./js/show-sidebar-right.js" defer></script>
-    <script type="module" src="./js/show-nav-support.js" defer></script>
+    <script type="module" src="./js/util-nav.js" defer></script>
     <script type="module" src="./js/show-footer-item-lists.js" defer></script>
     <script type="module" src="./js/filter-hide-brands-specs.js" defer></script>
     <script type="module" src="./js/filter-load-brands-specs.js" defer></script>
@@ -35,10 +35,9 @@
       <nav id="navigation">
         <div class="nav-container">
           <ul class="public-list">
-            <li>
-              <a href="#navigation"
-                ><i class="fa-solid fa-user-large-slash"></i>
-                <!-- <i class="fa-solid fa-user"></i> -->
+            <li class="head-to-header-btn public-nav-page-assign-btn">
+              <a href="./">
+                <i class="fa-solid fa-house"></i>
               </a>
             </li>
             <li class="primary-list-hover">
@@ -100,12 +99,18 @@
                 </li>
               </ul>
             </li>
-            <li>
+            <li class="show-user-options-btn">
               <a href="#navigation"
+                ><i class="fa-solid fa-user-large-slash"></i>
+                <!-- <i class="fa-solid fa-user"></i> -->
+              </a>
+            </li>
+            <li class="head-to-kart-btn public-nav-page-assign-btn">
+              <a href="./kart.html"
                 ><i class="fa-solid fa-cart-shopping"></i
               ></a>
             </li>
-            <li>
+            <li class="head-to-products-btn public-nav-page-assign-btn">
               <a href="./products.html"
                 ><i class="fa-solid fa-magnifying-glass"></i
               ></a>

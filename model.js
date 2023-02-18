@@ -6,12 +6,14 @@ import {
   tabChangeGalleryLimit,
 } from "./js/model-gallery-util.js";
 import { getElement, hidePreLoader } from "./js/util-fx.js";
+import { setFooterYear } from "./js/util-footer.js";
 import { tab_screen } from "./js/util-var.js";
 
 window.addEventListener("DOMContentLoaded", async function () {
   try {
     await LoadProductModel();
     hidePreLoader();
+    await setFooterYear();
 
     if (
       this.window.innerWidth <
