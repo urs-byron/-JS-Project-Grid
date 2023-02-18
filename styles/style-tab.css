@@ -8,6 +8,27 @@
   }
 
   /* -------- */
+  /* LOGIN & SIGNUP */
+  /* -------- */
+
+  .user-login-signup-container {
+    --user-login-signup-container-gr-row: 1fr 1fr;
+    --user-login-signup-container-gr-col: 1fr;
+    --user-login-signup-container-gr-gap: 1rem;
+    --user-login-and-signup-container-gr-gap: 0.25rem;
+    --user-login-signup-container-fieldset-pad: 0.5rem;
+  }
+
+  .user-login-signup legend h2 {
+    font-size: 16px;
+  }
+  .user-login-signup label,
+  .user-login-signup input,
+  .user-login-signup button,
+  .user-login-section-message {
+    font-size: 10px;
+  }
+  /* -------- */
   /* HEADER */
   /* -------- */
 

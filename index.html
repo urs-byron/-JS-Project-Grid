@@ -17,6 +17,7 @@
     <!-- JS -->
     <script type="module" src="./app.js"></script>
     <script type="module" src="./js/header-play-music.js" defer></script>
+    <script type="module" src="./js/show-user-option.js" defer></script>
     <script type="module" src="./js/util-nav.js" defer></script>
     <script type="module" src="./js/show-sidebar-right.js" defer></script>
     <script type="module" src="./js/show-footer-item-lists.js" defer></script>
@@ -25,6 +26,137 @@
     <div class="preloader">
       <img src="./res/misc/preloader.gif" alt="" />
     </div>
+
+    <div class="user-options">
+      <div class="user-options-container">
+        <div class="user-info">
+          <div class="user-info-container">
+            <h2>profile</h2>
+          </div>
+        </div>
+        <div class="user-login-signup">
+          <div class="user-login-signup-container">
+            <div class="user-login-container">
+              <form action="./" action="POST">
+                <fieldset>
+                  <legend>
+                    <h2>login</h2>
+                  </legend>
+                  <div class="user-login-username-container">
+                    <label for="user-login-username">username</label>
+                    <input
+                      type="text"
+                      name="user-login-username"
+                      id="user-login-username"
+                      placeholder="ben10"
+                      required
+                    />
+                  </div>
+                  <div class="user-login-password-container">
+                    <label for="user-login-password">password</label>
+                    <input
+                      type="password"
+                      name="user-login-password"
+                      id="user-login-password"
+                      placeholder="********"
+                      required
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    name="user-login-submit"
+                    id="user-login-submit-btn"
+                  >
+                    welcome back!
+                  </button>
+                </fieldset>
+              </form>
+              <form action="">
+                <fieldset>
+                  <legend><h2>Logout</h2></legend>
+                  <button
+                    type="submit"
+                    name="user-logout-submit"
+                    id="user-logout-submit-btn"
+                  >
+                    we'll miss you!
+                  </button>
+                </fieldset>
+              </form>
+              <p class="user-login-section-message"></p>
+            </div>
+            <div class="user-signup-container">
+              <form action="./" action="POST">
+                <fieldset>
+                  <legend>
+                    <h2>sign-up</h2>
+                  </legend>
+                  <div class="user-signup-first-name-container">
+                    <label for="user-signup-first-name">first name</label>
+                    <input
+                      type="text"
+                      name="user-signup-first-name"
+                      id="user-signup-first-name"
+                      placeholder="Benny"
+                      required
+                    />
+                  </div>
+                  <div class="user-signup-last-name-container">
+                    <label for="user-signup-last-name">last name</label>
+                    <input
+                      type="text"
+                      name="user-signup-last-name"
+                      id="user-signup-last-name"
+                      placeholder="Tennisson"
+                      required
+                    />
+                  </div>
+                  <div class="user-signup-username-container">
+                    <label for="user-signup-username">username</label>
+                    <input
+                      type="text"
+                      name="user-signup-username"
+                      id="user-signup-username"
+                      placeholder="ben10m@lupHETZ20"
+                      required
+                    />
+                  </div>
+                  <div class="user-signup-password-container">
+                    <label for="user-signup-password">password</label>
+                    <input
+                      type="password"
+                      name="user-signup-password"
+                      id="user-signup-password"
+                      placeholder="********"
+                      required
+                    />
+                  </div>
+                  <div class="user-signup-re-password-container">
+                    <label for="user-signup-repeat-password">re-password</label>
+                    <input
+                      type="password"
+                      name="user-signup-repeat-password"
+                      id="user-signup-repeat-password"
+                      placeholder="********"
+                      required
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    name="user-signup-submit"
+                    name="user-signup-submit-btn"
+                  >
+                    give me money!
+                  </button>
+                </fieldset>
+              </form>
+              <p class="user-login-section-message"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <header>
       <div class="header-container">
         <div class="header-bg-container">

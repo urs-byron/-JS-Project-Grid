@@ -361,6 +361,126 @@ h2 {
 }
 
 /* -------- */
+/* USER OPTIONS */
+/* -------- */
+
+.user-options {
+  --user-options-pos-top: -150%;
+
+  width: 100vw;
+  height: 100vh;
+  padding: var(--sidebar-right-space);
+
+  position: fixed;
+  top: var(--user-options-pos-top);
+  left: 0;
+
+  z-index: 75;
+
+  display: grid;
+  justify-content: center;
+  align-content: center;
+
+  background-color: rgb(0, 0, 0, 0.5);
+
+  transition: padding 0.5s ease, top 0.25s ease;
+}
+.user-options-container {
+  /* border: 30px solid rgb(255, 0, 0, 0); */
+  border-radius: 15px;
+
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: 100% 100%;
+  grid-template-rows: 1fr;
+  /* grid-template-columns: 1fr 1fr; */
+}
+.user-options-container > * {
+  /* max-height: 500px; */
+  /* border: 2.5px solid gray; */
+  border-radius: 15px;
+
+  background-color: white;
+
+  translate: -100% 0;
+}
+.user-login-signup-container {
+  height: 100%;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: var(--user-login-signup-container-gr-col, 1fr 1fr);
+  grid-template-rows: var(--user-login-signup-container-gr-row, 1fr);
+  gap: var(--user-login-signup-container-gr-gap, 2.5rem);
+}
+.user-login-signup-container > div {
+  display: grid;
+  grid-template-rows: 1fr;
+}
+.user-signup-container,
+.user-login-container {
+  display: grid;
+  gap: var(--user-login-and-signup-container-gr-gap, 1rem);
+}
+.user-login-container {
+  grid-row: 1fr 1fr 1fr;
+}
+.user-signup-container {
+  grid-row: 1fr 1fr;
+}
+
+.user-login-signup-container > div > form {
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+.user-login-signup-container > div fieldset {
+  border-radius: 10px;
+  padding: var(--user-login-signup-container-fieldset-pad, 1.5rem);
+
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: center;
+  gap: 1rem;
+}
+.user-login-signup-container > div fieldset > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+}
+
+.user-login-signup legend h2 {
+  padding: 0 1rem;
+  text-transform: capitalize;
+}
+.user-login-signup button {
+  padding: 0.5rem 0;
+  border: 0px solid black;
+  border-radius: 5px;
+
+  background-color: black;
+
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+.user-login-signup input {
+  padding: 5px;
+  border: 1px solid gray;
+  border-radius: 3px !important;
+  font-family: "Montserrat", sans-serif !important;
+}
+.user-login-signup label {
+  font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
+}
+.user-login-section-message {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+/* -------- */
 /* NAVIGATION */
 /* -------- */
 
