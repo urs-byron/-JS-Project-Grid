@@ -28,6 +28,10 @@
   .user-login-section-message {
     font-size: 10px;
   }
+
+  #user-logout-form {
+    translate: 0 57.5%;
+  }
   /* -------- */
   /* HEADER */
   /* -------- */

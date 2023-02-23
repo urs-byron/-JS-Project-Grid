@@ -15,11 +15,12 @@
     <link rel="stylesheet" href="./styles/style-tab.css" />
     <link rel="stylesheet" href="./styles/style-mob.css" />
     <!-- JS -->
-    <script type="module" src="./app.js"></script>
+    <script type="module" src="./app.js" defer></script>
     <script type="module" src="./js/header-play-music.js" defer></script>
     <script type="module" src="./js/show-user-option.js" defer></script>
     <script type="module" src="./js/util-nav.js" defer></script>
     <script type="module" src="./js/show-sidebar-right.js" defer></script>
+    <script type="module" src="./js/util-account.js" defer></script>
     <script type="module" src="./js/show-footer-item-lists.js" defer></script>
   </head>
   <body>
@@ -37,7 +38,7 @@
         <div class="user-login-signup">
           <div class="user-login-signup-container">
             <div class="user-login-container">
-              <form action="./" action="POST">
+              <form action="./" action="GET" id="user-login-form">
                 <fieldset>
                   <legend>
                     <h2>login</h2>
@@ -71,7 +72,7 @@
                   </button>
                 </fieldset>
               </form>
-              <form action="">
+              <form action="./" action="GET" id="user-logout-form">
                 <fieldset>
                   <legend><h2>Logout</h2></legend>
                   <button
@@ -86,7 +87,7 @@
               <p class="user-login-section-message"></p>
             </div>
             <div class="user-signup-container">
-              <form action="./" action="POST">
+              <form action="./" action="GET" id="user-signup-form">
                 <fieldset>
                   <legend>
                     <h2>sign-up</h2>
@@ -128,6 +129,7 @@
                       name="user-signup-password"
                       id="user-signup-password"
                       placeholder="********"
+                      min
                       required
                     />
                   </div>
@@ -144,7 +146,7 @@
                   <button
                     type="submit"
                     name="user-signup-submit"
-                    name="user-signup-submit-btn"
+                    id="user-signup-submit-btn"
                   >
                     give me money!
                   </button>
@@ -322,7 +324,7 @@
             <li class="show-user-options-btn">
               <a href="#navigation"
                 ><i class="fa-solid fa-user-large-slash"></i>
-                <!-- <i class="fa-solid fa-user"></i> -->
+                <i class="fa-solid fa-user"></i>
               </a>
             </li>
             <li class="head-to-kart-btn public-nav-page-assign-btn">
