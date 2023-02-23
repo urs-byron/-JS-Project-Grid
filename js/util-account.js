@@ -240,3 +240,8 @@ window.addEventListener("DOMContentLoaded", (e) => {
     signup_form.style.setProperty("display", "grid");
   }
 });
+
+// localStorage.setItem("logged_account", "");
+// localStorage.setItem("accounts", JSON.stringify([]));
+
+// KART MECHANISM
