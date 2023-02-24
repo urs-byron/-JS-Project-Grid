@@ -173,16 +173,78 @@ const containMatchedProducts = (data) => {
     const prod_act_info = document.createElement("i");
     prod_act_cart.classList.add("fa-solid", "fa-cart-plus");
     prod_act_info.classList.add("fa-solid", "fa-tags");
+    prod_act_cart.setAttribute("data-model", prod.model);
 
-    // products.html?product-name=
     const prod_act_cart_a = document.createElement("a");
     const prod_act_info_a = document.createElement("a");
     prod_act_cart_a.appendChild(prod_act_cart);
+    prod_act_cart_a.setAttribute("data-model", prod.model);
+    prod_act_cart_a.classList.add("product-add-kart");
     prod_act_info_a.appendChild(prod_act_info);
     prod_act_info_a.setAttribute(
       "href",
       `model.html?product-model=${prod.model}`
     );
+
+    prod_act_cart_a.addEventListener("click", (e) => {
+      const logged_account = localStorage.getItem("logged_account");
+      if (logged_account) {
+        // ANIMATION
+        e.currentTarget.classList.add("show-add-kart-anim");
+        setTimeout(
+          (e) => {
+            let el = null;
+            if (e.target.classList.contains("fa-solid")) {
+              el = e.target.parentElement;
+            } else if (e.target.classList.contains("product-add-kart")) {
+              el = e.target;
+            }
+            el.classList.remove("show-add-kart-anim");
+          },
+          4000,
+          e
+        );
+
+        // DATABASE
+        const item_model = e.currentTarget.dataset.model;
+        const accounts = JSON.parse(localStorage.getItem("accounts"));
+        let logged_account_i = null;
+        let logged_account_kart_item_names = [];
+        let logged_account_kart_item_model = null;
+
+        accounts.forEach((account, index) => {
+          if (account.user_name === logged_account) {
+            logged_account_i = index;
+          }
+        });
+
+        logged_account_kart_item_names = accounts[logged_account_i].kart.map(
+          (item) => item.model
+        );
+
+        if (logged_account_kart_item_names.length) {
+          logged_account_kart_item_names.forEach((model, index) => {
+            if (model === item_model) logged_account_kart_item_model = index;
+          });
+
+          if (logged_account_kart_item_model) {
+            accounts[logged_account_i].kart[
+              logged_account_kart_item_model
+            ].quantity =
+              accounts[logged_account_i].kart[logged_account_kart_item_model]
+                .quantity + 1;
+          } else {
+            const new_kart_item = { model: `${item_model}`, quantity: 1 };
+            accounts[logged_account_i].kart.push(new_kart_item);
+          }
+        } else {
+          const new_kart_item = { model: `${item_model}`, quantity: 1 };
+          accounts[logged_account_i].kart.push(new_kart_item);
+        }
+
+        localStorage.setItem("accounts", JSON.stringify(accounts));
+      }
+    });
 
     prod_act.appendChild(prod_act_cart_a);
     prod_act.appendChild(prod_act_info_a);

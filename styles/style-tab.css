@@ -325,6 +325,13 @@
   }
 
   /* -------- */
+  /* MATCHED PRODUCT */
+  .product-add-kart::before {
+    border: 1.25px solid red;
+    font-size: 7.5px;
+  }
+
+  /* -------- */
   /* PRODUCT MODEL */
   /* -------- */
 

@@ -56,6 +56,13 @@
     --product-act-i-ff-size: 20px;
   }
   /* -------- */
+  /* MATCHED PRODUCT */
+  .product-add-kart::before {
+    border: 1px solid red;
+    font-size: 5px;
+  }
+
+  /* -------- */
   /* PRODUCT MODEL */
   /* -------- */
 

@@ -4,7 +4,7 @@ import {
   products_json_url,
 } from "./js/util-var.js";
 
-import { hidePreLoader } from "./js/util-fx.js";
+import { createLocalStorage, hidePreLoader } from "./js/util-fx.js";
 
 import {
   HTMLUniLogos,
@@ -48,3 +48,5 @@ window.addEventListener("resize", (element) => {
     throw new Error(error);
   }
 });
+
+createLocalStorage();

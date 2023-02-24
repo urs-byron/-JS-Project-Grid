@@ -39,4 +39,20 @@ const hidePreLoader = () => {
   getElement(".preloader").classList.add("hide-preloader");
 };
 
-export { getElement, getElements, getData, getCSSVar, hidePreLoader };
+const createLocalStorage = () => {
+  if (!localStorage.getItem("accounts")) {
+    localStorage.setItem("accounts", JSON.stringify([]));
+  }
+  if (!localStorage.getItem("logged_account")) {
+    localStorage.setItem("logged_account", "");
+  }
+};
+
+export {
+  getElement,
+  getElements,
+  getData,
+  getCSSVar,
+  hidePreLoader,
+  createLocalStorage,
+};
