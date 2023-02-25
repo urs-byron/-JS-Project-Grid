@@ -28,7 +28,6 @@ main {
 .product-model-container {
   --product-display-item-transX: 0%;
   --product-image-item-transX: 0%;
-  /* --product-model-gallery-items: 3; */
   --product-model-gallery-img-gr-gap: 0.5rem;
 
   max-width: var(--page-max-width-g);

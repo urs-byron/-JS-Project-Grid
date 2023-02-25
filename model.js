@@ -5,13 +5,14 @@ import {
   genChangeGalleryLimit,
   tabChangeGalleryLimit,
 } from "./js/model-gallery-util.js";
-import { getElement, hidePreLoader } from "./js/util-fx.js";
+import { getElement, hidePreLoader, createLocalStorage } from "./js/util-fx.js";
 import { setFooterYear } from "./js/util-footer.js";
 import { tab_screen } from "./js/util-var.js";
 
 window.addEventListener("DOMContentLoaded", async function () {
   try {
     await LoadProductModel();
+    createLocalStorage();
     hidePreLoader();
     await setFooterYear();
 

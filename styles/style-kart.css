@@ -1,0 +1,118 @@
+/* -------- */
+/* KART ITEMS */
+/* -------- */
+
+.kart-items {
+  width: 100vw;
+  max-height: auto;
+  padding: var(--sidebar-right-space);
+
+  transition: padding 0.5s ease;
+}
+
+.kart-items-container {
+  max-width: var(--page-max-width-g);
+  height: auto;
+  margin: 0 auto;
+
+  overflow: hidden;
+}
+
+.kart-items-head {
+  margin: 1rem 0 0.5rem 0;
+}
+
+.kart-items-content-container {
+  padding: var(--kart-items-content-container-pad, 1.5rem);
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--kart-items-content-container-gr-gap, 2.5rem);
+}
+
+.kart-no-accnt {
+  padding: 100px 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.kart-item {
+  --kart-item-h: 100px;
+  --kart-item-img-h: 100px;
+
+  border: 1px solid black;
+  border-radius: 10px;
+
+  box-shadow: var(--kart-item-box-sh, 0px 0px 5px 5px gray);
+
+  font-family: "Montserrat", sans-serif;
+}
+.kart-item-container {
+  max-height: var(--kart-item-h);
+  display: grid;
+  grid-template-columns: var(
+    --kart-item-cont-gr-col,
+    0.1fr 0.25fr 0.5fr 0.15fr
+  );
+  grid-template-rows: var(--kart-item-h);
+}
+
+.kart-item-container > div {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+.kart-item-container > div ~ * {
+  border: 1px solid black;
+  border-style: none none none dashed;
+}
+.kart-item-container img {
+  height: calc(var(--kart-item-img-h) * 0.75);
+}
+.kart-item-container i {
+  -webkit-text-stroke: 1.5px black;
+}
+.kart-item-delete {
+  border-radius: 10px 0 0 10px;
+  background-color: gray;
+
+  color: white;
+  font-size: var(--kart-item-delete-ff-size, 40px);
+
+  cursor: pointer;
+}
+
+.kart-item-label {
+  display: grid;
+  grid-template-columns: var(--kart-item-label-gr-col, 0.6fr 0.4fr);
+  align-items: center;
+  justify-items: center;
+
+  text-decoration: none;
+  color: black;
+
+  cursor: pointer;
+}
+.kart-item-label > h3 + h3 {
+  font-weight: normal;
+}
+.kart-item-qtty {
+  border-radius: 0 10px 10px 0;
+  background-color: gray;
+
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  gap: 1rem;
+
+  font-size: 25px;
+  color: white;
+}
+.kart-item-qtty > * {
+  cursor: pointer;
+}
+.kart-item-qtty span {
+  font-size: 20px;
+  color: black;
+}

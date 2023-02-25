@@ -63,6 +63,24 @@
   }
 
   /* -------- */
+  /* KART */
+  /* -------- */
+
+  .kart-items-content-container {
+    --kart-items-content-cont-gr-gap: 1rem;
+
+    gap: 1rem;
+  }
+
+  .kart-item {
+    --kart-item-label: 1fr;
+    --kart-item-label-gr-col: 1fr;
+  }
+  /* .kart-item-label {
+    grid-template-columns: ;
+  } */
+
+  /* -------- */
   /* PRODUCT MODEL */
   /* -------- */
 
@@ -286,5 +304,25 @@
 
   .footer-links {
     grid-template-columns: repeat(4, 0.25fr);
+  }
+
+  .kart-items-content-container {
+    --kart-items-content-container-pad: 1rem;
+    --kart-items-content-container-gr-gap: 1rem;
+  }
+  .kart-item {
+    --kart-item-h: 55px;
+    --kart-item-box-sh: 0px 0px 2.5px 3px gray;
+    --kart-item-cont-gr-col: 40px 70px 1fr 60px;
+
+    --kart-item-delete-ff-size: 20px;
+    --kart-item-img-h: 60px;
+  }
+  .kart-item-label {
+    font-size: 8px;
+  }
+  .kart-item-qtty {
+    gap: 0.35rem;
+    font-size: 15px;
   }
 }

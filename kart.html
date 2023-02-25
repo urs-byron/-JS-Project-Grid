@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- TITLE -->
+    <title>Music Shop - Kart</title>
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="./res/favicon.ico" />
+    <!-- STYLES -->
+    <link rel="stylesheet" href="./styles/style-kart.css" />
+    <link rel="stylesheet" href="./style-general.css" />
+    <link rel="stylesheet" href="./styles/style-sml.css" />
+    <link rel="stylesheet" href="./styles/style-tab.css" />
+    <link rel="stylesheet" href="./styles/style-mob.css" />
+    <!-- JS -->
+    <script type="module" src="./kart.js" defer></script>
+    <script type="module" src="./js/show-sidebar-right.js" defer></script>
+    <script type="module" src="./js/show-user-option.js" defer></script>
+    <script type="module" src="./js/util-nav.js" defer></script>
+    <script type="module" src="./js/util-account.js" defer></script>
+    <script type="module" src="./js/show-footer-item-lists.js" defer></script>
+  </head>
+  <body>
+    <div class="preloader">
+      <img src="./res/misc/preloader.gif" alt="" />
+    </div>
+
+    <div class="user-options">
+      <div class="user-options-container">
+        <div class="user-info">
+          <div class="user-info-container">
+            <h2>profile</h2>
+          </div>
+        </div>
+        <div class="user-login-signup">
+          <div class="user-login-signup-container">
+            <div class="user-login-container">
+              <form action="./" action="GET" id="user-login-form">
+                <fieldset>
+                  <legend>
+                    <h2>login</h2>
+                  </legend>
+                  <div class="user-login-username-container">
+                    <label for="user-login-username">username</label>
+                    <input
+                      type="text"
+                      name="user-login-username"
+                      id="user-login-username"
+                      placeholder="ben10"
+                      required
+                    />
+                  </div>
+                  <div class="user-login-password-container">
+                    <label for="user-login-password">password</label>
+                    <input
+                      type="password"
+                      name="user-login-password"
+                      id="user-login-password"
+                      placeholder="********"
+                      required
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    name="user-login-submit"
+                    id="user-login-submit-btn"
+                  >
+                    welcome back!
+                  </button>
+                </fieldset>
+              </form>
+              <form action="./" action="GET" id="user-logout-form">
+                <fieldset>
+                  <legend><h2>Logout</h2></legend>
+                  <button
+                    type="submit"
+                    name="user-logout-submit"
+                    id="user-logout-submit-btn"
+                  >
+                    we'll miss you!
+                  </button>
+                </fieldset>
+              </form>
+              <p class="user-login-section-message"></p>
+            </div>
+            <div class="user-signup-container">
+              <form action="./" action="GET" id="user-signup-form">
+                <fieldset>
+                  <legend>
+                    <h2>sign-up</h2>
+                  </legend>
+                  <div class="user-signup-first-name-container">
+                    <label for="user-signup-first-name">first name</label>
+                    <input
+                      type="text"
+                      name="user-signup-first-name"
+                      id="user-signup-first-name"
+                      placeholder="Benny"
+                      required
+                    />
+                  </div>
+                  <div class="user-signup-last-name-container">
+                    <label for="user-signup-last-name">last name</label>
+                    <input
+                      type="text"
+                      name="user-signup-last-name"
+                      id="user-signup-last-name"
+                      placeholder="Tennisson"
+                      required
+                    />
+                  </div>
+                  <div class="user-signup-username-container">
+                    <label for="user-signup-username">username</label>
+                    <input
+                      type="text"
+                      name="user-signup-username"
+                      id="user-signup-username"
+                      placeholder="ben10m@lupHETZ20"
+                      required
+                    />
+                  </div>
+                  <div class="user-signup-password-container">
+                    <label for="user-signup-password">password</label>
+                    <input
+                      type="password"
+                      name="user-signup-password"
+                      id="user-signup-password"
+                      placeholder="********"
+                      min
+                      required
+                    />
+                  </div>
+                  <div class="user-signup-re-password-container">
+                    <label for="user-signup-repeat-password">re-password</label>
+                    <input
+                      type="password"
+                      name="user-signup-repeat-password"
+                      id="user-signup-repeat-password"
+                      placeholder="********"
+                      required
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    name="user-signup-submit"
+                    id="user-signup-submit-btn"
+                  >
+                    give me money!
+                  </button>
+                </fieldset>
+              </form>
+              <p class="user-login-section-message"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-right-toggle">
+      <i class="fa-solid fa-angles-right"></i>
+    </div>
+    <aside class="sidebar-right">
+      <nav id="navigation">
+        <div class="nav-container">
+          <ul class="public-list">
+            <li class="head-to-header-btn public-nav-page-assign-btn">
+              <a href="./">
+                <i class="fa-solid fa-house"></i>
+              </a>
+            </li>
+            <li class="primary-list-hover">
+              <a
+                ><i class="primary-list-hover fa-solid fa-ellipsis-vertical"></i
+              ></a>
+              <ul class="primary-list">
+                <li class="tutoring-li">
+                  <a>
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <h4>Tutoring</h4>
+                  </a>
+                  <ul class="tutoring-ul secondary-ul">
+                    <li><a>Courses</a></li>
+                    <li><a>Faculty</a></li>
+                    <li><a>Certificates</a></li>
+                    <li><a>Affiliates</a></li>
+                  </ul>
+                </li>
+                <li class="events-li">
+                  <a href="#events">
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <h4>Events</h4>
+                  </a>
+                </li>
+                <li class="careers-li">
+                  <a>
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <h4>Careers</h4>
+                  </a>
+                  <ul class="careers-ul secondary-ul">
+                    <li><a>Internship</a></li>
+                    <li><a>Teaching</a></li>
+                    <li><a>Developer</a></li>
+                  </ul>
+                </li>
+                <li class="community-li">
+                  <a>
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <h4>Community</h4>
+                  </a>
+                  <ul class="community-ul secondary-ul">
+                    <li><a>Forums</a></li>
+                    <li><a>Classes</a></li>
+                    <li><a>Bands</a></li>
+                  </ul>
+                </li>
+                <li class="resources-li">
+                  <a>
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <h4>Resources</h4>
+                  </a>
+                  <ul class="resources-ul secondary-ul">
+                    <li><a>Books</a></li>
+                    <li><a>Lessons</a></li>
+                    <li><a>Prinouts</a></li>
+                    <li><a>Audio</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="show-user-options-btn">
+              <a
+                ><i class="fa-solid fa-user-large-slash"></i>
+                <i class="fa-solid fa-user"></i>
+              </a>
+            </li>
+            <li class="head-to-kart-btn public-nav-page-assign-btn">
+              <a href="./kart.html"
+                ><i class="fa-solid fa-cart-shopping"></i
+              ></a>
+            </li>
+            <li class="head-to-products-btn public-nav-page-assign-btn">
+              <a href="./products.html"
+                ><i class="fa-solid fa-magnifying-glass"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="support" id="support">
+        <div class="support-btn">
+          <a href="#support"><i class="fa-regular fa-comments"></i></a>
+        </div>
+        <div class="support-window">
+          <div class="support-window-tab">
+            <i class="fa-solid fa-ellipsis"></i
+            ><i class="fa-solid fa-compress"></i>
+          </div>
+          <div class="support-head">Welcome to <span>Engel /Haft</span></div>
+          <div class="support-start">
+            <a class="support-start-text" href="#">
+              <i class="fa-solid fa-headphones"></i>
+              <span>Chat Support</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main>
+      <div class="kart-items">
+        <div class="kart-items-container">
+          <div class="kart-items-head"><h2>Kart</h2></div>
+          <div class="kart-items-content">
+            <div class="kart-items-content-container">
+              <div class="gen-loading-container">
+                <img
+                  src="./res/misc/gen-loading.gif"
+                  alt="loading ..."
+                  class="gen-loading"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer">
+      <div class="footer-container">
+        <div class="footer-head">
+          <h2>Resources</h2>
+        </div>
+        <div class="footer-content">
+          <h3 class="footer-item-head footer-faq">
+            faq <span class="footer-head-underline"></span>
+          </h3>
+          <div class="footer-item-content">
+            <a href="#footer">
+              <h4><i class="fa-regular fa-square-plus"></i> about us</h4>
+            </a>
+            <a href="#footer">
+              <h4><i class="fa-regular fa-square-plus"></i> news</h4>
+            </a>
+          </div>
+          <h3 class="footer-item-head footer-contact">
+            contact <span class="footer-head-underline"></span>
+          </h3>
+          <div class="footer-item-content">
+            <a href="#footer">
+              <h4><i class="fa-regular fa-square-plus"></i> nearest dealer</h4>
+            </a>
+            <a href="#footer">
+              <h4><i class="fa-regular fa-square-plus"></i> order status</h4>
+            </a>
+          </div>
+          <h3 class="footer-item-head footer-service">
+            service <span class="footer-head-underline"></span>
+          </h3>
+          <div class="footer-item-content">
+            <a href="#footer">
+              <h4><i class="fa-regular fa-square-plus"></i> product recall</h4>
+            </a>
+            <a href="#footer">
+              <h4><i class="fa-regular fa-square-plus"></i> franchising</h4>
+            </a>
+            <a href="#footer">
+              <h4>
+                <i class="fa-regular fa-square-plus"></i> customer support
+              </h4>
+            </a>
+          </div>
+          <h3 class="footer-item-head footer-terms">
+            terms <span class="footer-head-underline"></span>
+          </h3>
+          <div class="footer-item-content">
+            <a href="#footer">
+              <h4><i class="fa-regular fa-square-plus"></i> online terms</h4>
+            </a>
+            <a href="#footer">
+              <h4>
+                <i class="fa-regular fa-square-plus"></i> legal information
+              </h4>
+            </a>
+          </div>
+          <h3 class="footer-item-head footer-privacy">
+            <a href="#footer"
+              >privacy <span class="footer-head-underline"></span
+            ></a>
+          </h3>
+          <h3 class="footer-item-head footer-stuff">
+            <a href="#footer"
+              >stuff <span class="footer-head-underline"></span
+            ></a>
+          </h3>
+          <div class="footer-links">
+            <a href="#"><i class="fa-solid fa-turn-up"></i></a>
+            <a href="#footer"><i class="fa-brands fa-amazon"></i></a>
+            <a href="#footer"> <i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#footer"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+
+          <div class="footer-item-content website-logo-container">
+            <h1 class="website-logo footer-logo">
+              <span>Engel /Haft<span class="logo-break">.</span></span
+              ><sup
+                ><sup><sup>&copy;</sup></sup></sup
+              >
+            </h1>
+          </div>
+        </div>
+        <p>
+          Copyright <sup><i class="fa-regular fa-copyright"></i></sup> Yutaka
+          CGLM. All rights reserved <span class="footer-date"></span>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

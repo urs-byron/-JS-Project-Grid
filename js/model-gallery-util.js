@@ -1,5 +1,6 @@
 import { getElement, getElements, getData, getCSSVar } from "./util-fx.js";
 import { products_json_url } from "./util-var.js";
+import { addKartItemQtty } from "./filter-kart-add.js";
 
 let model = null,
   model_gallery = [],
@@ -106,12 +107,19 @@ const HTMLProductDetails = (product_model) => {
   prod_details_act_cont.classList.add("product-model-act");
   const prod_details_act_add = document.createElement("i");
   prod_details_act_add.classList.add("fa-solid", "fa-cart-plus");
+  prod_details_act_add.addEventListener("click", addKartItemQtty);
   const prod_details_act_like = document.createElement("i");
   prod_details_act_like.classList.add("fa-regular", "fa-heart");
 
   prod_details_act_cont.appendChild(prod_details_act_add);
   prod_details_act_cont.appendChild(prod_details_act_like);
 
+  prod_details_act_add.setAttribute("data-model", product_model.model);
+  prod_details_act_add.setAttribute("data-price", product_model.price);
+  prod_details_act_add.setAttribute(
+    "data-img-src",
+    product_model.gallery.display
+  );
   // PRODUCT DETAILS CONTENT
 
   const prod_details_content = document.createElement("div");

@@ -332,6 +332,33 @@
   }
 
   /* -------- */
+  /* KART */
+  /* -------- */
+  .kart-items-content-container {
+    --kart-items-content-container-gr-gap: 1.5rem;
+  }
+
+  .kart-item {
+    --kart-item-h: 75px;
+    --kart-item-box-sh: 0px 0px 3.5px 3.5px gray;
+    --kart-item-cont-gr-col: 70px 110px 1fr 80px;
+
+    --kart-item-delete-ff-size: 27.5px;
+    --kart-item-img-h: 75px;
+  }
+  .kart-item-label {
+    font-size: 12px;
+    gap: 0.5rem;
+  }
+  .kart-item-qtty {
+    gap: 0.5rem;
+    font-size: 18px;
+  }
+  .kart-item-qtty span {
+    font-size: 12px;
+  }
+
+  /* -------- */
   /* PRODUCT MODEL */
   /* -------- */
 
