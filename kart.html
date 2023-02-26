@@ -18,9 +18,9 @@
     <script type="module" src="./kart.js" defer></script>
     <script type="module" src="./js/show-sidebar-right.js" defer></script>
     <script type="module" src="./js/show-user-option.js" defer></script>
+    <script type="module" src="./js/show-footer-item-lists.js" defer></script>
     <script type="module" src="./js/util-nav.js" defer></script>
     <script type="module" src="./js/util-account.js" defer></script>
-    <script type="module" src="./js/show-footer-item-lists.js" defer></script>
   </head>
   <body>
     <div class="preloader">
@@ -31,7 +31,41 @@
       <div class="user-options-container">
         <div class="user-info">
           <div class="user-info-container">
-            <h2>profile</h2>
+            <form action="">
+              <fieldset>
+                <legend>
+                  <h2>change password:</h2>
+                </legend>
+                <div class="user-change-password-container">
+                  <label for="user-change-password">password</label>
+                  <input
+                    type="password"
+                    name="user-change-password"
+                    id="user-change-password"
+                    placeholder="********"
+                    min
+                    required
+                  />
+                </div>
+                <div class="user-change-re-password-container">
+                  <label for="user-change-repeat-password">re-password</label>
+                  <input
+                    type="password"
+                    name="user-change-repeat-password"
+                    id="user-change-repeat-password"
+                    placeholder="********"
+                    required
+                  />
+                </div>
+                <button
+                  type="submit"
+                  name="user-change-pass-submit"
+                  id="user-change-pass-submit-btn"
+                >
+                  LOL!
+                </button>
+              </fieldset>
+            </form>
           </div>
         </div>
         <div class="user-login-signup">
@@ -155,6 +189,10 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="user-options-navi">
+        <i class="fa-solid fa-chevron-left"></i
+        ><i class="fa-solid fa-chevron-right"></i>
       </div>
     </div>
 

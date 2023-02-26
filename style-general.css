@@ -386,7 +386,6 @@ h2 {
   transition: padding 0.5s ease, top 0.25s ease;
 }
 .user-options-container {
-  /* border: 30px solid rgb(255, 0, 0, 0); */
   border-radius: 15px;
 
   overflow: hidden;
@@ -394,20 +393,25 @@ h2 {
   display: grid;
   grid-template-columns: 100% 100%;
   grid-template-rows: 1fr;
-  /* grid-template-columns: 1fr 1fr; */
 }
 .user-options-container > * {
-  /* max-height: 500px; */
-  /* border: 2.5px solid gray; */
   border-radius: 15px;
 
   background-color: white;
 
-  translate: -100% 0;
+  translate: var(--user-options-items, -100%) 0;
+
+  transition: translate 0.25s ease;
+}
+.move-user-options-items {
+  --user-options-items: 0%;
+}
+.user-info-container,
+.user-login-signup-container {
+  padding: 1rem;
 }
 .user-login-signup-container {
   height: 100%;
-  padding: 1rem;
   display: grid;
   grid-template-columns: var(--user-login-signup-container-gr-col, 1fr 1fr);
   grid-template-rows: var(--user-login-signup-container-gr-row, 1fr);
@@ -429,11 +433,13 @@ h2 {
   grid-row: 1fr 1fr;
 }
 
-.user-login-signup-container > div > form {
+.user-login-signup-container > div > form,
+.user-info-container form {
   display: grid;
   grid-template-rows: 1fr auto;
 }
-.user-login-signup-container > div fieldset {
+.user-login-signup-container > div fieldset,
+.user-info-container fieldset {
   border-radius: 10px;
   padding: var(--user-login-signup-container-fieldset-pad, 1.5rem);
 
@@ -442,16 +448,18 @@ h2 {
   align-content: center;
   gap: 1rem;
 }
-.user-login-signup-container > div fieldset > div {
+.user-login-signup-container > div fieldset > div,
+.user-info-container fieldset > div {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: space-between;
 }
-
+.user-info legend h2,
 .user-login-signup legend h2 {
   padding: 0 1rem;
   text-transform: capitalize;
 }
+.user-info button,
 .user-login-signup button {
   padding: 0.5rem 0;
   border: 0px solid black;
@@ -465,12 +473,14 @@ h2 {
 
   cursor: pointer;
 }
+.user-info input,
 .user-login-signup input {
   padding: 5px;
   border: 1px solid gray;
   border-radius: 3px !important;
   font-family: "Montserrat", sans-serif !important;
 }
+.user-info label,
 .user-login-signup label {
   font-family: "Montserrat", sans-serif;
   text-transform: capitalize;
@@ -482,6 +492,23 @@ h2 {
 
 #user-logout-form {
   translate: 57.5% 0;
+}
+.user-options-navi {
+  text-align: right;
+}
+.user-options-navi > i {
+  height: auto;
+  width: 40px;
+  padding: 0.35rem 0;
+  border: 1px solid black;
+  border-radius: 7px;
+  margin: 0.75rem 0.75rem 0 0;
+
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
 }
 
 /* -------- */

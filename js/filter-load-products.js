@@ -1,9 +1,6 @@
 import { getElement, getElements, getData } from "./util-fx.js";
 import { products_json_url } from "./util-var.js";
-import { addKartItemAnim, addKartItemQtty } from "./filter-kart-add.js";
-
-const prod_filter_form = getElement(".product-filter-container form");
-const prod_filter_w_toggle = [...getElements(".product-filter-w-toggle")];
+import { addKartItemAnim, addKartItemQtty } from "./filter-add-kart.js";
 
 const productFilterObj = () => {
   const product_filter_obj = {
@@ -244,40 +241,29 @@ const filterProducts = async () => {
   containMatchedProducts(products_by_spec);
 };
 
-prod_filter_form.addEventListener("submit", async (e) => {
-  try {
-    e.preventDefault();
-    await filterProducts();
-  } catch (err) {
-    throw new Error(err);
-  }
-});
+const disableSearchFilter = (e) => {
+  const filter_enabler = filter.querySelector(".filter-enabler");
+  const filter_inputs = [...filter.querySelectorAll("input")];
 
-prod_filter_w_toggle.forEach((filter) => {
-  filter.addEventListener("click", function (e) {
-    const filter_enabler = filter.querySelector(".filter-enabler");
-    const filter_inputs = [...filter.querySelectorAll("input")];
+  if (
+    e.target.classList.contains("filter-enabler-container") ||
+    e.target.classList.contains("filter-enabler-btn") ||
+    e.target.classList.contains("fa-circle")
+  ) {
+    if (filter_enabler.classList.contains("product-filter-enabled")) {
+      filter_enabler.classList.remove("product-filter-enabled");
 
-    if (
-      e.target.classList.contains("filter-enabler-container") ||
-      e.target.classList.contains("filter-enabler-btn") ||
-      e.target.classList.contains("fa-circle")
-    ) {
-      if (filter_enabler.classList.contains("product-filter-enabled")) {
-        filter_enabler.classList.remove("product-filter-enabled");
+      filter_inputs.forEach((input) => {
+        input.removeAttribute("disabled");
+      });
+    } else {
+      filter_enabler.classList.add("product-filter-enabled");
 
-        filter_inputs.forEach((input) => {
-          input.removeAttribute("disabled");
-        });
-      } else {
-        filter_enabler.classList.add("product-filter-enabled");
-
-        filter_inputs.forEach((input) => {
-          input.setAttribute("disabled", "true");
-        });
-      }
+      filter_inputs.forEach((input) => {
+        input.setAttribute("disabled", "true");
+      });
     }
-  });
-});
+  }
+};
 
-export { filterProducts };
+export { filterProducts, disableSearchFilter };

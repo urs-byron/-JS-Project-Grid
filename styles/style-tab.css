@@ -11,6 +11,12 @@
   /* LOGIN & SIGNUP */
   /* -------- */
 
+  .user-info-container {
+    padding: 0.5rem;
+  }
+  .user-info-container fieldset {
+    padding: 1.25rem 0.75rem;
+  }
   .user-login-signup-container {
     --user-login-signup-container-gr-row: 1fr 1fr;
     --user-login-signup-container-gr-col: 1fr;
@@ -19,9 +25,13 @@
     --user-login-signup-container-fieldset-pad: 0.5rem;
   }
 
+  .user-info legend h2,
   .user-login-signup legend h2 {
     font-size: 16px;
   }
+  .user-info label,
+  .user-info input,
+  .user-info button,
   .user-login-signup label,
   .user-login-signup input,
   .user-login-signup button,
@@ -31,6 +41,21 @@
 
   #user-logout-form {
     translate: 0 57.5%;
+  }
+
+  .user-options-navi {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.25rem;
+  }
+  .user-options-navi > i {
+    width: 100%;
+    padding: 0.25rem 0;
+    border: none;
+    border-radius: 5px;
+    margin: 0.25rem 0 0 0;
+
+    font-size: 17.5px;
   }
   /* -------- */
   /* HEADER */

@@ -221,7 +221,7 @@ const LoadBrands = async (url) => {
 
 export { LoadBrands };
 
-const checkLoadedHTML = () => {
+const addProdContGrabMech = () => {
   if (document.querySelector(".products-container")) {
     [...getElements(".products-container")].forEach((cont) => {
       const allElements = getElements(".products-container *");
@@ -358,8 +358,8 @@ const checkLoadedHTML = () => {
       });
     });
   } else {
-    setTimeout(checkLoadedHTML, 1500);
+    setTimeout(addProdContGrabMech, 1500);
   }
 };
 
-checkLoadedHTML();
+addProdContGrabMech();

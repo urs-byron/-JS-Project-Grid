@@ -18,8 +18,9 @@
             "display": "./res/products/acoustic/acoustic-grand-gb1k.png",
             "items": [
               "./res/products/acoustic/acoustic-grand-gb1k.png",
+              "./res/products/acoustic/acoustic-grand-s7x.png",
               "./res/products/acoustic/acoustic-grand-gb1k.png",
-              "./res/products/acoustic/acoustic-grand-gb1k.png"
+              "./res/products/acoustic/acoustic-grand-s7x.png"
             ]
           }
         },
@@ -37,7 +38,9 @@
             "display": "./res/products/acoustic/acoustic-grand-s7x.png",
             "items": [
               "./res/products/acoustic/acoustic-grand-s7x.png",
-              "./res/products/acoustic/acoustic-grand-s7x.png"
+              "./res/products/acoustic/acoustic-grand-gb1k.png",
+              "./res/products/acoustic/acoustic-grand-s7x.png",
+              "./res/products/acoustic/acoustic-grand-gb1k.png"
             ]
           }
         },
@@ -55,8 +58,9 @@
             "display": "./res/products/acoustic/acoustic-baby-U1.png",
             "items": [
               "./res/products/acoustic/acoustic-baby-U1.png",
+              "./res/products/acoustic/acoustic-baby-yd14.png",
               "./res/products/acoustic/acoustic-baby-U1.png",
-              "./res/products/acoustic/acoustic-baby-U1.png"
+              "./res/products/acoustic/acoustic-baby-yd14.png"
             ]
           }
         },
@@ -74,7 +78,9 @@
             "display": "./res/products/acoustic/acoustic-baby-yd14.png",
             "items": [
               "./res/products/acoustic/acoustic-baby-yd14.png",
+              "./res/products/acoustic/acoustic-baby-U1.png",
               "./res/products/acoustic/acoustic-baby-yd14.png",
+              "./res/products/acoustic/acoustic-baby-U1.png",
               "./res/products/acoustic/acoustic-baby-yd14.png"
             ]
           }
@@ -93,7 +99,9 @@
             "display": "./res/products/acoustic/acoustic-upright-U3.png",
             "items": [
               "./res/products/acoustic/acoustic-upright-U3.png",
+              "./res/products/acoustic/acoustic-upright-x1.png",
               "./res/products/acoustic/acoustic-upright-U3.png",
+              "./res/products/acoustic/acoustic-upright-x1.png",
               "./res/products/acoustic/acoustic-upright-U3.png"
             ]
           }
@@ -112,7 +120,7 @@
             "display": "./res/products/acoustic/acoustic-upright-x1.png",
             "items": [
               "./res/products/acoustic/acoustic-upright-x1.png",
-              "./res/products/acoustic/acoustic-upright-x1.png",
+              "./res/products/acoustic/acoustic-upright-U3.png",
               "./res/products/acoustic/acoustic-upright-x1.png"
             ]
           }
@@ -141,7 +149,9 @@
             "display": "./res/products/electric/electric-arius-YDP-103.png",
             "items": [
               "./res/products/electric/electric-arius-YDP-103.png",
+              "./res/products/electric/electric-arius-YDP-144.png",
               "./res/products/electric/electric-arius-YDP-103.png",
+              "./res/products/electric/electric-arius-YDP-144.png",
               "./res/products/electric/electric-arius-YDP-103.png"
             ]
           }
@@ -159,6 +169,8 @@
             "link": "#product-highlights",
             "display": "./res/products/electric/electric-arius-YDP-144.png",
             "items": [
+              "./res/products/electric/electric-arius-YDP-144.png",
+              "./res/products/electric/electric-arius-YDP-103.png",
               "./res/products/electric/electric-arius-YDP-144.png",
               "./res/products/electric/electric-arius-YDP-144.png"
             ]
@@ -178,7 +190,9 @@
             "display": "./res/products/electric/electric-arius-YDP-184.png",
             "items": [
               "./res/products/electric/electric-arius-YDP-184.png",
+              "./res/products/electric/electric-arius-YDP-S54.png",
               "./res/products/electric/electric-arius-YDP-184.png",
+              "./res/products/electric/electric-arius-YDP-S54.png",
               "./res/products/electric/electric-arius-YDP-184.png"
             ]
           }
@@ -197,7 +211,9 @@
             "display": "./res/products/electric/electric-arius-YDP-S54.png",
             "items": [
               "./res/products/electric/electric-arius-YDP-S54.png",
+              "./res/products/electric/electric-arius-YDP-184.png",
               "./res/products/electric/electric-arius-YDP-S54.png",
+              "./res/products/electric/electric-arius-YDP-184.png",
               "./res/products/electric/electric-arius-YDP-S54.png"
             ]
           }
@@ -226,7 +242,9 @@
             "display": "./res/products/synth/synth-montage-2C.png",
             "items": [
               "./res/products/synth/synth-montage-2C.png",
+              "./res/products/synth/synth-montage-8.png",
               "./res/products/synth/synth-montage-2C.png",
+              "./res/products/synth/synth-montage-8.png",
               "./res/products/synth/synth-montage-2C.png"
             ]
           }
@@ -245,7 +263,9 @@
             "display": "./res/products/synth/synth-montage-8.png",
             "items": [
               "./res/products/synth/synth-montage-8.png",
-              "./res/products/synth/synth-montage-8.png"
+              "./res/products/synth/synth-montage-2C.png",
+              "./res/products/synth/synth-montage-8.png",
+              "./res/products/synth/synth-montage-2C.png"
             ]
           }
         },
@@ -263,7 +283,7 @@
             "display": "./res/products/synth/synth-reface-cs.png",
             "items": [
               "./res/products/synth/synth-reface-cs.png",
-              "./res/products/synth/synth-reface-cs.png",
+              "./res/products/synth/synth-reface-yc.png",
               "./res/products/synth/synth-reface-cs.png"
             ]
           }
@@ -282,7 +302,9 @@
             "display": "./res/products/synth/synth-reface-yc.png",
             "items": [
               "./res/products/synth/synth-reface-yc.png",
+              "./res/products/synth/synth-reface-cs.png",
               "./res/products/synth/synth-reface-yc.png",
+              "./res/products/synth/synth-reface-cs.png",
               "./res/products/synth/synth-reface-yc.png"
             ]
           }
@@ -311,8 +333,8 @@
             "display": "./res/products/antique/antique-P660_Queen-Ann.png",
             "items": [
               "./res/products/antique/antique-P660_Queen-Ann.png",
-              "./res/products/antique/antique-P660_Queen-Ann.png",
-              "./res/products/antique/antique-P660_Queen-Ann.png"
+              "./res/products/synth/synth-reface-yc.png",
+              "./res/products/acoustic/acoustic-baby-yd14.png"
             ]
           }
         }

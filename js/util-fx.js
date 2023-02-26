@@ -40,11 +40,11 @@ const hidePreLoader = () => {
 };
 
 const createLocalStorage = () => {
-  if (!localStorage.getItem("accounts")) {
-    localStorage.setItem("accounts", JSON.stringify([]));
+  if (!localStorage.getItem("eh_music_shop_accounts")) {
+    localStorage.setItem("eh_music_shop_accounts", JSON.stringify([]));
   }
-  if (!localStorage.getItem("logged_account")) {
-    localStorage.setItem("logged_account", "");
+  if (!localStorage.getItem("eh_music_shop_logged_account")) {
+    localStorage.setItem("eh_music_shop_logged_account", "");
   }
 };
 

@@ -1,5 +1,5 @@
 import { getElement } from "./util-fx.js";
-import { getLoggedAccountIndex } from "./filter-kart-add.js";
+import { getLoggedAccountIndex } from "./filter-add-kart.js";
 
 const loadKartItems = () => {
   const logged_account_i = getLoggedAccountIndex();
@@ -9,7 +9,7 @@ const loadKartItems = () => {
   ).classList.add("hide-gen-loading");
 
   if (logged_account_i || logged_account_i === 0) {
-    const accounts = JSON.parse(localStorage.getItem("accounts"));
+    const accounts = JSON.parse(localStorage.getItem("eh_music_shop_accounts"));
     const account_kart = accounts[logged_account_i].kart;
     if (account_kart.length > 0) {
       account_kart.forEach((item, index, arr) => {
@@ -102,7 +102,7 @@ const changeKartItemQtty = (e) => {
     e.target.classList.contains("fa-square-minus") ||
     e.target.classList.contains("fa-square-plus")
   ) {
-    const accounts = JSON.parse(localStorage.getItem("accounts"));
+    const accounts = JSON.parse(localStorage.getItem("eh_music_shop_accounts"));
     const account_kart = accounts[getLoggedAccountIndex()].kart;
     const model = account_kart[e.currentTarget.dataset.kartIndex];
     let newmodel_qtty = null;
@@ -112,26 +112,32 @@ const changeKartItemQtty = (e) => {
 
       if (newmodel_qtty > 0) {
         e.currentTarget.querySelector("span").textContent = newmodel_qtty;
-        localStorage.setItem("accounts", JSON.stringify(accounts));
+        localStorage.setItem(
+          "eh_music_shop_accounts",
+          JSON.stringify(accounts)
+        );
       } else {
         account_kart.splice(e.currentTarget.dataset.kartIndex, 1);
         e.currentTarget.parentElement.parentElement.style.setProperty(
           "display",
           "none"
         );
-        localStorage.setItem("accounts", JSON.stringify(accounts));
+        localStorage.setItem(
+          "eh_music_shop_accounts",
+          JSON.stringify(accounts)
+        );
         window.location.reload();
       }
     } else if (e.target.classList.contains("fa-square-plus")) {
       newmodel_qtty = ++model.quantity;
       e.currentTarget.querySelector("span").textContent = newmodel_qtty;
-      localStorage.setItem("accounts", JSON.stringify(accounts));
+      localStorage.setItem("eh_music_shop_accounts", JSON.stringify(accounts));
     }
   }
 };
 
 const removeKartItem = (e) => {
-  const accounts = JSON.parse(localStorage.getItem("accounts"));
+  const accounts = JSON.parse(localStorage.getItem("eh_music_shop_accounts"));
   const account_kart = accounts[getLoggedAccountIndex()].kart;
   const kart_model_i = e.currentTarget.dataset.kartIndex;
   account_kart.splice(kart_model_i, 1);
@@ -139,7 +145,7 @@ const removeKartItem = (e) => {
     "display",
     "none"
   );
-  localStorage.setItem("accounts", JSON.stringify(accounts));
+  localStorage.setItem("eh_music_shop_accounts", JSON.stringify(accounts));
   window.location.reload();
 };
 

@@ -8,3 +8,15 @@ getElement(".show-user-options-btn").addEventListener("click", function (e) {
     user_options.style.setProperty("--user-options-pos-top", "-150%");
   }
 });
+
+getElement(".user-options-navi").addEventListener("click", (e) => {
+  if (localStorage.getItem("eh_music_shop_logged_account")) {
+    if (e.target.classList.contains("fa-solid")) {
+      [...e.currentTarget.parentElement.children[0].children].forEach(
+        (cont) => {
+          cont.classList.toggle("move-user-options-items");
+        }
+      );
+    }
+  }
+});

@@ -20,14 +20,13 @@ import { setFooterYear } from "./js/util-footer.js";
 
 window.addEventListener("DOMContentLoaded", async (element) => {
   try {
+    createLocalStorage();
+    setFooterYear();
+
     await LoadAffiliatedUniversities(uni_logo_url);
-
     await LoadBrands(products_json_url);
-
     await LoadMainEvents(event_json_url);
     await LoadEventDates(event_json_url);
-
-    setFooterYear();
   } catch (error) {
     throw new Error(error);
   }
@@ -48,5 +47,3 @@ window.addEventListener("resize", (element) => {
     throw new Error(error);
   }
 });
-
-createLocalStorage();

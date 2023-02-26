@@ -1,4 +1,5 @@
 import { getElement, getElements } from "./util-fx.js";
+import { getLoggedAccountIndex } from "./filter-add-kart.js";
 
 // SIGNUP
 
@@ -31,7 +32,7 @@ const checkInputName = (e) => {
 const checkSignupInputUsername = (e) => {
   const input = e.target;
   const username_pattern = new RegExp("\\w", "gi");
-  const accounts = JSON.parse(localStorage.getItem("accounts"));
+  const accounts = JSON.parse(localStorage.getItem("eh_music_shop_accounts"));
   const accounts_user_names = accounts.map((account) => account.user_name);
 
   if (
@@ -48,13 +49,28 @@ const checkSignupInputUsername = (e) => {
   }
 };
 
-const checkSignupInputPassword = (e) => {
+const checkInputPasswordIntegrity = (e) => {
   const input = e.target;
   const password_pattern = new RegExp(
     "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$",
     "g"
   );
 
+  if (getLoggedAccountIndex() !== null) {
+    if (
+      input.value ===
+      JSON.parse(localStorage.getItem("eh_music_shop_accounts"))[
+        getLoggedAccountIndex()
+      ].password
+    ) {
+      input.setCustomValidity(
+        "This password is the same as the one of the previous passwords."
+      );
+    } else {
+      input.setCustomValidity("");
+    }
+    return;
+  }
   if (!input.value.match(password_pattern)) {
     input.setCustomValidity(
       'A password must be have eight (8) characters, and contains characters in lowercase or uppercase, special characters, and numbers: eg. "p@ssWord01"'
@@ -66,8 +82,10 @@ const checkSignupInputPassword = (e) => {
 
 const checkSignupInputRePassword = (e) => {
   const input = e.target;
-
-  if (input.value !== signup_password_input.value) {
+  if (
+    input.value !==
+    e.target.parentElement.previousElementSibling.querySelector("input").value
+  ) {
     input.setCustomValidity(
       'This password is not the same as the same as above."'
     );
@@ -88,7 +106,7 @@ window.addEventListener("load", (e) => {
 signup_form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const accounts = JSON.parse(localStorage.getItem("accounts"));
+  const accounts = JSON.parse(localStorage.getItem("eh_music_shop_accounts"));
   let inputs = [];
   let new_account = {};
   getElements("#user-signup-form input").forEach((input) => {
@@ -106,7 +124,7 @@ signup_form.addEventListener("submit", (e) => {
   });
 
   accounts.push(new_account);
-  localStorage.setItem("accounts", JSON.stringify(accounts));
+  localStorage.setItem("eh_music_shop_accounts", JSON.stringify(accounts));
 
   window.location.reload();
 });
@@ -119,8 +137,8 @@ signup_name_input.forEach((input) => {
 signup_username_input.addEventListener("change", checkSignupInputUsername);
 signup_username_input.addEventListener("input", checkSignupInputUsername);
 
-signup_password_input.addEventListener("change", checkSignupInputPassword);
-signup_password_input.addEventListener("input", checkSignupInputPassword);
+signup_password_input.addEventListener("change", checkInputPasswordIntegrity);
+signup_password_input.addEventListener("input", checkInputPasswordIntegrity);
 
 signup_re_password_input.addEventListener("change", checkSignupInputRePassword);
 signup_re_password_input.addEventListener("input", checkSignupInputRePassword);
@@ -132,14 +150,16 @@ const login_user_name = getElement("#user-login-username");
 const login_password = getElement("#user-login-password");
 
 const getLoginInput = (login_user_name) => {
-  return JSON.parse(localStorage.getItem("accounts")).find((account) => {
-    if (account.user_name === login_user_name.value) return account;
-  });
+  return JSON.parse(localStorage.getItem("eh_music_shop_accounts")).find(
+    (account) => {
+      if (account.user_name === login_user_name.value) return account;
+    }
+  );
 };
 
 const checkLoginInputUsername = (e) => {
   const login_user_name = e.target;
-  const accounts = JSON.parse(localStorage.getItem("accounts"));
+  const accounts = JSON.parse(localStorage.getItem("eh_music_shop_accounts"));
   const accounts_user_names = accounts.map((account) => account.user_name);
 
   if (accounts_user_names.includes(login_user_name.value)) {
@@ -191,7 +211,7 @@ login_form.addEventListener("submit", (e) => {
     (input) => input.value
   );
 
-  localStorage.setItem("logged_account", input_values[0]);
+  localStorage.setItem("eh_music_shop_logged_account", input_values[0]);
   window.location.reload();
 });
 
@@ -207,7 +227,7 @@ const logout_form = getElement("#user-logout-form");
 
 logout_form.addEventListener("submit", (e) => {
   e.preventDefault();
-  localStorage.setItem("logged_account", "");
+  localStorage.setItem("eh_music_shop_logged_account", "");
   window.location.reload();
 });
 
@@ -218,7 +238,7 @@ window.addEventListener("DOMContentLoaded", (e) => {
   const user_option_logged_i = getElement(".show-user-options-btn .fa-user");
   const login_inputs = [...getElements("#user-login-form input")];
 
-  if (localStorage.getItem("logged_account")) {
+  if (localStorage.getItem("eh_music_shop_logged_account")) {
     login_inputs.forEach((input) => {
       input.setAttribute("disabled", "true");
     });
@@ -241,7 +261,39 @@ window.addEventListener("DOMContentLoaded", (e) => {
   }
 });
 
-// localStorage.setItem("logged_account", "");
-// localStorage.setItem("accounts", JSON.stringify([]));
+// localStorage.setItem("eh_music_shop_logged_account", "");
+// localStorage.setItem("eh_music_shop_accounts", JSON.stringify([]));
 
-// KART MECHANISM
+// CHANGE PASSWORD
+
+const change_pass_form = getElement(".user-info-container form");
+const change_password = getElement("#user-change-password");
+const change_re_password = getElement("#user-change-repeat-password");
+
+change_password.addEventListener("change", checkInputPasswordIntegrity);
+change_password.addEventListener("input", checkInputPasswordIntegrity);
+
+change_re_password.addEventListener("change", checkSignupInputRePassword);
+change_re_password.addEventListener("input", checkSignupInputRePassword);
+
+change_pass_form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const accounts = JSON.parse(localStorage.getItem("eh_music_shop_accounts"));
+  const logged_account = accounts[getLoggedAccountIndex()];
+
+  logged_account.password =
+    e.target.parentElement.children[0].querySelector("input").value;
+  localStorage.setItem("eh_music_shop_accounts", JSON.stringify(accounts));
+  window.location.reload();
+});
+
+window.addEventListener("DOMContentLoaded", (e) => {
+  try {
+    if (getLoggedAccountIndex() === null) {
+      const user_options_navi = getElement(".user-options-navi");
+      user_options_navi.style.setProperty("display", "none");
+    }
+  } catch (err) {
+    throw new Error(err);
+  }
+});

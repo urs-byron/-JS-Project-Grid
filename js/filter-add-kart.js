@@ -1,8 +1,8 @@
 import { getElement } from "./util-fx.js";
 
 const getLoggedAccountIndex = () => {
-  const accounts = JSON.parse(localStorage.getItem("accounts"));
-  const logged_account = localStorage.getItem("logged_account");
+  const accounts = JSON.parse(localStorage.getItem("eh_music_shop_accounts"));
+  const logged_account = localStorage.getItem("eh_music_shop_logged_account");
 
   let logged_account_i = null;
 
@@ -30,7 +30,7 @@ const newKartItem = (
 };
 
 const addKartItemAnim = (e) => {
-  const logged_account = localStorage.getItem("logged_account");
+  const logged_account = localStorage.getItem("eh_music_shop_logged_account");
   if (logged_account) {
     // ANIMATION
     e.currentTarget.classList.add("show-add-kart-anim");
@@ -51,14 +51,14 @@ const addKartItemAnim = (e) => {
 };
 
 const addKartItemQtty = (e) => {
-  const logged_account = localStorage.getItem("logged_account");
+  const logged_account = localStorage.getItem("eh_music_shop_logged_account");
   if (logged_account) {
     // DATABASE
     const item_model = e.currentTarget.dataset.model;
     const item_img = e.currentTarget.dataset.imgSrc;
     const item_price = e.currentTarget.dataset.price;
 
-    const accounts = JSON.parse(localStorage.getItem("accounts"));
+    const accounts = JSON.parse(localStorage.getItem("eh_music_shop_accounts"));
     const logged_account_i = getLoggedAccountIndex();
     let logged_account_kart_item_names = [];
     let logged_account_kart_item_model = null;
@@ -91,7 +91,7 @@ const addKartItemQtty = (e) => {
       newKartItem(accounts, logged_account_i, item_model, item_img, item_price);
     }
 
-    localStorage.setItem("accounts", JSON.stringify(accounts));
+    localStorage.setItem("eh_music_shop_accounts", JSON.stringify(accounts));
   }
 };
 

@@ -1,6 +1,6 @@
 import { getElement, getElements, getData, getCSSVar } from "./util-fx.js";
 import { products_json_url } from "./util-var.js";
-import { addKartItemQtty } from "./filter-kart-add.js";
+import { addKartItemQtty } from "./filter-add-kart.js";
 
 let model = null,
   model_gallery = [],

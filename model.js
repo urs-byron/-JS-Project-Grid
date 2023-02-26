@@ -4,7 +4,7 @@ import {
   genCheckGalleryMove,
   genChangeGalleryLimit,
   tabChangeGalleryLimit,
-} from "./js/model-gallery-util.js";
+} from "./js/model-util.js";
 import { getElement, hidePreLoader, createLocalStorage } from "./js/util-fx.js";
 import { setFooterYear } from "./js/util-footer.js";
 import { tab_screen } from "./js/util-var.js";
@@ -14,7 +14,7 @@ window.addEventListener("DOMContentLoaded", async function () {
     await LoadProductModel();
     createLocalStorage();
     hidePreLoader();
-    await setFooterYear();
+    setFooterYear();
 
     if (
       this.window.innerWidth <
@@ -34,7 +34,7 @@ window.addEventListener("DOMContentLoaded", async function () {
 
 window.matchMedia(tab_screen).addEventListener("change", async (e) => {
   try {
-    if (!getElement(".error-message")) {
+    if (!document.querySelector(".error-message")) {
       if (e.matches) {
         tabChangeGalleryLimit();
       } else {
