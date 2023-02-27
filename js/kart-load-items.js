@@ -1,6 +1,18 @@
 import { getElement } from "./util-fx.js";
 import { getLoggedAccountIndex } from "./filter-add-kart.js";
 
+const emptyAccntKartMsg = () => {
+  const kart_items_content = getElement(".kart-items-content-container");
+
+  const no_account_kart_head = document.createElement("h3");
+
+  no_account_kart_head.appendChild(
+    document.createTextNode(`Your kart is empty!`)
+  );
+  no_account_kart_head.classList.add("kart-no-accnt");
+  kart_items_content.appendChild(no_account_kart_head);
+};
+
 const loadKartItems = () => {
   const logged_account_i = getLoggedAccountIndex();
   const kart_items_content = getElement(".kart-items-content-container");
@@ -8,7 +20,7 @@ const loadKartItems = () => {
     ".kart-items-content-container .gen-loading-container"
   ).classList.add("hide-gen-loading");
 
-  if (logged_account_i || logged_account_i === 0) {
+  if (logged_account_i !== null) {
     const accounts = JSON.parse(localStorage.getItem("eh_music_shop_accounts"));
     const account_kart = accounts[logged_account_i].kart;
     if (account_kart.length > 0) {
@@ -79,13 +91,7 @@ const loadKartItems = () => {
         kart_items_content.appendChild(kart_item);
       });
     } else {
-      const no_account_kart_head = document.createElement("h3");
-
-      no_account_kart_head.appendChild(
-        document.createTextNode(`Your kart is empty!`)
-      );
-      no_account_kart_head.classList.add("kart-no-accnt");
-      kart_items_content.appendChild(no_account_kart_head);
+      emptyAccntKartMsg();
     }
   } else {
     const no_account_head = document.createElement("h3");
@@ -95,6 +101,27 @@ const loadKartItems = () => {
     no_account_head.classList.add("kart-no-accnt");
     kart_items_content.appendChild(no_account_head);
   }
+};
+
+const changeKartItemData = (e) => {
+  const del_item = e.currentTarget.parentElement.parentElement;
+  del_item.style.setProperty("display", "none");
+
+  let del_item_next = del_item.nextElementSibling;
+
+  while (del_item_next !== null) {
+    del_item_next.children[0].firstChild.dataset.kartIndex--;
+    del_item_next.children[0].lastChild.dataset.kartIndex--;
+    del_item_next = del_item_next.nextElementSibling;
+  }
+
+  const logged_account_i = getLoggedAccountIndex();
+  const accounts = [
+    ...JSON.parse(localStorage.getItem("eh_music_shop_accounts")),
+  ];
+  const account_kart = accounts[logged_account_i].kart;
+  --account_kart.length;
+  if (account_kart.length === 0) emptyAccntKartMsg();
 };
 
 const changeKartItemQtty = (e) => {
@@ -118,15 +145,13 @@ const changeKartItemQtty = (e) => {
         );
       } else {
         account_kart.splice(e.currentTarget.dataset.kartIndex, 1);
-        e.currentTarget.parentElement.parentElement.style.setProperty(
-          "display",
-          "none"
-        );
+
+        changeKartItemData(e);
+
         localStorage.setItem(
           "eh_music_shop_accounts",
           JSON.stringify(accounts)
         );
-        window.location.reload();
       }
     } else if (e.target.classList.contains("fa-square-plus")) {
       newmodel_qtty = ++model.quantity;
@@ -141,12 +166,10 @@ const removeKartItem = (e) => {
   const account_kart = accounts[getLoggedAccountIndex()].kart;
   const kart_model_i = e.currentTarget.dataset.kartIndex;
   account_kart.splice(kart_model_i, 1);
-  e.currentTarget.parentElement.parentElement.style.setProperty(
-    "display",
-    "none"
-  );
+
+  changeKartItemData(e);
+
   localStorage.setItem("eh_music_shop_accounts", JSON.stringify(accounts));
-  window.location.reload();
 };
 
 export { loadKartItems };
