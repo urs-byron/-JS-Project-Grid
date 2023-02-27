@@ -1,13 +1,13 @@
-import { products_json_url } from "./js/util-var.js";
+import { products_json_url } from "../util-var.js";
 import {
   getElement,
   getElements,
   hidePreLoader,
   createLocalStorage,
-} from "./js/util-fx.js";
-import { filterProducts } from "./js/filter-load-products.js";
-import { HTMLFilterInput } from "./js/filter-load-brands-specs.js";
-import { setFooterYear } from "./js/util-footer.js";
+} from "../util-fx.js";
+import { filterProducts } from "../filter-load-products.js";
+import { HTMLFilterInput } from "../filter-load-brands-specs.js";
+import { setFooterYear } from "../util/util-footer.js";
 
 const prod_filter_form = getElement(".product-filter-container form");
 const prod_filter_w_toggle = [...getElements(".product-filter-w-toggle")];
@@ -39,6 +39,8 @@ prod_filter_form.addEventListener("submit", async (e) => {
     throw new Error(err);
   }
 });
+
+// DISABLES AN INPUT FROM THE SEARCH FILTER
 
 prod_filter_w_toggle.forEach((filter) => {
   filter.addEventListener("click", function (e) {

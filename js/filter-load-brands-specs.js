@@ -1,6 +1,7 @@
 import { getElement, getElements, getData } from "./util-fx.js";
 import { products_json_url } from "./util-var.js";
 
+// RETURNS UNIQUE SET OF FILTERS
 const OBJBrandsSpec = async (url) => {
   const data = await getData(url);
   const brands = [];
@@ -25,6 +26,7 @@ const OBJBrandsSpec = async (url) => {
   return dataSet;
 };
 
+// SETS PRICE FILTER CONSTRAINTS
 const HTMLNumberInput = async (data) => {
   const min_input = getElement("#min-product-price");
   const max_input = getElement("#max-product-price");
@@ -38,6 +40,7 @@ const HTMLNumberInput = async (data) => {
   max_input.setAttribute("placeholder", `${data.max_price}`);
 };
 
+// SETS PRICE FILTER CONSTRAINTS
 const HTMLCheckboxInput = async (data, html_cont, name) => {
   const cont = getElement(html_cont);
 
@@ -65,6 +68,7 @@ const HTMLCheckboxInput = async (data, html_cont, name) => {
   }
 };
 
+// ASSIGNS FILTER CONSTRAINT TO DIFFERENT FILTER INPUT
 const HTMLFilterInput = async (url) => {
   const { brands, prod_specs, min_price, max_price } = await OBJBrandsSpec(url);
   HTMLCheckboxInput(prod_specs, ".product-specs-content ul", "product-spec");

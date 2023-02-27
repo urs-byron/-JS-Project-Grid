@@ -1,4 +1,4 @@
-import { getElement, getElements } from "./util-fx.js";
+import { getElement, getElements } from "../util-fx.js";
 
 const footer_item_head_set = getElements(".footer-item-head");
 

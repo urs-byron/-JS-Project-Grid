@@ -1,4 +1,4 @@
-import { getElement } from "./util-fx.js";
+import { getElement } from "../util-fx.js";
 
 const setFooterYear = () => {
   getElement(".footer-date").textContent = new Date().getFullYear();

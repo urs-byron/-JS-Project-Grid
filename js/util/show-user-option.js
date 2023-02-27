@@ -1,4 +1,4 @@
-import { getElement, getCSSVar } from "./util-fx.js";
+import { getElement, getCSSVar } from "../util-fx.js";
 
 getElement(".show-user-options-btn").addEventListener("click", function (e) {
   const user_options = getElement(".user-options");

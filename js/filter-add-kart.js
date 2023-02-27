@@ -1,5 +1,6 @@
 import { getElement } from "./util-fx.js";
 
+// RETURNS CURRENT LOGGED ACCOUNT INDEX FROM THE SET OF LOCALSTORAGE ACCOUNTS
 const getLoggedAccountIndex = () => {
   const accounts = JSON.parse(localStorage.getItem("eh_music_shop_accounts"));
   const logged_account = localStorage.getItem("eh_music_shop_logged_account");
@@ -13,6 +14,7 @@ const getLoggedAccountIndex = () => {
   return logged_account_i;
 };
 
+// ADDS A NEW PRODUCT TO AN ACCOUNT'S KART
 const newKartItem = (
   accounts,
   logged_account_i,
@@ -29,6 +31,7 @@ const newKartItem = (
   accounts[logged_account_i].kart.push(new_kart_item);
 };
 
+// SHOWS KART ADDING ANIMATION
 const addKartItemAnim = (e) => {
   const logged_account = localStorage.getItem("eh_music_shop_logged_account");
   if (logged_account) {
@@ -50,6 +53,7 @@ const addKartItemAnim = (e) => {
   }
 };
 
+// ADDS A PRODUCT TO AN ACCOUNT'S KART
 const addKartItemQtty = (e) => {
   const logged_account = localStorage.getItem("eh_music_shop_logged_account");
   if (logged_account) {

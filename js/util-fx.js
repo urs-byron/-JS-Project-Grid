@@ -1,3 +1,4 @@
+// RETURNS A SINGLE HTML OBJECT
 const getElement = (mark) => {
   const element = document.querySelector(mark);
   if (element === null) {
@@ -6,6 +7,7 @@ const getElement = (mark) => {
   return element;
 };
 
+// RETURNS A SET SINGLE HTML OBJECT
 const getElements = (mark) => {
   const element = document.querySelectorAll(mark);
   if (element === null) {
@@ -14,6 +16,7 @@ const getElements = (mark) => {
   return element;
 };
 
+// RETURNS ASYNC DATA FROM A GIVEN SITE
 const getData = async (url_param) => {
   let res = {};
   if (
@@ -31,14 +34,17 @@ const getData = async (url_param) => {
   return data;
 };
 
+// RETURNS A CSS VARIABLE
 const getCSSVar = (e, mark) => {
   return getComputedStyle(e).getPropertyValue(mark);
 };
 
+// HIDES A PAGE PRELOADER
 const hidePreLoader = () => {
   getElement(".preloader").classList.add("hide-preloader");
 };
 
+// CREATES LOCALSTORAGE FOR THE SITE
 const createLocalStorage = () => {
   if (!localStorage.getItem("eh_music_shop_accounts")) {
     localStorage.setItem("eh_music_shop_accounts", JSON.stringify([]));

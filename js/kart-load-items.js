@@ -1,6 +1,7 @@
 import { getElement } from "./util-fx.js";
 import { getLoggedAccountIndex } from "./filter-add-kart.js";
 
+// HTML MESSAGE WHEN THE ACCOUNT IS EMPTY
 const emptyAccntKartMsg = () => {
   const kart_items_content = getElement(".kart-items-content-container");
 
@@ -13,6 +14,7 @@ const emptyAccntKartMsg = () => {
   kart_items_content.appendChild(no_account_kart_head);
 };
 
+// GENERATES HTML CONTENT FOR THE KART
 const loadKartItems = () => {
   const logged_account_i = getLoggedAccountIndex();
   const kart_items_content = getElement(".kart-items-content-container");
@@ -103,6 +105,7 @@ const loadKartItems = () => {
   }
 };
 
+// CHANGES THE DATASET OF THE PROCEEDING HTML CONTENT FROM THE DELETED KART ITEM
 const changeKartItemData = (e) => {
   const del_item = e.currentTarget.parentElement.parentElement;
   del_item.style.setProperty("display", "none");
@@ -124,6 +127,7 @@ const changeKartItemData = (e) => {
   if (account_kart.length === 0) emptyAccntKartMsg();
 };
 
+// CHANGES A KART ITEM'S QUANTITY BOTH IN DISPLAY AND LOCALSTORAGE
 const changeKartItemQtty = (e) => {
   if (
     e.target.classList.contains("fa-square-minus") ||
@@ -161,6 +165,7 @@ const changeKartItemQtty = (e) => {
   }
 };
 
+// DELETES A KART ITEM FROM LOCALSTORAGE
 const removeKartItem = (e) => {
   const accounts = JSON.parse(localStorage.getItem("eh_music_shop_accounts"));
   const account_kart = accounts[getLoggedAccountIndex()].kart;

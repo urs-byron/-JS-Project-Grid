@@ -1,5 +1,6 @@
 import { getElement, getData } from "./util-fx.js";
 
+// GENERATE HTML UNIVERSITY ANIMATION VARIABLES
 const HTMLUniLogos = (container, uni_logo_set) => {
   uni_logo_set.forEach(({ name: uni_name, src: uni_logo }) => {
     {
@@ -23,6 +24,7 @@ const HTMLUniLogos = (container, uni_logo_set) => {
   });
 };
 
+// SET UNIVERSITY ANIMATION VARIABLES
 const CSSAffiliatedUniTransX = () => {
   const page = getElement("body");
   const container = getElement(".affiliated-universities-logo-container");
@@ -37,6 +39,7 @@ const CSSAffiliatedUniTransX = () => {
   );
 };
 
+// LOAD UNIVERSITY LOGOS
 const LoadAffiliatedUniversities = async (uni_logo_url) => {
   const page = getElement("body");
   const container = getElement(".affiliated-universities-logo-container");

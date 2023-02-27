@@ -1,4 +1,4 @@
-import { getElement } from "./util-fx.js";
+import { getElement } from "../util-fx.js";
 
 const html_body = getElement("body");
 

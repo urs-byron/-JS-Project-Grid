@@ -1,5 +1,7 @@
 import { getElement, getData } from "./util-fx.js";
 
+// ----- GENERATE HTML HEADER EVENTS ----- //
+
 const HTMLEventNameType = (cont, obj) => {
   for (const { name: event_name, type: event_week, banner: event_bg } of obj) {
     const HTML_event = document.createElement("div");
@@ -78,6 +80,8 @@ const HTMLEventDates = (cont, obj) => {
   cont.appendChild(events_head);
   cont.appendChild(events_ul);
 };
+
+// ----- LOAD HEADER EVENTS ----- //
 
 const LoadMainEvents = async (event_json_url) => {
   const container = getElement(".main-events-container");

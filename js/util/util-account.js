@@ -1,5 +1,5 @@
-import { getElement, getElements } from "./util-fx.js";
-import { getLoggedAccountIndex } from "./filter-add-kart.js";
+import { getElement, getElements } from "../util-fx.js";
+import { getLoggedAccountIndex } from "../filter-add-kart.js";
 
 // SIGNUP
 

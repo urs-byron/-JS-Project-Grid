@@ -213,7 +213,6 @@ const checkLoadedModelGallery = () => {
     setTimeout(checkLoadedModelGallery, 1500);
   }
 };
-
 const changeImgTransX = () => {
   model.style.setProperty(
     "--product-image-item-transX",
@@ -234,7 +233,6 @@ const changeDispTransX = () => {
     `${model_gallery_counter * -100}%`
   );
 };
-
 const checkGalleryCounterLimit = () => {
   if (model_gallery_counter < 0) {
     model_gallery_counter = model_gallery.length - 1;
@@ -243,6 +241,7 @@ const checkGalleryCounterLimit = () => {
   }
 };
 
+// CHANGES THE MOVEMENT OF THE VISIBLE IMAGES GALLERY PER MEDIA QUERY
 const genCheckGalleryMove = () => {
   checkGalleryMove = () => {
     (model_gallery_counter + 1) *
@@ -264,6 +263,7 @@ const tabCheckGalleryMove = () => {
   };
 };
 
+// CHANGES THE NUMBER OF VISIBLE IMAGES GALLERY IMAGES PER MEDIA QUERY
 const genChangeGalleryLimit = () => {
   model_images_limit =
     Math.floor(
@@ -287,6 +287,8 @@ export {
   genChangeGalleryLimit,
   tabChangeGalleryLimit,
 };
+
+// DISPLAYS THE NEXT/PREV GALLERY IMAGE
 
 const nextGalleryImg = () => {
   model_images_items[model_gallery_counter].classList.remove(

@@ -1,6 +1,8 @@
 import { getElement, getElements, getData, getCSSVar } from "./util-fx.js";
 import { stn_screen, sml_screen, tab_screen } from "./util-var.js";
 
+// ----- LOAD HEADER PRODUCTS ----- //
+// GENERATE
 const LoadBrandHead = async (data) => {
   const cont = document.createElement("div");
   cont.classList.add(`product-brand`);
@@ -42,7 +44,6 @@ const LoadBrandHead = async (data) => {
 
   return cont;
 };
-
 const LoadBrandProducts = async (data) => {
   const cont = document.createElement("div");
   cont.classList.add(`products-container`);
@@ -173,7 +174,6 @@ const LoadBrandProducts = async (data) => {
 
   return prods;
 };
-
 const LoadBrandProductsNavi = async (data) => {
   const prod_nav_cont = document.createElement("div");
   prod_nav_cont.classList.add("product-navi-container");
@@ -194,7 +194,7 @@ const LoadBrandProductsNavi = async (data) => {
 
   return prod_nav;
 };
-
+// LOAD
 const LoadBrands = async (url) => {
   const data = await getData(url);
   const cont = getElement(".product-highlights-brands");
@@ -221,6 +221,7 @@ const LoadBrands = async (url) => {
 
 export { LoadBrands };
 
+// ADDS GRAB MECHANISM FOR THE HEADER PRODUCTS
 const addProdContGrabMech = () => {
   if (document.querySelector(".products-container")) {
     [...getElements(".products-container")].forEach((cont) => {
@@ -361,5 +362,4 @@ const addProdContGrabMech = () => {
     setTimeout(addProdContGrabMech, 1500);
   }
 };
-
 addProdContGrabMech();

@@ -16,7 +16,7 @@ import { LoadBrands } from "./js/header-load-products.js";
 
 import { LoadMainEvents, LoadEventDates } from "./js/header-load-events.js";
 
-import { setFooterYear } from "./js/util-footer.js";
+import { setFooterYear } from "./js//util/util-footer.js";
 
 window.addEventListener("DOMContentLoaded", async (element) => {
   try {

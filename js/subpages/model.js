@@ -4,10 +4,10 @@ import {
   genCheckGalleryMove,
   genChangeGalleryLimit,
   tabChangeGalleryLimit,
-} from "./js/model-util.js";
-import { getElement, hidePreLoader, createLocalStorage } from "./js/util-fx.js";
-import { setFooterYear } from "./js/util-footer.js";
-import { tab_screen } from "./js/util-var.js";
+} from "../model-util.js";
+import { getElement, hidePreLoader, createLocalStorage } from "../util-fx.js";
+import { setFooterYear } from "../util/util-footer.js";
+import { tab_screen } from "../util-var.js";
 
 window.addEventListener("DOMContentLoaded", async function () {
   try {

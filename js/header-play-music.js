@@ -2,6 +2,7 @@ import { getElement } from "./util-fx.js";
 
 const header_bg_container = getElement(".header-bg-container");
 
+// PLAY/PAUSE HEADER MUSIC
 header_bg_container.addEventListener("click", (element) => {
   try {
     const header_music = getElement(".header-bg-music");
