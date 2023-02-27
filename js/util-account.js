@@ -73,7 +73,14 @@ const checkInputPasswordIntegrity = (e) => {
   }
   if (!input.value.match(password_pattern)) {
     input.setCustomValidity(
-      'A password must be have eight (8) characters, and contains characters in lowercase or uppercase, special characters, and numbers: eg. "p@ssWord01"'
+      'A password must be have eight (8) characters, and must contain atleast one (1) lowercase or uppercase character, special character, and number: eg. "p@ssWord01"'
+    );
+  } else if (
+    input.value !==
+    e.target.parentElement.nextElementSibling.querySelector("input").value
+  ) {
+    input.setCustomValidity(
+      "This password is not the same as the same as below."
     );
   } else {
     input.setCustomValidity("");
@@ -87,7 +94,7 @@ const checkSignupInputRePassword = (e) => {
     e.target.parentElement.previousElementSibling.querySelector("input").value
   ) {
     input.setCustomValidity(
-      'This password is not the same as the same as above."'
+      "This password is not the same as the same as above."
     );
   } else {
     input.setCustomValidity("");
@@ -260,9 +267,6 @@ window.addEventListener("DOMContentLoaded", (e) => {
     signup_form.style.setProperty("display", "grid");
   }
 });
-
-// localStorage.setItem("eh_music_shop_logged_account", "");
-// localStorage.setItem("eh_music_shop_accounts", JSON.stringify([]));
 
 // CHANGE PASSWORD
 
