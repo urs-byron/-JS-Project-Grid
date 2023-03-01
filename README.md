@@ -1,8 +1,7 @@
 <br/>
-<p align="center">
+<p align="center" text-align="center">
 
-  <img align="center">
-![favicon](https://user-images.githubusercontent.com/79783779/222044508-618ca19c-80df-4284-bd5e-7e6a29060f59.png)</img>
+![favicon](https://user-images.githubusercontent.com/79783779/222044508-618ca19c-80df-4284-bd5e-7e6a29060f59.png)
   <h3 align="center">Music Shop</h3>
 
   <p align="center">
