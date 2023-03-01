@@ -45,7 +45,7 @@ https://sensational-llama-e030d4.netlify.app/
 
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Below are images from the actual website, including most of its featured functionalities.
 
 * Header
 ![music_shop_header](https://user-images.githubusercontent.com/79783779/222045042-722cd4c4-c93d-44a4-97e0-f78397d4493d.png)
