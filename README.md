@@ -1,5 +1,6 @@
 <br/>
 <p align="center" text-align="center">
+  <h3 align="center">Music Shop</h3>
   <p align="center">
     Emulation of a product retailing based website.
     <br/>
