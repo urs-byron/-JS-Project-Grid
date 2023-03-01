@@ -17,7 +17,7 @@
 * [Getting Started](#getting-started)
   * [Site](#site)
 * [Usage](#usage)
-* [Authors](#authors)
+* [Author](#author)
 
 ## About The Project
 
