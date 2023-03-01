@@ -18,7 +18,6 @@
   * [Site](#site)
 * [Usage](#usage)
 * [Authors](#authors)
-* [Acknowledgements](#acknowledgements)
 
 ## About The Project
 
@@ -60,5 +59,8 @@ Use this space to show useful examples of how a project can be used. Additional 
 ![music_shop_product_model](https://user-images.githubusercontent.com/79783779/222045938-d41af3c3-5cea-4b11-a730-b02c4ff360d9.png)
 * Product Kart
 ## Authors![music_shop_kart](https://user-images.githubusercontent.com/79783779/222045970-1a4f675f-17e1-42f5-9f7d-b4afd393d7ad.png)
+
+
+## Author
 
 * **Byron Ursua** - *Electrical Engineering Graduate* - [Byron Ursua](https://github.com/noidontyesidont) - *Built this Music Shop*
