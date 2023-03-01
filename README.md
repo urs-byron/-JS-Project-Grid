@@ -1,5 +1,8 @@
 <br/>
 <p align="center">
+
+![favicon](https://user-images.githubusercontent.com/79783779/222044508-618ca19c-80df-4284-bd5e-7e6a29060f59.png)
+
   <h3 align="center">Music Shop</h3>
 
   <p align="center">
@@ -50,6 +53,8 @@ https://sensational-llama-e030d4.netlify.app/
 ## Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+
+
 
 ## Authors
 
