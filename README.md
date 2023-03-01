@@ -1,9 +1,5 @@
 <br/>
 <p align="center" text-align="center">
-
-![favicon](https://user-images.githubusercontent.com/79783779/222044508-618ca19c-80df-4284-bd5e-7e6a29060f59.png)
-  <h3 align="center">Music Shop</h3>
-
   <p align="center">
     Emulation of a product retailing based website.
     <br/>
@@ -24,8 +20,6 @@
 * [Acknowledgements](#acknowledgements)
 
 ## About The Project
-
-![Screen Shot](https://drive.google.com/drive/u/1/folders/116RlN_8zXJYaHUlT1pRqWWtMFMp8zM4F)
 
 This project is made to exhibit all that I have learned about early intermediate HTML, CSS, and JS from the previous months. It emulates the basic functionalities of a commercial website, including:
 
@@ -53,8 +47,17 @@ https://sensational-llama-e030d4.netlify.app/
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-
-
-## Authors
+* Header
+![music_shop_header](https://user-images.githubusercontent.com/79783779/222045042-722cd4c4-c93d-44a4-97e0-f78397d4493d.png)
+* Header Products
+![music_shop_header_products](https://user-images.githubusercontent.com/79783779/222045825-a8ba72fa-bf99-407a-8f50-ec7f798cdd80.png)
+* Header Misc
+![music_shop_header_misc](https://user-images.githubusercontent.com/79783779/222045861-16a5dd64-bfc6-4b4a-bcca-26daa9a3ac48.png)
+* Product Search
+![music_shop_product_search](https://user-images.githubusercontent.com/79783779/222045905-75aba40d-4476-4bf4-a2d0-6a6de1ea9aec.png)
+* Product Model
+![music_shop_product_model](https://user-images.githubusercontent.com/79783779/222045938-d41af3c3-5cea-4b11-a730-b02c4ff360d9.png)
+* Product Kart
+## Authors![music_shop_kart](https://user-images.githubusercontent.com/79783779/222045970-1a4f675f-17e1-42f5-9f7d-b4afd393d7ad.png)
 
 * **Byron Ursua** - *Electrical Engineering Graduate* - [Byron Ursua](https://github.com/noidontyesidont) - *Built this Music Shop*
