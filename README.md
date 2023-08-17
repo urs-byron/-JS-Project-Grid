@@ -2,18 +2,11 @@
 <p align="center" text-align="center">
   <h3 align="center">Music Shop</h3>
   <p align="center">
-    Emulation of a product retailing based website.
+    Emulation of a multi-paged product retailing based website.
     <br/>
     <br/>
   </p>
 </p>
-
-## Table Of Contents
-
-* [About the Project](#about-the-project)
-* [Built With](#built-with)
-* [Getting Started](#getting-started)
-* [Usage](#usage)
 
 ## About The Project
 
