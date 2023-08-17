@@ -8,16 +8,12 @@
   </p>
 </p>
 
-
-
 ## Table Of Contents
 
 * [About the Project](#about-the-project)
 * [Built With](#built-with)
 * [Getting Started](#getting-started)
-  * [Site](#site)
 * [Usage](#usage)
-* [Author](#author)
 
 ## About The Project
 
@@ -33,15 +29,14 @@ Notable functions made for this project are the:
 
 ## Built With
 
-This project is done without any Bootstrap, SASS, or external APIs. Resources aside from the images and fonts used are unique.
+<a href="https://img.shields.io/badge/%20%20-JavaScript-%23f0db4f?style=for-the-badge&logo=javascript&labelColor=%23323330" target="blank"><img align="center" src="https://img.shields.io/badge/%20%20-JavaScript-%23f0db4f?style=for-the-badge&logo=javascript&labelColor=%23323330"/></a> &nbsp;&nbsp;&nbsp;
+<a href="https://img.shields.io/badge/%20%20-html-%23f06529?style=for-the-badge&logo=html5&labelColor=white" target="blank"><img align="center" src="https://img.shields.io/badge/%20%20-html-%23f06529?style=for-the-badge&logo=html5&labelColor=white" /></a>
+&nbsp;&nbsp;&nbsp;
+<a href="https://img.shields.io/badge/%20%20-css-%23264de4?style=for-the-badge&logo=css3&logoColor=%23264de4&labelColor=white" target="blank"><img align="center" src="https://img.shields.io/badge/%20%20-css-%23264de4?style=for-the-badge&logo=css3&logoColor=%23264de4&labelColor=white"/></a>   
 
 ## Getting Started
 
 Visit the following link for the project demonstration. Note that it automatically creates localStorage items since it does not operate with any database.
-
-### Site
-
-https://sensational-llama-e030d4.netlify.app/
 
 ## Usage
 
@@ -59,8 +54,3 @@ Below are images from the actual website, including most of its featured functio
 ![music_shop_product_model](https://user-images.githubusercontent.com/79783779/222045938-d41af3c3-5cea-4b11-a730-b02c4ff360d9.png)
 * Product Kart
 ![music_shop_kart](https://user-images.githubusercontent.com/79783779/222045970-1a4f675f-17e1-42f5-9f7d-b4afd393d7ad.png)
-
-
-## Author
-
-* **Byron Ursua** - *Electrical Engineering Graduate* - [Byron Ursua](https://github.com/noidontyesidont) - *Built this Music Shop*
