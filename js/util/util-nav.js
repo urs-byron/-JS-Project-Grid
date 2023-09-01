@@ -19,6 +19,7 @@ getElements(".public-nav-page-assign-btn").forEach((assign_btn) => {
       window.location.origin === "https://sensational-llama-e030d4.netlify.app"
     ) {
       if (window.location.pathname !== `/${assign_btn_link}`) {
+        console.log(window.location.pathname);
         window.location.assign(
           `https://sensational-llama-e030d4.netlify.app/${assign_btn_link}`
         );
