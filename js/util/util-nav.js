@@ -3,7 +3,7 @@ import { getElement, getElements } from "../util-fx.js";
 // ASSIGN PAGE
 
 getElements(".public-nav-page-assign-btn").forEach((assign_btn) => {
-  const assign_btn_link = assign_btn.children[0].getAttribute("href").slice(2);
+  const assign_btn_link = assign_btn.children[0].getAttribute("href").slice(1);
   assign_btn.addEventListener("click", function (e) {
     e.preventDefault();
     if (window.location.origin === "http://127.0.0.1:5500") {
@@ -19,8 +19,6 @@ getElements(".public-nav-page-assign-btn").forEach((assign_btn) => {
       window.location.origin === "https://sensational-llama-e030d4.netlify.app"
     ) {
       if (window.location.pathname !== `/${assign_btn_link}`) {
-        console.log(1);
-        console.log(assign_btn_link);
         window.location.assign(
           `https://sensational-llama-e030d4.netlify.app/${assign_btn_link}`
         );
